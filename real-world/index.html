@@ -1,0 +1,469 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Real-Scene Pilot | UAV-DualCog</title><meta name="description" content="Benchmark for aerial multiview spatiotemporal dual cognition across image and video tasks."><link rel="icon" type="image/png" href="/w/UAV-DualCog/media/title.png"><link rel="stylesheet" href="/w/UAV-DualCog/_astro/analysis.CCSSHGtJ.css"></head> <body id="top"> <header class="site-header"> <div class="shell header-inner"> <a href="/w/UAV-DualCog/" class="brand"> <img class="brand-mark" src="/w/UAV-DualCog/media/title.png" alt="UAV-DualCog"> </a> <nav class="nav"> <a href="/w/UAV-DualCog/" class> Home </a><a href="/w/UAV-DualCog/benchmark" class> Benchmark </a><a href="/w/UAV-DualCog/construction" class> Construction </a><a href="/w/UAV-DualCog/real-world" class> Real World </a><a href="/w/UAV-DualCog/evaluation" class> Evaluation </a><a href="/w/UAV-DualCog/leaderboard" class> Leaderboard </a><a href="/w/UAV-DualCog/analysis" class> Analysis </a><a href="/w/UAV-DualCog/training" class> Training </a><a href="/w/UAV-DualCog/usage" class> Usage </a> </nav> </div> </header> <aside class="page-sidebar"> <div class="page-sidebar-inner"> <p class="page-sidebar-title">CONTENT</p> <nav class="page-sidebar-nav" aria-label="CONTENT"> <a href="#scope" class="page-sidebar-link" data-section="scope"> Pilot Scope </a><a href="#pipeline" class="page-sidebar-link" data-section="pipeline"> Construction </a><a href="#landmarks" class="page-sidebar-link" data-section="landmarks"> Landmarks </a><a href="#examples" class="page-sidebar-link" data-section="examples"> Task Examples </a><a href="#evaluation" class="page-sidebar-link" data-section="evaluation"> Evaluation </a><a href="#analysis" class="page-sidebar-link" data-section="analysis"> Analysis </a> </nav> </div> </aside> <main class="shell main-content">  <section class="page-hero"> <p class="eyebrow">Real World</p> <h1>GauUscene 3DGS Real-Scene Pilots</h1> <p class="lede">
+Three small-scale pilots transfer the UAV-DualCog construction and evaluation protocol to
+      directly loadable 3D Gaussian Splatting reconstructions derived from real aerial imagery and metric LiDAR.
+</p> </section> <nav class="section-nav-grid" aria-label="Page sections"><a class="section-link-card" href="#scope"><span class="section-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon"> <path d="M4 6.5h16M4 12h16M4 17.5h10M15.5 15.5l4 4M19.5 15.5l-4 4"></path> </svg></span><span class="section-link-copy"><strong>Pilot Scope</strong><small>A real-scene reconstruction pilot, distinct from physical-flight evaluation.</small></span></a><a class="section-link-card" href="#pipeline"><span class="section-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon"> <path d="M8 8.5 4.5 12 8 15.5M16 8.5 19.5 12 16 15.5M13.5 5.5 10.5 18.5"></path> </svg></span><span class="section-link-copy"><strong>Construction</strong><small>Metric alignment, rendering, semantic fusion, and task generation.</small></span></a><a class="section-link-card" href="#examples"><span class="section-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon"> <path d="M5 18.5h14M6 15.5V9.5M10 15.5V5.5M14 15.5v-3M18 15.5V7.5"></path> </svg></span><span class="section-link-copy"><strong>Task Examples</strong><small>Temporary examples using the four image-task contracts.</small></span></a><a class="section-link-card" href="#evaluation"><span class="section-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon"> <path d="M5 16c1.6-4.5 4.1-7 7.4-7 1.9 0 3.7.8 5.6 2.6M5 8c1.7 2 3.2 3 4.8 3 2 0 3.7-1.2 5.4-3.9M4 18.5h16"></path> </svg></span><span class="section-link-copy"><strong>Evaluation</strong><small>Reserved tables for the three representative models.</small></span></a></nav> <section class="section-divider" id="scope"> <div class="section-head"> <p class="section-kicker">Pilot Scope</p> <h2>Real appearance and surveyed geometry, without claiming physical-flight evaluation</h2> <p class="sublede">
+The pilots cover all GauUscene scenes with official CityGaussianV2 checkpoints: LFLS, SMBU,
+        and Upper Campus. Aligned COLMAP cameras and LiDAR point clouds provide metric geometry and pose support.
+</p> </div> <section class="stack">  <div class="stat-grid"> <article class="card stat-card"> <div class="stat-value">600</div> <div class="stat-label">Sampled registered views</div>  </article><article class="card stat-card"> <div class="stat-value">300</div> <div class="stat-label">Landmark candidates</div>  </article><article class="card stat-card"> <div class="stat-value">60</div> <div class="stat-label">Temporary landmarks</div>  </article><article class="card stat-card"> <div class="stat-value">480</div> <div class="stat-label">Image QA samples</div>  </article> </div> </section> <article class="article-block" style="margin-top: 24px;"> <p>
+These pilots ask whether the existing benchmark pipeline can operate on reconstructions of real
+        aerial scenes. They do not model real UAV dynamics, online control, sensor noise, or safety intervention,
+        and are therefore reported separately from the AirSim benchmark and from any future physical experiment.
+</p> </article> <div class="reading-grid" style="margin-top: 24px;"> <article class="article-block"> <p class="section-kicker">UPPER_CAMPUS.zip</p> <h3>Upper Campus</h3> <p> 358 registered views, 100
+candidates, 20 temporary landmarks, and
+160 generated image QA samples.
+</p> </article><article class="article-block"> <p class="section-kicker">LFLS.zip</p> <h3>LFLS</h3> <p> 553 registered views, 100
+candidates, 20 temporary landmarks, and
+160 generated image QA samples.
+</p> </article><article class="article-block"> <p class="section-kicker">SMBU.zip</p> <h3>SMBU</h3> <p> 415 registered views, 100
+candidates, 20 temporary landmarks, and
+160 generated image QA samples.
+</p> </article> </div> </section> <section class="section-divider" id="pipeline"> <div class="section-head"> <p class="section-kicker">Platform Extension & Construction</p> <h2>The common simulation bridge now supports a metric-aligned 3DGS scene</h2> </div> <div class="reading-grid"> <article class="article-block"> <h3>Scene ingestion and rendering</h3> <p>
+The platform loads the released CityGaussianV2 reconstruction through a headless gsplat service.
+          A robust similarity alignment maps GauUscene V2.1 LiDAR and COLMAP coordinates into the Gaussian
+          coordinate system, while rendered depth is converted back to meters for downstream geometry checks.
+</p> </article> <article class="article-block"> <h3>Semantic landmark construction</h3> <p>
+Two hundred views per scene are sampled across the registered camera coverage. Open-vocabulary detection and
+          mask segmentation are lifted through metric depth, fused across views, deduplicated in 3D, and ranked
+          by view coverage, confidence, geometric quality, stability, category diversity, and scene coverage.
+</p> </article> <article class="article-block"> <h3>DualCog task generation</h3> <p>
+Each temporary 20-landmark set is passed through the common Stage 4 generator used by the main benchmark.
+          Registered aerial views provide the observations, while geometry-derived labels and projected boxes
+          preserve the same option-plus-BBox output contracts across all four image tasks.
+</p> </article> </div> </section> <section class="section-divider" id="landmarks"> <div class="section-head"> <p class="section-kicker">Landmark Review</p> <h2>Each full-scene candidate pool precedes a temporary, spatially diverse selection</h2> <p class="sublede">
+Each scene contributes 100 candidates and a temporary 20-landmark set. Across all scenes, the pools span
+68 occupied grids, while the provisional selections span
+49 grids pending manual review.
+</p> </div> <article class="article-block"> <p>
+Candidate masks, projected boxes, multiview crops, 3D centers, dimensions, category labels, and quality
+        fields are retained in the review bundle. Human reviewers can keep, revise, merge, or reject each instance
+        before the pilot set is treated as a released annotation.
+</p> <p>
+The temporary selections prioritize buildings, transport and industrial infrastructure, urban landscape elements,
+        and distinctive vegetation. Category wording and instance boundaries remain subject to the final human pass.
+</p> </article> </section> <section id="examples" class="section-divider"> <section class="section-divider"> <div class="section-head"> <p class="section-kicker">Task Examples</p> <h2>Real-Scene Task Examples</h2> <p class="sublede">These temporary examples preserve the media, prompt, answer, and evidence structure of the released benchmark.</p> </div> <article class="example-explorer" id="real-scene-task-examples"> <div class="example-toolbar"> <label> <span>Task Type</span> <select data-role="task-group-select"> <option value="0">Self-relative Position Reasoning</option><option value="1">Action-conditioned Future Observation Prediction</option><option value="2">Landmark-relative Position Reasoning</option><option value="3">Goal-conditioned Action Decision</option> </select> </label> <label> <span>Example</span> <select data-role="task-example-select"> <option value="0">gauu_upper_campus_gauu_upper_candidate_0390_self_shared_4way_010001_where</option><option value="1">gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_where</option><option value="2">gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_where</option> </select> </label> <div class="example-toolbar-actions"> <button type="button" class="button primary explorer-toggle" data-role="answer-toggle">Show GT & Predictions</button> <button type="button" class="button explorer-nav-button" data-role="example-prev">Previous</button> <button type="button" class="button explorer-nav-button" data-role="example-next">Next</button> </div> </div> <div class="example-shell " data-role="example-shell"> <div> <p class="section-kicker" data-role="example-task-label">Self-relative Position Reasoning</p> <h3 data-role="example-id-heading">gauu_upper_campus_gauu_upper_candidate_0390_self_shared_4way_010001_where</h3> <p class="sublede example-prompt-full" data-role="example-prompt">Image 1 shows the Front facade of a brick schoolhouse visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.
+
+Options:
+
+A. Front
+B. Left
+C. Back
+D. Right</p> <div class="overview-list question-comparison-list is-hidden" data-role="prompt-comparison"> <div class="overview-item"> <p class="section-kicker">Original Question</p> <p data-role="original-question">-</p> </div> <div class="overview-item"> <p class="section-kicker">Open-ended Question</p> <p data-role="open-ended-question">-</p> </div> </div> <div class="overview-list"> <div class="overview-item"> <p data-role="example-input">a brick schoolhouse visible from multiple aerial viewpoints</p> </div> </div> <div class="prediction-grid" data-role="example-media-grid"> <article class="prediction-card"> <p class="section-kicker">Reference landmark view</p> <button type="button" class="image-zoom-trigger" data-lightbox-src="/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg" data-lightbox-alt="Reference landmark view" aria-label="Open enlarged Reference landmark view"> <img src="/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg" alt="Reference landmark view" style="width:100%;display:block;"> </button> </article><article class="prediction-card"> <p class="section-kicker">Query observation</p> <button type="button" class="image-zoom-trigger" data-lightbox-src="/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg" data-lightbox-alt="Query observation" aria-label="Open enlarged Query observation"> <img src="/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg" alt="Query observation" style="width:100%;display:block;"> </button> </article> </div> </div> <div class="example-answer-panel is-hidden" data-role="answer-panel"> <div class="gt-panel-grid"> <article class="metric-strip gt-panel-card"> <p class="section-kicker">Ground Truth</p> <div data-role="gold-content"> <div class="gold-section-block"> <p class="prediction-metric-row">Option: A</p> <p class="prediction-metric-row">BBox: [0.055, 0.634, 0.247, 0.996]</p>   </div> </div> </article> </div> <div class="prediction-grid" data-role="answer-media-grid">  </div> <div class="prediction-grid prediction-grid-models" data-role="prediction-grid">  </div> <article class="prediction-card prediction-summary-card" data-role="prediction-summary"> <p><strong>Prediction Summary.</strong> Manual analysis for this sample is being prepared.</p> </article> </div> </div> </article> </section> <script>(function(){const groups = [{"task_id":"self_where","task_title":"Self-relative Position Reasoning","examples":[{"example_id":"gauu_upper_campus_gauu_upper_candidate_0390_self_shared_4way_010001_where","scene_id":"gauu_upper_campus","difficulty":"4way","prompt_excerpt":"Image 1 shows the Front facade of a brick schoolhouse visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Back\nD. Right","input_summary":"a brick schoolhouse visible from multiple aerial viewpoints","task_id":"self_where","task_modality":"image","gold_answer":"A","gold_bbox":"[0.055, 0.634, 0.247, 0.996]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.05500516891479492,0.6342501725229909,0.24717330932617188,0.9964370799042291]}]}],"answer_media_panels":[]},{"example_id":"gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_where","scene_id":"gauu_lfls","difficulty":"8way","prompt_excerpt":"Image 1 shows the Front facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Front-Right\nC. Left\nD. Right","input_summary":"a high-rise building visible from multiple aerial viewpoints","task_id":"self_where","task_modality":"image","gold_answer":"D","gold_bbox":"[0.325, 0.002, 0.462, 0.282]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.3254150152206421,0.001722633768777076,0.461915922164917,0.2823376314581349]}]}],"answer_media_panels":[]},{"example_id":"gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_where","scene_id":"gauu_smbu","difficulty":"4way","prompt_excerpt":"Image 1 shows the Back facade of a landmark signage visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Right\nC. Front\nD. Left","input_summary":"a landmark signage visible from multiple aerial viewpoints","task_id":"self_where","task_modality":"image","gold_answer":"D","gold_bbox":"[0.435, 0.601, 0.480, 0.656]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.4354578971862793,0.60113260642585,0.4797126293182373,0.6561571950789493]}]}],"answer_media_panels":[]}]},{"task_id":"self_what","task_title":"Action-conditioned Future Observation Prediction","examples":[{"example_id":"gauu_upper_campus_gauu_upper_candidate_0158_self_shared_4way_030001_what","scene_id":"gauu_upper_campus","difficulty":"4way","prompt_excerpt":"Image 1 shows the Front facade of a pedestrian crosswalk visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 0-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5","input_summary":"a pedestrian crosswalk visible from multiple aerial viewpoints","task_id":"self_what","task_modality":"image","gold_answer":"C","gold_bbox":"[0.287, 0.116, 0.386, 0.232]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.28699115753173826,0.11632616495348744,0.3863999557495117,0.23225285566735737]}]}],"answer_media_panels":[]},{"example_id":"gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_what","scene_id":"gauu_lfls","difficulty":"8way","prompt_excerpt":"Image 1 shows the Front facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 45-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5","input_summary":"a high-rise building visible from multiple aerial viewpoints","task_id":"self_what","task_modality":"image","gold_answer":"A","gold_bbox":"[0.532, 0.002, 0.676, 0.295]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.5324599266052246,0.0017677396011799749,0.6755365848541259,0.29532908610693875]}]}],"answer_media_panels":[]},{"example_id":"gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_what","scene_id":"gauu_smbu","difficulty":"4way","prompt_excerpt":"Image 1 shows the Back facade of a landmark signage visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5","input_summary":"a landmark signage visible from multiple aerial viewpoints","task_id":"self_what","task_modality":"image","gold_answer":"A","gold_bbox":"[0.457, 0.639, 0.512, 0.722]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.4567230224609375,0.6392392944479045,0.5120807647705078,0.7222975521825542]}]}],"answer_media_panels":[]}]},{"task_id":"env_where","task_title":"Landmark-relative Position Reasoning","examples":[{"example_id":"gauu_upper_campus_gauu_upper_candidate_0104_env_shared_4way_170002_where","scene_id":"gauu_upper_campus","difficulty":"4way","prompt_excerpt":"Image 1 shows the Right facade of a shipping container stack visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Left\nB. Right\nC. Front\nD. Back","input_summary":"a shipping container stack visible from multiple aerial viewpoints","task_id":"env_where","task_modality":"image","gold_answer":"C","gold_bbox":"[0.256, 0.791, 0.500, 0.998]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.2559065437316895,0.7911369516789187,0.49977455139160154,0.9977151000175727]}]}],"answer_media_panels":[]},{"example_id":"gauu_lfls_gauu_lfls_candidate_0059_env_shared_8way_060004_where","scene_id":"gauu_lfls","difficulty":"8way","prompt_excerpt":"Image 1 shows the Right facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Front-Left\nC. Front-Right\nD. Right","input_summary":"a high-rise building visible from multiple aerial viewpoints","task_id":"env_where","task_modality":"image","gold_answer":"B","gold_bbox":"[0.532, 0.002, 0.676, 0.295]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.5324599266052246,0.0017677396011799749,0.6755365848541259,0.29532908610693875]}]}],"answer_media_panels":[]},{"example_id":"gauu_smbu_gauu_smbu_candidate_0203_env_shared_8way_050004_where","scene_id":"gauu_smbu","difficulty":"8way","prompt_excerpt":"Image 1 shows the Front facade of a railway track visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Left\nC. Back\nD. Front","input_summary":"a railway track visible from multiple aerial viewpoints","task_id":"env_where","task_modality":"image","gold_answer":"B","gold_bbox":"[0.087, 0.370, 0.270, 0.874]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.08694043159484863,0.3701595829631631,0.26991543769836424,0.8735287164328107]}]}],"answer_media_panels":[]}]},{"task_id":"env_how","task_title":"Goal-conditioned Action Decision","examples":[{"example_id":"gauu_upper_campus_gauu_upper_candidate_0104_env_shared_4way_170002_how","scene_id":"gauu_upper_campus","difficulty":"4way","prompt_excerpt":"Image 1 shows the Right facade of a shipping container stack visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Right\nC. Left\nD. Front","input_summary":"a shipping container stack visible from multiple aerial viewpoints","task_id":"env_how","task_modality":"image","gold_answer":"D","gold_bbox":"[0.256, 0.791, 0.500, 0.998]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.2559065437316895,0.7911369516789187,0.49977455139160154,0.9977151000175727]}]}],"answer_media_panels":[]},{"example_id":"gauu_lfls_gauu_lfls_candidate_0059_env_shared_8way_060004_how","scene_id":"gauu_lfls","difficulty":"8way","prompt_excerpt":"Image 1 shows the Right facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Back-Left\nC. Front-Left\nD. Back","input_summary":"a high-rise building visible from multiple aerial viewpoints","task_id":"env_how","task_modality":"image","gold_answer":"C","gold_bbox":"[0.532, 0.002, 0.676, 0.295]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.5324599266052246,0.0017677396011799749,0.6755365848541259,0.29532908610693875]}]}],"answer_media_panels":[]},{"example_id":"gauu_smbu_gauu_smbu_candidate_0203_env_shared_8way_050004_how","scene_id":"gauu_smbu","difficulty":"8way","prompt_excerpt":"Image 1 shows the Front facade of a railway track visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Back-Left\nC. Left\nD. Right","input_summary":"a railway track visible from multiple aerial viewpoints","task_id":"env_how","task_modality":"image","gold_answer":"C","gold_bbox":"[0.087, 0.370, 0.270, 0.874]","predictions":[],"media_panels":[{"kind":"image","label":"Reference landmark view","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_reference.jpg","overlays":[]},{"kind":"image","label":"Query observation","url":"/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_query.jpg","overlays":[{"label":"Ground-truth landmark","color":"#16a085","bbox":[0.08694043159484863,0.3701595829631631,0.26991543769836424,0.8735287164328107]}]}],"answer_media_panels":[]}]}];
+const instanceId = "real-scene-task-examples";
+
+  const root = document.getElementById(instanceId);
+  const byRole = (role) => root?.querySelector(`[data-role="${role}"]`);
+  const taskSelect = byRole("task-group-select");
+  const exampleSelect = byRole("task-example-select");
+  const answerToggle = byRole("answer-toggle");
+  const prevButton = byRole("example-prev");
+  const nextButton = byRole("example-next");
+  const answerPanel = byRole("answer-panel");
+  const taskLabel = byRole("example-task-label");
+  const exampleHeading = byRole("example-id-heading");
+  const promptEl = byRole("example-prompt");
+  const promptComparisonEl = byRole("prompt-comparison");
+  const originalQuestionEl = byRole("original-question");
+  const openEndedQuestionEl = byRole("open-ended-question");
+  const inputEl = byRole("example-input");
+  const goldContentEl = byRole("gold-content");
+  const predictionGrid = byRole("prediction-grid");
+  const predictionSummary = byRole("prediction-summary");
+  const mediaGrid = byRole("example-media-grid");
+  const answerMediaGrid = byRole("answer-media-grid");
+  const exampleShell = byRole("example-shell");
+  let selectedBBoxModels = new Set();
+
+  const statusClass = (status) => {
+    if (status === "correct") return "status-correct";
+    if (status === "incorrect") return "status-incorrect";
+    if (status === "unavailable") return "status-unavailable";
+    return "";
+  };
+
+  const statusGlyph = (status) => {
+    if (status === "correct") return "✓";
+    if (status === "incorrect") return "✕";
+    if (status === "unavailable") return "—";
+    return "";
+  };
+
+  const isImageTask = (taskId, item) =>
+    (item?.task_modality || "image") !== "video" && taskId !== "self_instance_recognition_joint" && taskId !== "env_visibility_reasoning";
+
+  const isSelfVideoTask = (taskId) => taskId === "self_instance_recognition_joint";
+
+  const isEnvVideoTask = (taskId) => taskId === "env_visibility_reasoning";
+
+  const normalizeTimelineLabel = (label) => String(label || "").replace(/\s*\((Composite|Atomic)\)\s*$/i, "").trim();
+
+  const normalizeTimelineSummary = (summary) => {
+    const value = String(summary || "").trim();
+    return value && value !== "-" ? value : "not predicted";
+  };
+
+  const buildTimelineDisplayGroups = (rows) => {
+    const groups = [];
+    for (let idx = 0; idx < (rows || []).length; idx += 1) {
+      const row = rows[idx];
+      const next = rows[idx + 1];
+      if (row?.variant === "composite" && next?.variant === "atomic") {
+        groups.push({
+          label: normalizeTimelineLabel(row.label || next.label || ""),
+          combinedSummary: `Composite: ${normalizeTimelineSummary(row.summary)} | Atomic: ${normalizeTimelineSummary(next.summary)}`,
+          topRow: row,
+          bottomRow: next,
+        });
+        idx += 1;
+        continue;
+      }
+      groups.push({
+        label: normalizeTimelineLabel(row?.label || ""),
+        combinedSummary: normalizeTimelineSummary(row?.summary),
+        topRow: row,
+      });
+    }
+    return groups;
+  };
+
+  const currentGroup = () => groups[Number(taskSelect?.value) || 0] || groups[0] || { task_id: "", task_title: "", examples: [] };
+
+  const currentExample = () => {
+    const group = currentGroup();
+    return (group?.examples || [])[Number(exampleSelect?.value) || 0] || null;
+  };
+
+  const visibleOverlays = (overlays, showBBoxes) => {
+    if (!showBBoxes) return [];
+    return (overlays || []).filter((overlay) => overlay.label === "GT" || selectedBBoxModels.has(overlay.label));
+  };
+
+  const fillExampleOptions = (groupIndex) => {
+    const group = groups[groupIndex] || groups[0];
+    if (!exampleSelect || !group) return;
+    exampleSelect.innerHTML = "";
+    (group.examples || []).forEach((item, idx) => {
+      const option = document.createElement("option");
+      option.value = String(idx);
+      option.textContent = item.example_id;
+      exampleSelect.appendChild(option);
+    });
+  };
+
+  const syncNavigationButtons = () => {
+    const group = currentGroup();
+    const total = (group?.examples || []).length;
+    const idx = Number(exampleSelect?.value) || 0;
+    if (prevButton) prevButton.disabled = idx <= 0;
+    if (nextButton) nextButton.disabled = idx >= total - 1;
+  };
+
+  const renderMetricStatus = (label, value, status, metric, note, showPlaceholder = false) => {
+    if (!value && !status && !metric && !note && !showPlaceholder) return "";
+    const displayValue = value || "-";
+    const badge = status ? `<span class="metric-mark ${statusClass(status)}">${statusGlyph(status)}</span>` : "";
+    const metricText = metric ? `<span class="metric-inline-note">${metric}</span>` : "";
+    const noteText = note ? `<span class="metric-inline-note">${note}</span>` : "";
+    return `<p class="prediction-metric-row"><strong>${label}:</strong> <span>${displayValue}</span> ${badge} ${metricText} ${noteText}</p>`;
+  };
+
+  const renderSupportRow = (metric, note) => {
+    if (!metric && !note) return "";
+    const metricText = metric ? `<span class="metric-inline-note">${metric}</span>` : "";
+    const noteText = note ? `<span class="metric-inline-note">${note}</span>` : "";
+    return `<p class="prediction-metric-row prediction-support-row">${metricText} ${noteText}</p>`;
+  };
+
+  const renderPredictionSummary = (exampleItem) => {
+    if (!predictionSummary) return;
+    const text = String(exampleItem?.prediction_analysis || "").trim() || "Manual analysis for this sample is being prepared.";
+    predictionSummary.innerHTML = `<p><strong>Prediction Summary.</strong> ${text}</p>`;
+  };
+
+  const renderPrompt = (item) => {
+    const comparison = item?.prompt_comparison;
+    promptEl?.classList.toggle("is-hidden", Boolean(comparison));
+    promptComparisonEl?.classList.toggle("is-hidden", !comparison);
+    if (comparison) {
+      if (originalQuestionEl) originalQuestionEl.textContent = comparison.original || "-";
+      if (openEndedQuestionEl) openEndedQuestionEl.textContent = comparison.open_ended || "-";
+    } else if (promptEl) {
+      promptEl.textContent = item?.prompt_excerpt || "-";
+    }
+  };
+
+  const renderGoldContent = (item) => {
+    const taskId = item?.task_id || currentGroup()?.task_id || "";
+    const imageTask = isImageTask(taskId, item);
+    const selfVideoTask = isSelfVideoTask(taskId);
+    const envVideoTask = isEnvVideoTask(taskId);
+    const sections = Array.isArray(item?.gold_sections) && item.gold_sections.length > 0
+      ? item.gold_sections
+      : [
+          {
+            answer: item?.gold_answer || "",
+            bbox: item?.gold_bbox || "",
+            intervals: item?.gold_intervals || "",
+            count: item?.gold_count || "",
+          },
+        ];
+    return sections.map((section) => `
+      <div class="gold-section-block">
+        ${(imageTask || selfVideoTask) ? `<p class="prediction-metric-row">${section.answer ? `${item?.open_ended_mode ? "Answer" : "Option"}: ${section.answer}` : `${item?.open_ended_mode ? "Answer" : "Option"}: -`}</p>` : ""}
+        ${imageTask && section.bbox ? `<p class="prediction-metric-row">BBox: ${section.bbox}</p>` : ""}
+        ${envVideoTask ? `<p class="prediction-metric-row">${section.count ? `Count: ${section.count}` : "Count: -"}</p>` : ""}
+        ${(selfVideoTask || envVideoTask) && section.intervals ? `<p class="prediction-metric-row">Intervals: ${section.intervals}</p>` : ""}
+      </div>
+    `).join("");
+  };
+
+  const renderPredictions = (predictions, exampleItem, taskId, showBBoxes) => {
+    predictionGrid.innerHTML = "";
+    const imageTask = isImageTask(taskId, exampleItem);
+    const selfVideoTask = isSelfVideoTask(taskId);
+    const envVideoTask = isEnvVideoTask(taskId);
+    const bboxModels = new Set(
+      (exampleItem?.media_panels || []).flatMap((panel) =>
+        (panel?.overlays || []).map((overlay) => overlay.label).filter((label) => label && label !== "GT")
+      )
+    );
+    (predictions || []).forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "prediction-card";
+      if (exampleItem?.open_ended_mode) {
+        const semantic = renderMetricStatus("Semantic", item.semantic_eval, item.semantic_status, null, null, true);
+        const evidence = renderMetricStatus("Evidence", item.evidence_eval, item.evidence_status, null, null, true);
+        card.innerHTML = `
+          <div class="example-meta"><span class="example-badge">${item.model}</span></div>
+          ${item.raw_output ? `<pre class="prediction-raw-output">${item.raw_output}</pre>` : ""}
+          ${semantic}
+          ${evidence}
+          ${item.note ? `<p class="prediction-support-row">${item.note}</p>` : ""}
+        `;
+        predictionGrid.appendChild(card);
+        return;
+      }
+      const showBboxToggle = showBBoxes && bboxModels.has(item.model);
+      const bboxToggle = showBboxToggle
+        ? `<label class="bbox-inline-toggle"><input type="checkbox" data-model="${item.model}" ${selectedBBoxModels.has(item.model) ? "checked" : ""} /><span>Show BBox</span></label>`
+        : "";
+      card.innerHTML = `
+        <div class="example-meta">
+          <span class="example-badge">${item.model}</span>
+          ${bboxToggle}
+        </div>
+        ${imageTask || selfVideoTask ? renderMetricStatus('Option', item.answer, item.option_status, null, null, Boolean(item.answer || item.option_status)) : ''}
+        ${envVideoTask ? renderMetricStatus('Count', item.count, item.count_status, null, null, Boolean(item.count || item.count_status || item.status === 'unavailable')) : ''}
+        ${imageTask ? renderMetricStatus('BBox', item.bbox, item.bbox_status, item.bbox_metric, item.note, Boolean(item.bbox || item.bbox_status || item.bbox_metric || item.note)) : ''}
+        ${selfVideoTask || envVideoTask ? renderMetricStatus('Intervals', item.intervals, item.interval_status, null, null, Boolean(item.intervals || item.interval_status || item.interval_metric || item.note || item.status === 'unavailable')) : ''}
+        ${selfVideoTask || envVideoTask ? renderSupportRow(item.interval_metric, item.note) : ''}
+        ${imageTask && !item.bbox && !item.bbox_status && !item.bbox_metric && !item.answer && item.note ? `<p>${item.note}</p>` : ''}
+      `;
+      predictionGrid.appendChild(card);
+    });
+    predictionGrid.querySelectorAll("input[type='checkbox'][data-model]").forEach((input) => {
+      input.addEventListener("change", () => {
+        const model = input.getAttribute("data-model");
+        if (!model) return;
+        if (input.checked) selectedBBoxModels.add(model);
+        else selectedBBoxModels.delete(model);
+        const current = currentExample();
+        if (current) renderMediaPanels(current.media_panels || [], !answerPanel.classList.contains("is-hidden"));
+      });
+    });
+    renderPredictionSummary(exampleItem);
+  };
+
+  const renderMediaPanels = (panels, showBBoxes) => {
+    mediaGrid.innerHTML = "";
+    (panels || []).forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "prediction-card";
+      const overlays = visibleOverlays(item.overlays || [], showBBoxes);
+      const body = item.kind === "video"
+        ? `<video controls preload="metadata" src="${item.url}" style="width:100%;display:block;"></video>`
+        : `
+          <div class="bbox-visual">
+            <button type="button" class="image-zoom-trigger" data-lightbox-src="${item.url}" data-lightbox-alt="${item.label}" aria-label="Open enlarged ${item.label}">
+              <img src="${item.url}" alt="${item.label}" style="width:100%;display:block;" />
+            </button>
+            <div class="bbox-overlay-layer">${renderOverlayBoxes(overlays)}</div>
+          </div>`;
+      card.innerHTML = `
+        <p class="section-kicker">${item.label}</p>
+        ${body}
+      `;
+      mediaGrid.appendChild(card);
+    });
+  };
+
+  const renderOverlayBoxes = (overlays) => {
+    return (overlays || []).map((overlay) => {
+      const bbox = overlay.bbox || [0, 0, 0, 0];
+      const left = bbox[0] * 100;
+      const top = bbox[1] * 100;
+      const width = (bbox[2] - bbox[0]) * 100;
+      const height = (bbox[3] - bbox[1]) * 100;
+      const dashed = overlay.line_style === "dashed" ? " is-dashed" : "";
+      return `
+        <div class="bbox-box${dashed}" style="left:${left}%;top:${top}%;width:${width}%;height:${height}%;border-color:${overlay.color};">
+          <span class="bbox-box-label" style="background:${overlay.color};">${overlay.label}</span>
+        </div>
+      `;
+    }).join("");
+  };
+
+  const renderAnswerMediaPanels = (panels) => {
+    answerMediaGrid.innerHTML = "";
+    (panels || []).forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "prediction-card";
+      const timelineBody = (() => {
+        if (item.kind !== "timeline") return "";
+        const duration = Number(item.duration_sec || 0);
+        const ticks = duration > 0 ? [0, duration / 2, duration] : [];
+        const ruler = ticks.map((value) => {
+          const left = Math.min(100, Math.max(0, (value / Math.max(duration, 1)) * 100));
+          return `<span class="timeline-tick" style="left:${left}%;"><span class="timeline-tick-label">${value.toFixed(1)}s</span></span>`;
+        }).join("");
+        const groups = buildTimelineDisplayGroups(item.timeline_rows || []);
+        const rows = groups.map((group) => {
+          const tracks = [group.topRow, group.bottomRow].filter(Boolean).map((row) => {
+            const segments = (row.segments || []).map((segment) => {
+              const left = (Number(segment.start_sec || 0) / Math.max(duration, 1)) * 100;
+              const width = ((Number(segment.end_sec || 0) - Number(segment.start_sec || 0)) / Math.max(duration, 1)) * 100;
+              const segmentClass = row.variant === "composite" ? "timeline-segment is-composite" : "timeline-segment";
+              const segmentLabel = segment.label ? `<span class="timeline-segment-label">${segment.label}</span>` : "";
+              return `<span class="${segmentClass}" style="left:${left}%;width:${width}%;--segment-color:${row.color};" title="${group.label}: ${Number(segment.start_sec || 0).toFixed(1)}s - ${Number(segment.end_sec || 0).toFixed(1)}s">${segmentLabel}</span>`;
+            }).join("");
+            const trackVariant = row.variant ? `timeline-track-row-${row.variant}` : "timeline-track-row-default";
+            const trackBody = segments || '<span class="timeline-track-placeholder">NOT PREDICTED</span>';
+            return `<div class="timeline-track-row ${trackVariant}"><div class="timeline-track">${trackBody}</div></div>`;
+          }).join("");
+          return `
+            <div class="timeline-pair">
+              <div class="timeline-row-head">
+                <span class="timeline-row-label">${normalizeTimelineLabel(group.label)}</span>
+                <span class="timeline-row-summary">${group.combinedSummary}</span>
+              </div>
+              ${tracks}
+            </div>
+          `;
+        }).join("");
+        const legend = (item.timeline_rows || []).some((row) => row.variant === "composite")
+          ? `
+            <div class="timeline-legend">
+              <span class="timeline-legend-item">
+                <span class="timeline-legend-swatch is-composite"></span>
+                <span>Top row in each pair: composite</span>
+              </span>
+              <span class="timeline-legend-item">
+                <span class="timeline-legend-swatch"></span>
+                <span>Bottom row in each pair: atomic</span>
+              </span>
+            </div>
+          `
+          : "";
+        return `
+          <div class="timeline-visual">
+            <div class="timeline-scale">
+              <span>0.0s</span>
+              <span>${duration.toFixed(1)}s</span>
+            </div>
+            <div class="timeline-ruler">${ruler}</div>
+            <div class="timeline-rows">${rows}</div>
+            ${legend}
+          </div>
+        `;
+      })();
+      const body = item.kind === "video"
+        ? `<video controls preload="metadata" src="${item.url}" style="width:100%;display:block;"></video>`
+        : item.kind === "timeline"
+        ? timelineBody
+        : `
+          <div class="bbox-visual">
+            <button type="button" class="image-zoom-trigger" data-lightbox-src="${item.url}" data-lightbox-alt="${item.label}" aria-label="Open enlarged ${item.label}">
+              <img src="${item.url}" alt="${item.label}" style="width:100%;display:block;" />
+            </button>
+            <div class="bbox-overlay-layer">${renderOverlayBoxes(item.overlays || [])}</div>
+          </div>`;
+      card.innerHTML = `
+        <p class="section-kicker">${item.label}</p>
+        ${body}
+      `;
+      answerMediaGrid.appendChild(card);
+    });
+  };
+
+  const renderCurrentExample = () => {
+    const group = currentGroup();
+    const item = currentExample();
+    if (!item) {
+      if (taskLabel) taskLabel.textContent = group?.task_title || "-";
+      if (exampleHeading) exampleHeading.textContent = "-";
+      renderPrompt(null);
+      if (inputEl) inputEl.textContent = "No examples available.";
+      if (mediaGrid) mediaGrid.innerHTML = "";
+      if (answerMediaGrid) answerMediaGrid.innerHTML = "";
+      if (predictionGrid) predictionGrid.innerHTML = "";
+      return;
+    }
+    if (taskLabel) taskLabel.textContent = group?.task_title || "-";
+    if (exampleHeading) exampleHeading.textContent = item.example_id || "-";
+    renderPrompt(item);
+    if (inputEl) inputEl.textContent = item.input_summary || "Input summary is not available for this example.";
+    if (goldContentEl) goldContentEl.innerHTML = renderGoldContent(item);
+    exampleShell?.classList.toggle("has-side-answer", Boolean(item.prefer_side_answer));
+    selectedBBoxModels = new Set((item.predictions || []).map((pred) => pred.model).filter(Boolean));
+    const showBBoxes = Boolean(answerPanel && !answerPanel.classList.contains("is-hidden"));
+    renderMediaPanels(item.media_panels || [], showBBoxes);
+    renderAnswerMediaPanels(item.answer_media_panels || []);
+    renderPredictions(item.predictions || [], item, item.task_id || group?.task_id || "", showBBoxes);
+    syncNavigationButtons();
+  };
+
+  taskSelect?.addEventListener("change", () => {
+    fillExampleOptions(Number(taskSelect.value) || 0);
+    exampleSelect.value = "0";
+    renderCurrentExample();
+  });
+
+  exampleSelect?.addEventListener("change", renderCurrentExample);
+
+  prevButton?.addEventListener("click", () => {
+    const currentIndex = Number(exampleSelect.value) || 0;
+    if (currentIndex <= 0) return;
+    exampleSelect.value = String(currentIndex - 1);
+    renderCurrentExample();
+  });
+
+  nextButton?.addEventListener("click", () => {
+    const group = currentGroup();
+    const total = (group?.examples || []).length;
+    const currentIndex = Number(exampleSelect.value) || 0;
+    if (currentIndex >= total - 1) return;
+    exampleSelect.value = String(currentIndex + 1);
+    renderCurrentExample();
+  });
+
+  answerToggle?.addEventListener("click", () => {
+    answerPanel.classList.toggle("is-hidden");
+    answerToggle.textContent = answerPanel.classList.contains("is-hidden")
+      ? "Show GT & Predictions"
+      : "Hide GT & Predictions";
+    renderCurrentExample();
+  });
+
+  renderCurrentExample();
+})();</script> </section> <section class="section-divider" id="evaluation"> <div class="section-head"> <p class="section-kicker">Reserved Evaluation</p> <h2>Representative model results</h2> <p class="sublede">
+Model calls are intentionally excluded from this construction pass. Empty cells denote pending image evaluation,
+        not failed predictions or zero scores.
+</p> </div> <article class="table-panel paper-table"> <div class="table-wrap"> <table> <thead><tr><th>Model</th><th>Image Acc</th><th>BBox Acc@0.5</th><th>mIoU</th><th>Dual Semantic Acc</th><th>Dual Evidence Acc</th></tr></thead> <tbody><tr><th>Qwen3.5-4B</th><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr><tr><th>MiMo-V2.5</th><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr><tr><th>Gemini 3 Flash</th><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr></tbody> </table> </div> <p class="table-note"><strong>Pending pilot evaluation.</strong> The calling and scoring protocol will remain identical to the main benchmark.</p> </article> </section> <section class="section-divider" id="analysis"> <div class="section-head"> <p class="section-kicker">Analysis Plan</p> <h2>Protocol portability is evaluated separately from model performance</h2> </div> <article class="article-block"> <p>
+Construction analysis checks alignment residuals, landmark stability, BBox projection, image quality,
+        and manual-review acceptance. Once model results are available,
+        the pilot will report the same image semantic and evidence metrics as UAV-DualCog and use only descriptive comparison with AirSim;
+        no strict sim-to-real performance gap will be inferred from these reconstructed scenes.
+</p> <p>
+A preliminary free-viewpoint smoke test exposed visible artifacts outside the reconstruction's well-observed
+        camera manifold. We therefore retain registered aerial views for image QA and defer video-task construction
+        until a trajectory strategy can satisfy the same visual-quality gate.
+</p> </article> </section> <nav class="chapter-pager" aria-label="Chapter navigation"> <div class="chapter-pager-slot"> <a class="chapter-pager-link is-prev" href="/w/UAV-DualCog/construction"> <span class="chapter-pager-direction">Previous</span> <span class="chapter-pager-label">Construction</span> </a> </div> <div class="chapter-pager-slot is-next"> <a class="chapter-pager-link is-next" href="/w/UAV-DualCog/evaluation"> <span class="chapter-pager-direction">Next</span> <span class="chapter-pager-label">Evaluation</span> </a> </div> </nav>  </main> <div class="image-lightbox is-hidden" id="image-lightbox" aria-hidden="true"> <button type="button" class="image-lightbox-close" id="image-lightbox-close" aria-label="Close enlarged image">×</button> <img class="image-lightbox-media" id="image-lightbox-media" src="" alt=""> </div> <a class="back-to-top" href="#top" aria-label="Back to top">↑</a> <footer class="site-footer"> <div class="shell footer-inner"> <p>UAV-DualCog benchmarks aerial dual-cognition reasoning across image and video tasks.</p> <p>© 2026 <a href="https://anonymous.4open.science/r/UAV-DualCog-Code" target="_blank" rel="noreferrer">Anonymous Authors</a>. All rights reserved.</p> </div> </footer> <script type="module">const d=document.querySelector(".page-sidebar");if(d){const n=Array.from(d.querySelectorAll(".page-sidebar-link")),o=n.map(e=>document.getElementById(e.dataset.section)).filter(Boolean),r=e=>{n.forEach(t=>{const i=t.dataset.section===e;t.classList.toggle("is-active",i),i?t.setAttribute("aria-current","location"):t.removeAttribute("aria-current")})},c=()=>{if(!o.length)return;const e=window.innerHeight*.28;let t=o[0];for(const i of o)if(i.getBoundingClientRect().top<=e)t=i;else break;r(t.id)};n.forEach(e=>{e.addEventListener("click",()=>{const t=e.dataset.section;t&&r(t)})});let s=!1;const a=()=>{s||(s=!0,window.requestAnimationFrame(()=>{c(),s=!1}))};c(),window.addEventListener("scroll",a,{passive:!0}),window.addEventListener("resize",a),window.addEventListener("hashchange",()=>{const e=window.location.hash.replace("#","");e&&r(e)})}</script> <script type="module">const e=document.getElementById("image-lightbox"),i=document.getElementById("image-lightbox-media"),d=document.getElementById("image-lightbox-close"),n=(t,s)=>{!e||!i||!t||(i.setAttribute("src",t),i.setAttribute("alt",s||"Enlarged image"),e.classList.remove("is-hidden"),e.setAttribute("aria-hidden","false"),document.body.classList.add("lightbox-open"))},o=()=>{!e||!i||(e.classList.add("is-hidden"),e.setAttribute("aria-hidden","true"),i.setAttribute("src",""),i.setAttribute("alt",""),document.body.classList.remove("lightbox-open"))};document.addEventListener("click",t=>{const s=t.target.closest("[data-lightbox-src]");if(s){n(s.getAttribute("data-lightbox-src"),s.getAttribute("data-lightbox-alt"));return}t.target===e&&o()});d?.addEventListener("click",o);document.addEventListener("keydown",t=>{t.key==="Escape"&&o()});</script> </body> </html>

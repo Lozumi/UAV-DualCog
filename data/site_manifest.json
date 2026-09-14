@@ -4,15 +4,15 @@
   "dataset_available": true,
   "bootstrap_only": false,
   "task_name": "UAV-DualCog-V1",
-  "spec_path": "configs/uav_dualcog/task_pipeline_uav_dualcog_v1.yaml",
-  "example_config_path": "web/data/task_examples.json",
+  "spec_path": "configs/flightmvstg/task_pipeline/task_pipeline_uav_dualcog_v1.yaml",
+  "example_config_path": "web/site_example_selection.yaml",
   "copied_local_csv": {
     "stage3_metrics_latest.csv": true,
     "stage4_metrics_latest.csv": true
   },
   "leaderboard_metric_sources": {
-    "stage3": "web/data/leaderboard/stage3.json",
-    "stage4": "web/data/leaderboard/stage4.json"
+    "stage3": "data/leaderboard/stage3_metrics_latest.csv",
+    "stage4": "data/leaderboard/stage4_metrics_latest.csv"
   },
   "files": {
     "benchmark_summary": "data/benchmark_summary.json",

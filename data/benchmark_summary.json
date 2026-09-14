@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-04-11T09:40:14.421166+00:00",
   "benchmark_name": "UAV-DualCog",
-  "tagline": "A dual-cognition benchmark for aerial image and video reasoning with explicit grounding.",
+  "tagline": "A dual-cognition benchmark for aerial image and video reasoning with explicit spatial and temporal localization.",
   "paper_stats": {
     "full_pool_scene_count": 18,
     "full_pool_area_m2": 5040232.0,

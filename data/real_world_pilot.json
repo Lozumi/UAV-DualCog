@@ -1,0 +1,1140 @@
+{
+  "generated_at": "2026-09-13T21:27:33.760256+00:00",
+  "scene": "GauUscene V2.1 direct-load CityGaussianV2 scenes",
+  "status": "image_task_generation_complete_model_evaluation_pending",
+  "statistics": {
+    "registered_views": 1326,
+    "sampled_views": 600,
+    "landmark_candidates": 300,
+    "temporary_landmarks": 60,
+    "covered_candidate_grids": 68,
+    "covered_temporary_grids": 49,
+    "registered_landmark_views": 367,
+    "image_tasks": 480
+  },
+  "scenes": [
+    {
+      "scene_id": "gauu_upper_campus",
+      "scene": "Upper Campus",
+      "checkpoint": "UPPER_CAMPUS.zip",
+      "status": "image_task_generation_complete_model_evaluation_pending",
+      "statistics": {
+        "registered_views": 358,
+        "sampled_views": 200,
+        "landmark_candidates": 100,
+        "temporary_landmarks": 20,
+        "covered_candidate_grids": 24,
+        "covered_temporary_grids": 15,
+        "registered_landmark_views": 124,
+        "image_tasks": 160
+      },
+      "task_counts": {
+        "self_where": 40,
+        "self_what": 40,
+        "env_where": 40,
+        "env_how": 40
+      },
+      "audit": {
+        "stage4_manifest": "task_pipeline_data/uav_dualcog_3dgs_real_scene_pilot_final/gsplat_gauu_upper_campus/qa/manifests/gauu_upper_campus.latest_manifest.json",
+        "selected_landmark_ids": [
+          "gauu_upper_candidate_0008",
+          "gauu_upper_candidate_0014",
+          "gauu_upper_candidate_0022",
+          "gauu_upper_candidate_0036",
+          "gauu_upper_candidate_0063",
+          "gauu_upper_candidate_0074",
+          "gauu_upper_candidate_0098",
+          "gauu_upper_candidate_0104",
+          "gauu_upper_candidate_0106",
+          "gauu_upper_candidate_0107",
+          "gauu_upper_candidate_0121",
+          "gauu_upper_candidate_0123",
+          "gauu_upper_candidate_0143",
+          "gauu_upper_candidate_0158",
+          "gauu_upper_candidate_0164",
+          "gauu_upper_candidate_0228",
+          "gauu_upper_candidate_0235",
+          "gauu_upper_candidate_0343",
+          "gauu_upper_candidate_0351",
+          "gauu_upper_candidate_0390"
+        ],
+        "video_tasks": "deferred_after_free_viewpoint_render_quality_gate",
+        "model_evaluation_status": "not_started"
+      },
+      "examples": {
+        "groups": [
+          {
+            "task_id": "self_where",
+            "task_title": "Self-relative Position Reasoning",
+            "examples": [
+              {
+                "example_id": "gauu_upper_campus_gauu_upper_candidate_0390_self_shared_4way_010001_where",
+                "scene_id": "gauu_upper_campus",
+                "difficulty": "4way",
+                "prompt_excerpt": "Image 1 shows the Front facade of a brick schoolhouse visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Back\nD. Right",
+                "input_summary": "a brick schoolhouse visible from multiple aerial viewpoints",
+                "task_id": "self_where",
+                "task_modality": "image",
+                "gold_answer": "A",
+                "gold_bbox": "[0.055, 0.634, 0.247, 0.996]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_upper_campus_self_where_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_upper_campus_self_where_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.05500516891479492,
+                          0.6342501725229909,
+                          0.24717330932617188,
+                          0.9964370799042291
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "self_what",
+            "task_title": "Action-conditioned Future Observation Prediction",
+            "examples": [
+              {
+                "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_self_shared_4way_030001_what",
+                "scene_id": "gauu_upper_campus",
+                "difficulty": "4way",
+                "prompt_excerpt": "Image 1 shows the Front facade of a pedestrian crosswalk visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 0-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+                "input_summary": "a pedestrian crosswalk visible from multiple aerial viewpoints",
+                "task_id": "self_what",
+                "task_modality": "image",
+                "gold_answer": "C",
+                "gold_bbox": "[0.287, 0.116, 0.386, 0.232]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_upper_campus_self_what_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_upper_campus_self_what_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.28699115753173826,
+                          0.11632616495348744,
+                          0.3863999557495117,
+                          0.23225285566735737
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "env_where",
+            "task_title": "Landmark-relative Position Reasoning",
+            "examples": [
+              {
+                "example_id": "gauu_upper_campus_gauu_upper_candidate_0104_env_shared_4way_170002_where",
+                "scene_id": "gauu_upper_campus",
+                "difficulty": "4way",
+                "prompt_excerpt": "Image 1 shows the Right facade of a shipping container stack visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Left\nB. Right\nC. Front\nD. Back",
+                "input_summary": "a shipping container stack visible from multiple aerial viewpoints",
+                "task_id": "env_where",
+                "task_modality": "image",
+                "gold_answer": "C",
+                "gold_bbox": "[0.256, 0.791, 0.500, 0.998]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_upper_campus_env_where_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_upper_campus_env_where_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.2559065437316895,
+                          0.7911369516789187,
+                          0.49977455139160154,
+                          0.9977151000175727
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "env_how",
+            "task_title": "Goal-conditioned Action Decision",
+            "examples": [
+              {
+                "example_id": "gauu_upper_campus_gauu_upper_candidate_0104_env_shared_4way_170002_how",
+                "scene_id": "gauu_upper_campus",
+                "difficulty": "4way",
+                "prompt_excerpt": "Image 1 shows the Right facade of a shipping container stack visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Right\nC. Left\nD. Front",
+                "input_summary": "a shipping container stack visible from multiple aerial viewpoints",
+                "task_id": "env_how",
+                "task_modality": "image",
+                "gold_answer": "D",
+                "gold_bbox": "[0.256, 0.791, 0.500, 0.998]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_upper_campus_env_how_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_upper_campus_env_how_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.2559065437316895,
+                          0.7911369516789187,
+                          0.49977455139160154,
+                          0.9977151000175727
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "scene_id": "gauu_lfls",
+      "scene": "LFLS",
+      "checkpoint": "LFLS.zip",
+      "status": "image_task_generation_complete_model_evaluation_pending",
+      "statistics": {
+        "registered_views": 553,
+        "sampled_views": 200,
+        "landmark_candidates": 100,
+        "temporary_landmarks": 20,
+        "covered_candidate_grids": 22,
+        "covered_temporary_grids": 15,
+        "registered_landmark_views": 103,
+        "image_tasks": 160
+      },
+      "task_counts": {
+        "self_where": 40,
+        "self_what": 40,
+        "env_where": 40,
+        "env_how": 40
+      },
+      "audit": {
+        "stage4_manifest": "task_pipeline_data/uav_dualcog_3dgs_real_scene_pilot_lfls/gsplat_gauu_lfls/qa/manifests/gauu_lfls.latest_manifest.json",
+        "selected_landmark_ids": [
+          "gauu_lfls_candidate_0000",
+          "gauu_lfls_candidate_0038",
+          "gauu_lfls_candidate_0040",
+          "gauu_lfls_candidate_0046",
+          "gauu_lfls_candidate_0059",
+          "gauu_lfls_candidate_0065",
+          "gauu_lfls_candidate_0078",
+          "gauu_lfls_candidate_0079",
+          "gauu_lfls_candidate_0127",
+          "gauu_lfls_candidate_0138",
+          "gauu_lfls_candidate_0142",
+          "gauu_lfls_candidate_0175",
+          "gauu_lfls_candidate_0204",
+          "gauu_lfls_candidate_0376",
+          "gauu_lfls_candidate_0391",
+          "gauu_lfls_candidate_0402",
+          "gauu_lfls_candidate_0476",
+          "gauu_lfls_candidate_0618",
+          "gauu_lfls_candidate_0637",
+          "gauu_lfls_candidate_0800"
+        ],
+        "video_tasks": "deferred_after_free_viewpoint_render_quality_gate",
+        "model_evaluation_status": "not_started"
+      },
+      "examples": {
+        "groups": [
+          {
+            "task_id": "self_where",
+            "task_title": "Self-relative Position Reasoning",
+            "examples": [
+              {
+                "example_id": "gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_where",
+                "scene_id": "gauu_lfls",
+                "difficulty": "8way",
+                "prompt_excerpt": "Image 1 shows the Front facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Front-Right\nC. Left\nD. Right",
+                "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+                "task_id": "self_where",
+                "task_modality": "image",
+                "gold_answer": "D",
+                "gold_bbox": "[0.325, 0.002, 0.462, 0.282]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_lfls_self_where_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_lfls_self_where_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.3254150152206421,
+                          0.001722633768777076,
+                          0.461915922164917,
+                          0.2823376314581349
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "self_what",
+            "task_title": "Action-conditioned Future Observation Prediction",
+            "examples": [
+              {
+                "example_id": "gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_what",
+                "scene_id": "gauu_lfls",
+                "difficulty": "8way",
+                "prompt_excerpt": "Image 1 shows the Front facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 45-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+                "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+                "task_id": "self_what",
+                "task_modality": "image",
+                "gold_answer": "A",
+                "gold_bbox": "[0.532, 0.002, 0.676, 0.295]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_lfls_self_what_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_lfls_self_what_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.5324599266052246,
+                          0.0017677396011799749,
+                          0.6755365848541259,
+                          0.29532908610693875
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "env_where",
+            "task_title": "Landmark-relative Position Reasoning",
+            "examples": [
+              {
+                "example_id": "gauu_lfls_gauu_lfls_candidate_0059_env_shared_8way_060004_where",
+                "scene_id": "gauu_lfls",
+                "difficulty": "8way",
+                "prompt_excerpt": "Image 1 shows the Right facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Front-Left\nC. Front-Right\nD. Right",
+                "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+                "task_id": "env_where",
+                "task_modality": "image",
+                "gold_answer": "B",
+                "gold_bbox": "[0.532, 0.002, 0.676, 0.295]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_lfls_env_where_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_lfls_env_where_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.5324599266052246,
+                          0.0017677396011799749,
+                          0.6755365848541259,
+                          0.29532908610693875
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "env_how",
+            "task_title": "Goal-conditioned Action Decision",
+            "examples": [
+              {
+                "example_id": "gauu_lfls_gauu_lfls_candidate_0059_env_shared_8way_060004_how",
+                "scene_id": "gauu_lfls",
+                "difficulty": "8way",
+                "prompt_excerpt": "Image 1 shows the Right facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Back-Left\nC. Front-Left\nD. Back",
+                "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+                "task_id": "env_how",
+                "task_modality": "image",
+                "gold_answer": "C",
+                "gold_bbox": "[0.532, 0.002, 0.676, 0.295]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_lfls_env_how_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_lfls_env_how_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.5324599266052246,
+                          0.0017677396011799749,
+                          0.6755365848541259,
+                          0.29532908610693875
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "scene_id": "gauu_smbu",
+      "scene": "SMBU",
+      "checkpoint": "SMBU.zip",
+      "status": "image_task_generation_complete_model_evaluation_pending",
+      "statistics": {
+        "registered_views": 415,
+        "sampled_views": 200,
+        "landmark_candidates": 100,
+        "temporary_landmarks": 20,
+        "covered_candidate_grids": 22,
+        "covered_temporary_grids": 19,
+        "registered_landmark_views": 140,
+        "image_tasks": 160
+      },
+      "task_counts": {
+        "self_where": 40,
+        "self_what": 40,
+        "env_where": 40,
+        "env_how": 40
+      },
+      "audit": {
+        "stage4_manifest": "task_pipeline_data/uav_dualcog_3dgs_real_scene_pilot_smbu/gsplat_gauu_smbu/qa/manifests/gauu_smbu.latest_manifest.json",
+        "selected_landmark_ids": [
+          "gauu_smbu_candidate_0000",
+          "gauu_smbu_candidate_0006",
+          "gauu_smbu_candidate_0009",
+          "gauu_smbu_candidate_0011",
+          "gauu_smbu_candidate_0040",
+          "gauu_smbu_candidate_0043",
+          "gauu_smbu_candidate_0046",
+          "gauu_smbu_candidate_0050",
+          "gauu_smbu_candidate_0055",
+          "gauu_smbu_candidate_0059",
+          "gauu_smbu_candidate_0065",
+          "gauu_smbu_candidate_0071",
+          "gauu_smbu_candidate_0077",
+          "gauu_smbu_candidate_0101",
+          "gauu_smbu_candidate_0119",
+          "gauu_smbu_candidate_0130",
+          "gauu_smbu_candidate_0203",
+          "gauu_smbu_candidate_0271",
+          "gauu_smbu_candidate_0291",
+          "gauu_smbu_candidate_0329"
+        ],
+        "video_tasks": "deferred_after_free_viewpoint_render_quality_gate",
+        "model_evaluation_status": "not_started"
+      },
+      "examples": {
+        "groups": [
+          {
+            "task_id": "self_where",
+            "task_title": "Self-relative Position Reasoning",
+            "examples": [
+              {
+                "example_id": "gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_where",
+                "scene_id": "gauu_smbu",
+                "difficulty": "4way",
+                "prompt_excerpt": "Image 1 shows the Back facade of a landmark signage visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Right\nC. Front\nD. Left",
+                "input_summary": "a landmark signage visible from multiple aerial viewpoints",
+                "task_id": "self_where",
+                "task_modality": "image",
+                "gold_answer": "D",
+                "gold_bbox": "[0.435, 0.601, 0.480, 0.656]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_smbu_self_where_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_smbu_self_where_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.4354578971862793,
+                          0.60113260642585,
+                          0.4797126293182373,
+                          0.6561571950789493
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "self_what",
+            "task_title": "Action-conditioned Future Observation Prediction",
+            "examples": [
+              {
+                "example_id": "gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_what",
+                "scene_id": "gauu_smbu",
+                "difficulty": "4way",
+                "prompt_excerpt": "Image 1 shows the Back facade of a landmark signage visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+                "input_summary": "a landmark signage visible from multiple aerial viewpoints",
+                "task_id": "self_what",
+                "task_modality": "image",
+                "gold_answer": "A",
+                "gold_bbox": "[0.457, 0.639, 0.512, 0.722]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_smbu_self_what_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_smbu_self_what_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.4567230224609375,
+                          0.6392392944479045,
+                          0.5120807647705078,
+                          0.7222975521825542
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "env_where",
+            "task_title": "Landmark-relative Position Reasoning",
+            "examples": [
+              {
+                "example_id": "gauu_smbu_gauu_smbu_candidate_0203_env_shared_8way_050004_where",
+                "scene_id": "gauu_smbu",
+                "difficulty": "8way",
+                "prompt_excerpt": "Image 1 shows the Front facade of a railway track visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Left\nC. Back\nD. Front",
+                "input_summary": "a railway track visible from multiple aerial viewpoints",
+                "task_id": "env_where",
+                "task_modality": "image",
+                "gold_answer": "B",
+                "gold_bbox": "[0.087, 0.370, 0.270, 0.874]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_smbu_env_where_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_smbu_env_where_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.08694043159484863,
+                          0.3701595829631631,
+                          0.26991543769836424,
+                          0.8735287164328107
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "task_id": "env_how",
+            "task_title": "Goal-conditioned Action Decision",
+            "examples": [
+              {
+                "example_id": "gauu_smbu_gauu_smbu_candidate_0203_env_shared_8way_050004_how",
+                "scene_id": "gauu_smbu",
+                "difficulty": "8way",
+                "prompt_excerpt": "Image 1 shows the Front facade of a railway track visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Back-Left\nC. Left\nD. Right",
+                "input_summary": "a railway track visible from multiple aerial viewpoints",
+                "task_id": "env_how",
+                "task_modality": "image",
+                "gold_answer": "C",
+                "gold_bbox": "[0.087, 0.370, 0.270, 0.874]",
+                "predictions": [],
+                "media_panels": [
+                  {
+                    "kind": "image",
+                    "label": "Reference landmark view",
+                    "url": "/media/real-world/gauu_smbu_env_how_reference.jpg"
+                  },
+                  {
+                    "kind": "image",
+                    "label": "Query observation",
+                    "url": "/media/real-world/gauu_smbu_env_how_query.jpg",
+                    "overlays": [
+                      {
+                        "label": "Ground-truth landmark",
+                        "color": "#16a085",
+                        "bbox": [
+                          0.08694043159484863,
+                          0.3701595829631631,
+                          0.26991543769836424,
+                          0.8735287164328107
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "examples": {
+    "groups": [
+      {
+        "task_id": "self_where",
+        "task_title": "Self-relative Position Reasoning",
+        "examples": [
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0390_self_shared_4way_010001_where",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "4way",
+            "prompt_excerpt": "Image 1 shows the Front facade of a brick schoolhouse visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Back\nD. Right",
+            "input_summary": "a brick schoolhouse visible from multiple aerial viewpoints",
+            "task_id": "self_where",
+            "task_modality": "image",
+            "gold_answer": "A",
+            "gold_bbox": "[0.055, 0.634, 0.247, 0.996]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_upper_campus_self_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_upper_campus_self_where_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.05500516891479492,
+                      0.6342501725229909,
+                      0.24717330932617188,
+                      0.9964370799042291
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_where",
+            "scene_id": "gauu_lfls",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Front-Right\nC. Left\nD. Right",
+            "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+            "task_id": "self_where",
+            "task_modality": "image",
+            "gold_answer": "D",
+            "gold_bbox": "[0.325, 0.002, 0.462, 0.282]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_lfls_self_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_lfls_self_where_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.3254150152206421,
+                      0.001722633768777076,
+                      0.461915922164917,
+                      0.2823376314581349
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_where",
+            "scene_id": "gauu_smbu",
+            "difficulty": "4way",
+            "prompt_excerpt": "Image 1 shows the Back facade of a landmark signage visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Right\nC. Front\nD. Left",
+            "input_summary": "a landmark signage visible from multiple aerial viewpoints",
+            "task_id": "self_where",
+            "task_modality": "image",
+            "gold_answer": "D",
+            "gold_bbox": "[0.435, 0.601, 0.480, 0.656]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_smbu_self_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_smbu_self_where_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.4354578971862793,
+                      0.60113260642585,
+                      0.4797126293182373,
+                      0.6561571950789493
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "self_what",
+        "task_title": "Action-conditioned Future Observation Prediction",
+        "examples": [
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_self_shared_4way_030001_what",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "4way",
+            "prompt_excerpt": "Image 1 shows the Front facade of a pedestrian crosswalk visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 0-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+            "input_summary": "a pedestrian crosswalk visible from multiple aerial viewpoints",
+            "task_id": "self_what",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.287, 0.116, 0.386, 0.232]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_upper_campus_self_what_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_upper_campus_self_what_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.28699115753173826,
+                      0.11632616495348744,
+                      0.3863999557495117,
+                      0.23225285566735737
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0059_self_shared_8way_060003_what",
+            "scene_id": "gauu_lfls",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 45-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+            "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+            "task_id": "self_what",
+            "task_modality": "image",
+            "gold_answer": "A",
+            "gold_bbox": "[0.532, 0.002, 0.676, 0.295]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_lfls_self_what_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_lfls_self_what_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.5324599266052246,
+                      0.0017677396011799749,
+                      0.6755365848541259,
+                      0.29532908610693875
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0006_self_shared_4way_030001_what",
+            "scene_id": "gauu_smbu",
+            "difficulty": "4way",
+            "prompt_excerpt": "Image 1 shows the Back facade of a landmark signage visible from multiple aerial viewpoints in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+            "input_summary": "a landmark signage visible from multiple aerial viewpoints",
+            "task_id": "self_what",
+            "task_modality": "image",
+            "gold_answer": "A",
+            "gold_bbox": "[0.457, 0.639, 0.512, 0.722]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_smbu_self_what_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_smbu_self_what_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.4567230224609375,
+                      0.6392392944479045,
+                      0.5120807647705078,
+                      0.7222975521825542
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "env_where",
+        "task_title": "Landmark-relative Position Reasoning",
+        "examples": [
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0104_env_shared_4way_170002_where",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "4way",
+            "prompt_excerpt": "Image 1 shows the Right facade of a shipping container stack visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Left\nB. Right\nC. Front\nD. Back",
+            "input_summary": "a shipping container stack visible from multiple aerial viewpoints",
+            "task_id": "env_where",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.256, 0.791, 0.500, 0.998]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_upper_campus_env_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_upper_campus_env_where_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.2559065437316895,
+                      0.7911369516789187,
+                      0.49977455139160154,
+                      0.9977151000175727
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0059_env_shared_8way_060004_where",
+            "scene_id": "gauu_lfls",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Right facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Front-Left\nC. Front-Right\nD. Right",
+            "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+            "task_id": "env_where",
+            "task_modality": "image",
+            "gold_answer": "B",
+            "gold_bbox": "[0.532, 0.002, 0.676, 0.295]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_lfls_env_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_lfls_env_where_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.5324599266052246,
+                      0.0017677396011799749,
+                      0.6755365848541259,
+                      0.29532908610693875
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0203_env_shared_8way_050004_where",
+            "scene_id": "gauu_smbu",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front facade of a railway track visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Left\nC. Back\nD. Front",
+            "input_summary": "a railway track visible from multiple aerial viewpoints",
+            "task_id": "env_where",
+            "task_modality": "image",
+            "gold_answer": "B",
+            "gold_bbox": "[0.087, 0.370, 0.270, 0.874]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_smbu_env_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_smbu_env_where_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.08694043159484863,
+                      0.3701595829631631,
+                      0.26991543769836424,
+                      0.8735287164328107
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "env_how",
+        "task_title": "Goal-conditioned Action Decision",
+        "examples": [
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0104_env_shared_4way_170002_how",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "4way",
+            "prompt_excerpt": "Image 1 shows the Right facade of a shipping container stack visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Right\nC. Left\nD. Front",
+            "input_summary": "a shipping container stack visible from multiple aerial viewpoints",
+            "task_id": "env_how",
+            "task_modality": "image",
+            "gold_answer": "D",
+            "gold_bbox": "[0.256, 0.791, 0.500, 0.998]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_upper_campus_env_how_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_upper_campus_env_how_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.2559065437316895,
+                      0.7911369516789187,
+                      0.49977455139160154,
+                      0.9977151000175727
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0059_env_shared_8way_060004_how",
+            "scene_id": "gauu_lfls",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Right facade of a high-rise building visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Back-Left\nC. Front-Left\nD. Back",
+            "input_summary": "a high-rise building visible from multiple aerial viewpoints",
+            "task_id": "env_how",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.532, 0.002, 0.676, 0.295]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_lfls_env_how_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_lfls_env_how_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.5324599266052246,
+                      0.0017677396011799749,
+                      0.6755365848541259,
+                      0.29532908610693875
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0203_env_shared_8way_050004_how",
+            "scene_id": "gauu_smbu",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front facade of a railway track visible from multiple aerial viewpoints in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Back-Left\nC. Left\nD. Right",
+            "input_summary": "a railway track visible from multiple aerial viewpoints",
+            "task_id": "env_how",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.087, 0.370, 0.270, 0.874]",
+            "predictions": [],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/media/real-world/gauu_smbu_env_how_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/media/real-world/gauu_smbu_env_how_query.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground-truth landmark",
+                    "color": "#16a085",
+                    "bbox": [
+                      0.08694043159484863,
+                      0.3701595829631631,
+                      0.26991543769836424,
+                      0.8735287164328107
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

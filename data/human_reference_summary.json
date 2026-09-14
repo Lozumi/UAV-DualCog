@@ -10,7 +10,7 @@
   "method": "For each image task, select the two complete observed questionnaires with the highest BBox Acc@0.5, breaking ties by mIoU and then semantic accuracy. For each video level, select the two questionnaires with the highest F1@0.5, breaking ties by mtIoU and then semantic accuracy. Retain all seven observed questionnaires and generate 23 synthetic questionnaires by balanced source rotation and within-task bootstrap resampling.",
   "image": {
     "overall": {
-      "Acc": 86.35,
+      "Acc": 86.36,
       "BBox Acc@0.5": 69.9,
       "mIoU": 55.52
     },

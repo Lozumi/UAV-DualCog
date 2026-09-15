@@ -67,12 +67,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_upper_campus_self_where_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_upper_campus_self_where_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -109,12 +109,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_upper_campus_self_what_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_upper_campus_self_what_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -151,12 +151,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_upper_campus_env_where_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_upper_campus_env_where_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -193,12 +193,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_upper_campus_env_how_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_upper_campus_env_how_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -273,12 +273,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_lfls_self_where_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_lfls_self_where_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -315,12 +315,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_lfls_self_what_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_lfls_self_what_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -357,12 +357,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_lfls_env_where_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_lfls_env_where_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -399,12 +399,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_lfls_env_how_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_lfls_env_how_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -479,12 +479,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_smbu_self_where_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_smbu_self_where_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -521,12 +521,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_smbu_self_what_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_smbu_self_what_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -563,12 +563,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_smbu_env_where_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_smbu_env_where_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -605,12 +605,12 @@
                   {
                     "kind": "image",
                     "label": "Reference landmark view",
-                    "url": "/media/real-world/gauu_smbu_env_how_reference.jpg"
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_reference.jpg"
                   },
                   {
                     "kind": "image",
                     "label": "Query observation",
-                    "url": "/media/real-world/gauu_smbu_env_how_query.jpg",
+                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_query.jpg",
                     "overlays": [
                       {
                         "label": "Ground-truth landmark",
@@ -653,12 +653,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_upper_campus_self_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_upper_campus_self_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -689,12 +689,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_lfls_self_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_lfls_self_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -725,12 +725,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_smbu_self_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_smbu_self_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -767,12 +767,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_upper_campus_self_what_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_upper_campus_self_what_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -803,12 +803,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_lfls_self_what_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_lfls_self_what_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -839,12 +839,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_smbu_self_what_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_smbu_self_what_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -881,12 +881,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_upper_campus_env_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_upper_campus_env_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -917,12 +917,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_lfls_env_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_lfls_env_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -953,12 +953,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_smbu_env_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_smbu_env_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -995,12 +995,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_upper_campus_env_how_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_upper_campus_env_how_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -1031,12 +1031,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_lfls_env_how_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_lfls_env_how_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",
@@ -1067,12 +1067,12 @@
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/media/real-world/gauu_smbu_env_how_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/media/real-world/gauu_smbu_env_how_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground-truth landmark",

@@ -5,4 +5,4 @@ This repository hosts the supplementary website for **UAV-DualCog**, currently u
 - Website: https://anonymous.4open.science/w/UAV-DualCog
 - Code: https://anonymous.4open.science/r/UAV-DualCog-Code
 
-The website presents the benchmark design, construction pipeline, evaluation protocol, leaderboard, analysis, training details, and usage instructions.
+The website presents the benchmark design, construction pipeline, evaluation protocol, leaderboard, paired dual-cognition analysis, training details, a Real-to-Sim image pilot, and usage instructions.

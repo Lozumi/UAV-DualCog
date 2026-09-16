@@ -1,635 +1,130 @@
 {
-  "generated_at": "2026-09-14T21:37:13.433837+00:00",
-  "scene": "GauUscene V2.1 direct-load CityGaussianV2 scenes",
-  "status": "image_task_generation_complete_model_evaluation_pending",
+  "generated_at": "2026-09-16T04:36:35.909119+00:00",
+  "status": "evaluation_complete",
   "statistics": {
     "registered_views": 1326,
     "sampled_views": 600,
     "landmark_candidates": 300,
-    "temporary_landmarks": 15,
-    "covered_candidate_grids": 68,
-    "covered_temporary_grids": 15,
-    "registered_landmark_views": 94,
-    "image_tasks": 120
+    "reviewed_landmarks": 30,
+    "image_tasks": 400,
+    "models": 19
   },
   "scenes": [
-    {
-      "scene_id": "gauu_upper_campus",
-      "scene": "Upper Campus",
-      "checkpoint": "UPPER_CAMPUS.zip",
-      "status": "image_task_generation_complete_model_evaluation_pending",
-      "statistics": {
-        "registered_views": 358,
-        "sampled_views": 200,
-        "landmark_candidates": 100,
-        "temporary_landmarks": 5,
-        "covered_candidate_grids": 24,
-        "covered_temporary_grids": 5,
-        "registered_landmark_views": 31,
-        "image_tasks": 40
-      },
-      "task_counts": {
-        "self_where": 10,
-        "self_what": 10,
-        "env_where": 10,
-        "env_how": 10
-      },
-      "audit": {
-        "stage4_manifest": "task_pipeline_data/uav_dualcog_3dgs_real_scene_pilot_final/gsplat_gauu_upper_campus/qa/manifests/gauu_upper_campus.latest_manifest.json",
-        "selected_landmark_ids": [
-          "gauu_upper_candidate_0008",
-          "gauu_upper_candidate_0063",
-          "gauu_upper_candidate_0107",
-          "gauu_upper_candidate_0143",
-          "gauu_upper_candidate_0390"
-        ],
-        "video_tasks": "deferred_after_free_viewpoint_render_quality_gate",
-        "model_evaluation_status": "not_started"
-      },
-      "examples": {
-        "groups": [
-          {
-            "task_id": "self_where",
-            "task_title": "Self-relative Position Reasoning",
-            "examples": [
-              {
-                "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_self_shared_4way_010001_where",
-                "scene_id": "gauu_upper_campus",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Back\nD. Right",
-                "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-                "task_id": "self_where",
-                "task_modality": "image",
-                "gold_answer": "A",
-                "gold_bbox": "[0.612, 0.150, 0.778, 0.741]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.6119572067260742,
-                          0.14971885216381356,
-                          0.7775363922119141,
-                          0.7414148075064433
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "self_what",
-            "task_title": "Action-conditioned Future Observation Prediction",
-            "examples": [
-              {
-                "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_self_shared_4way_010001_what",
-                "scene_id": "gauu_upper_campus",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
-                "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-                "task_id": "self_what",
-                "task_modality": "image",
-                "gold_answer": "D",
-                "gold_bbox": "[0.572, 0.002, 0.668, 0.345]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.5716004943847657,
-                          0.0015270561398807371,
-                          0.66834228515625,
-                          0.34460966902127754
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "env_where",
-            "task_title": "Landmark-relative Position Reasoning",
-            "examples": [
-              {
-                "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_env_shared_8way_010004_where",
-                "scene_id": "gauu_upper_campus",
-                "difficulty": "8way",
-                "prompt_excerpt": "Image 1 shows the Front-Right facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front-Right\nB. Back\nC. Front\nD. Back-Left",
-                "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-                "task_id": "env_where",
-                "task_modality": "image",
-                "gold_answer": "C",
-                "gold_bbox": "[0.518, 0.126, 0.655, 0.711]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.5184074020385743,
-                          0.12601799147086604,
-                          0.6545885467529297,
-                          0.711233637773108
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "env_how",
-            "task_title": "Goal-conditioned Action Decision",
-            "examples": [
-              {
-                "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_env_shared_8way_010004_how",
-                "scene_id": "gauu_upper_campus",
-                "difficulty": "8way",
-                "prompt_excerpt": "Image 1 shows the Front-Right facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Right\nC. Left\nD. Front",
-                "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-                "task_id": "env_how",
-                "task_modality": "image",
-                "gold_answer": "D",
-                "gold_bbox": "[0.518, 0.126, 0.655, 0.711]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.5184074020385743,
-                          0.12601799147086604,
-                          0.6545885467529297,
-                          0.711233637773108
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
     {
       "scene_id": "gauu_lfls",
       "scene": "LFLS",
       "checkpoint": "LFLS.zip",
-      "status": "image_task_generation_complete_model_evaluation_pending",
       "statistics": {
         "registered_views": 553,
-        "sampled_views": 200,
-        "landmark_candidates": 100,
-        "temporary_landmarks": 5,
-        "covered_candidate_grids": 22,
-        "covered_temporary_grids": 5,
-        "registered_landmark_views": 25,
-        "image_tasks": 40
+        "landmarks": 11,
+        "image_tasks": 114
       },
       "task_counts": {
-        "self_where": 10,
-        "self_what": 10,
-        "env_where": 10,
-        "env_how": 10
-      },
-      "audit": {
-        "stage4_manifest": "task_pipeline_data/uav_dualcog_3dgs_real_scene_pilot_lfls/gsplat_gauu_lfls/qa/manifests/gauu_lfls.latest_manifest.json",
-        "selected_landmark_ids": [
-          "gauu_lfls_candidate_0078",
-          "gauu_lfls_candidate_0142",
-          "gauu_lfls_candidate_0402",
-          "gauu_lfls_candidate_0476",
-          "gauu_lfls_candidate_0800"
-        ],
-        "video_tasks": "deferred_after_free_viewpoint_render_quality_gate",
-        "model_evaluation_status": "not_started"
-      },
-      "examples": {
-        "groups": [
-          {
-            "task_id": "self_where",
-            "task_title": "Self-relative Position Reasoning",
-            "examples": [
-              {
-                "example_id": "gauu_lfls_gauu_lfls_candidate_0800_self_shared_4way_020001_where",
-                "scene_id": "gauu_lfls",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Right facade of a rectangular industrial hall with a pale green central roof panel in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Right\nD. Back",
-                "input_summary": "a rectangular industrial hall with a pale green central roof panel",
-                "task_id": "self_where",
-                "task_modality": "image",
-                "gold_answer": "A",
-                "gold_bbox": "[0.679, 0.132, 0.983, 0.570]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.6788427829742432,
-                          0.13168762493245348,
-                          0.9828988075256347,
-                          0.5702894239884049
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "self_what",
-            "task_title": "Action-conditioned Future Observation Prediction",
-            "examples": [
-              {
-                "example_id": "gauu_lfls_gauu_lfls_candidate_0078_self_shared_4way_030001_what",
-                "scene_id": "gauu_lfls",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a group of bright blue sports courts on a large rectangular rooftop in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 0-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
-                "input_summary": "a group of bright blue sports courts on a large rectangular rooftop",
-                "task_id": "self_what",
-                "task_modality": "image",
-                "gold_answer": "C",
-                "gold_bbox": "[0.313, 0.633, 0.695, 0.997]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.3134263038635254,
-                          0.6325260712421233,
-                          0.6954907894134521,
-                          0.9967642780764581
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "env_where",
-            "task_title": "Landmark-relative Position Reasoning",
-            "examples": [
-              {
-                "example_id": "gauu_lfls_gauu_lfls_candidate_0402_env_shared_4way_010002_where",
-                "scene_id": "gauu_lfls",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a stepped white apartment block following the bend of a narrow river in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Front\nC. Right\nD. Left",
-                "input_summary": "a stepped white apartment block following the bend of a narrow river",
-                "task_id": "env_where",
-                "task_modality": "image",
-                "gold_answer": "D",
-                "gold_bbox": "[0.078, 0.088, 0.197, 0.236]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.07767819166183472,
-                          0.08757181827236592,
-                          0.19657702445983888,
-                          0.23557591857552387
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "env_how",
-            "task_title": "Goal-conditioned Action Decision",
-            "examples": [
-              {
-                "example_id": "gauu_lfls_gauu_lfls_candidate_0402_env_shared_4way_010002_how",
-                "scene_id": "gauu_lfls",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a stepped white apartment block following the bend of a narrow river in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Front\nC. Left\nD. Back",
-                "input_summary": "a stepped white apartment block following the bend of a narrow river",
-                "task_id": "env_how",
-                "task_modality": "image",
-                "gold_answer": "C",
-                "gold_bbox": "[0.078, 0.088, 0.197, 0.236]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.07767819166183472,
-                          0.08757181827236592,
-                          0.19657702445983888,
-                          0.23557591857552387
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "self_where": 20,
+        "self_what": 20,
+        "env_where": 37,
+        "env_how": 37
       }
     },
     {
       "scene_id": "gauu_smbu",
       "scene": "SMBU",
       "checkpoint": "SMBU.zip",
-      "status": "image_task_generation_complete_model_evaluation_pending",
       "statistics": {
         "registered_views": 415,
-        "sampled_views": 200,
-        "landmark_candidates": 100,
-        "temporary_landmarks": 5,
-        "covered_candidate_grids": 22,
-        "covered_temporary_grids": 5,
-        "registered_landmark_views": 38,
-        "image_tasks": 40
+        "landmarks": 10,
+        "image_tasks": 166
       },
       "task_counts": {
-        "self_where": 10,
-        "self_what": 10,
-        "env_where": 10,
-        "env_how": 10
-      },
-      "audit": {
-        "stage4_manifest": "task_pipeline_data/uav_dualcog_3dgs_real_scene_pilot_smbu/gsplat_gauu_smbu/qa/manifests/gauu_smbu.latest_manifest.json",
-        "selected_landmark_ids": [
-          "gauu_smbu_candidate_0011",
-          "gauu_smbu_candidate_0055",
-          "gauu_smbu_candidate_0077",
-          "gauu_smbu_candidate_0271",
-          "gauu_smbu_candidate_0329"
-        ],
-        "video_tasks": "deferred_after_free_viewpoint_render_quality_gate",
-        "model_evaluation_status": "not_started"
-      },
-      "examples": {
-        "groups": [
-          {
-            "task_id": "self_where",
-            "task_title": "Self-relative Position Reasoning",
-            "examples": [
-              {
-                "example_id": "gauu_smbu_gauu_smbu_candidate_0055_self_shared_8way_040003_where",
-                "scene_id": "gauu_smbu",
-                "difficulty": "8way",
-                "prompt_excerpt": "Image 1 shows the Back-Left facade of an elongated ornamental lake beside a circular white building and paved plaza in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Front-Left\nC. Right\nD. Front",
-                "input_summary": "an elongated ornamental lake beside a circular white building and paved plaza",
-                "task_id": "self_where",
-                "task_modality": "image",
-                "gold_answer": "C",
-                "gold_bbox": "[0.533, 0.540, 0.998, 0.989]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.5333284854888916,
-                          0.5403241675176765,
-                          0.9977849960327149,
-                          0.9887371890570047
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "self_what",
-            "task_title": "Action-conditioned Future Observation Prediction",
-            "examples": [
-              {
-                "example_id": "gauu_smbu_gauu_smbu_candidate_0055_self_shared_8way_040003_what",
-                "scene_id": "gauu_smbu",
-                "difficulty": "8way",
-                "prompt_excerpt": "Image 1 shows the Back-Left facade of an elongated ornamental lake beside a circular white building and paved plaza in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 135-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
-                "input_summary": "an elongated ornamental lake beside a circular white building and paved plaza",
-                "task_id": "self_what",
-                "task_modality": "image",
-                "gold_answer": "B",
-                "gold_bbox": "[0.533, 0.540, 0.998, 0.989]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.5333284854888916,
-                          0.5403241675176765,
-                          0.9977849960327149,
-                          0.9887371890570047
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "env_where",
-            "task_title": "Landmark-relative Position Reasoning",
-            "examples": [
-              {
-                "example_id": "gauu_smbu_gauu_smbu_candidate_0329_env_shared_4way_020002_where",
-                "scene_id": "gauu_smbu",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a tall white residential tower beside an open lawn and wooded area in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Left\nB. Back\nC. Front\nD. Right",
-                "input_summary": "a tall white residential tower beside an open lawn and wooded area",
-                "task_id": "env_where",
-                "task_modality": "image",
-                "gold_answer": "A",
-                "gold_bbox": "[0.172, 0.003, 0.303, 0.231]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.1719407320022583,
-                          0.002760082448353382,
-                          0.30289411544799805,
-                          0.23062477245979265
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "task_id": "env_how",
-            "task_title": "Goal-conditioned Action Decision",
-            "examples": [
-              {
-                "example_id": "gauu_smbu_gauu_smbu_candidate_0329_env_shared_4way_020002_how",
-                "scene_id": "gauu_smbu",
-                "difficulty": "4way",
-                "prompt_excerpt": "Image 1 shows the Front facade of a tall white residential tower beside an open lawn and wooded area in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Front\nC. Left\nD. Back",
-                "input_summary": "a tall white residential tower beside an open lawn and wooded area",
-                "task_id": "env_how",
-                "task_modality": "image",
-                "gold_answer": "C",
-                "gold_bbox": "[0.172, 0.003, 0.303, 0.231]",
-                "predictions": [],
-                "media_panels": [
-                  {
-                    "kind": "image",
-                    "label": "Reference landmark view",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_reference.jpg"
-                  },
-                  {
-                    "kind": "image",
-                    "label": "Query observation",
-                    "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_query.jpg",
-                    "overlays": [
-                      {
-                        "label": "Ground-truth landmark",
-                        "color": "#16a085",
-                        "bbox": [
-                          0.1719407320022583,
-                          0.002760082448353382,
-                          0.30289411544799805,
-                          0.23062477245979265
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "self_where": 50,
+        "self_what": 50,
+        "env_where": 33,
+        "env_how": 33
       }
+    },
+    {
+      "scene_id": "gauu_upper_campus",
+      "scene": "Upper Campus",
+      "checkpoint": "UPPER_CAMPUS.zip",
+      "statistics": {
+        "registered_views": 358,
+        "landmarks": 9,
+        "image_tasks": 120
+      },
+      "task_counts": {
+        "self_where": 30,
+        "self_what": 30,
+        "env_where": 30,
+        "env_how": 30
+      }
+    }
+  ],
+  "scene_gallery": [
+    {
+      "scene_id": "gauu_lfls",
+      "label": "LFLS",
+      "images": [
+        {
+          "label": "Full-scene aerial panorama",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_panorama.jpg"
+        },
+        {
+          "label": "Registered aerial view 1",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_scene_1.jpg"
+        },
+        {
+          "label": "Registered aerial view 2",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_scene_2.jpg"
+        }
+      ],
+      "boundary": "Registered reconstruction coverage",
+      "area_m2": 0,
+      "raw_landmark_candidates": 100,
+      "reviewed_valid_landmarks": 11
+    },
+    {
+      "scene_id": "gauu_smbu",
+      "label": "SMBU",
+      "images": [
+        {
+          "label": "Full-scene aerial panorama",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_panorama.jpg"
+        },
+        {
+          "label": "Registered aerial view 1",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_scene_1.jpg"
+        },
+        {
+          "label": "Registered aerial view 2",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_scene_2.jpg"
+        }
+      ],
+      "boundary": "Registered reconstruction coverage",
+      "area_m2": 0,
+      "raw_landmark_candidates": 100,
+      "reviewed_valid_landmarks": 10
+    },
+    {
+      "scene_id": "gauu_upper_campus",
+      "label": "Upper Campus",
+      "images": [
+        {
+          "label": "Full-scene aerial panorama",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_panorama.jpg"
+        },
+        {
+          "label": "Registered aerial view 1",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_scene_1.jpg"
+        },
+        {
+          "label": "Registered aerial view 2",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_scene_2.jpg"
+        }
+      ],
+      "boundary": "Registered reconstruction coverage",
+      "area_m2": 0,
+      "raw_landmark_candidates": 100,
+      "reviewed_valid_landmarks": 9
     }
   ],
   "examples": {
@@ -639,71 +134,107 @@
         "task_title": "Self-relative Position Reasoning",
         "examples": [
           {
-            "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_self_shared_4way_010001_where",
-            "scene_id": "gauu_upper_campus",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Back\nD. Right",
-            "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-            "task_id": "self_where",
-            "task_modality": "image",
-            "gold_answer": "A",
-            "gold_bbox": "[0.612, 0.150, 0.778, 0.741]",
-            "predictions": [],
-            "media_panels": [
-              {
-                "kind": "image",
-                "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_reference.jpg"
-              },
-              {
-                "kind": "image",
-                "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_query.jpg",
-                "overlays": [
-                  {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
-                    "bbox": [
-                      0.6119572067260742,
-                      0.14971885216381356,
-                      0.7775363922119141,
-                      0.7414148075064433
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "example_id": "gauu_lfls_gauu_lfls_candidate_0800_self_shared_4way_020001_where",
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where",
             "scene_id": "gauu_lfls",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Right facade of a rectangular industrial hall with a pale green central roof panel in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Left\nC. Right\nD. Back",
-            "input_summary": "a rectangular industrial hall with a pale green central roof panel",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Back-Left facade of small green deciduous tree with rounded canopy located on a rooftop in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Front\nC. Front-Right\nD. Back-Right",
+            "input_summary": "small green deciduous tree with rounded canopy located on a rooftop",
             "task_id": "self_where",
             "task_modality": "image",
             "gold_answer": "A",
-            "gold_bbox": "[0.679, 0.132, 0.983, 0.570]",
-            "predictions": [],
+            "gold_bbox": "[0.795, 0.828, 0.856, 0.924]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "C",
+                "bbox": "[0.790, 0.830, 0.860, 0.920]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.829",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "C",
+                "bbox": "[0.020, 0.550, 0.100, 0.680]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "C",
+                "bbox": "[0.630, 0.680, 0.680, 0.730]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              }
+            ],
             "media_panels": [
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where_answer.jpg",
                 "overlays": [
                   {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
+                    "label": "Ground truth",
+                    "color": "#16a34a",
                     "bbox": [
-                      0.6788427829742432,
-                      0.13168762493245348,
-                      0.9828988075256347,
-                      0.5702894239884049
+                      0.7945070743560791,
+                      0.8276674867654601,
+                      0.8558773040771485,
+                      0.9235436997408045
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.79,
+                      0.83,
+                      0.86,
+                      0.92
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.02,
+                      0.55,
+                      0.1,
+                      0.68
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.63,
+                      0.68,
+                      0.68,
+                      0.73
                     ]
                   }
                 ]
@@ -711,35 +242,215 @@
             ]
           },
           {
-            "example_id": "gauu_smbu_gauu_smbu_candidate_0055_self_shared_8way_040003_where",
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where",
             "scene_id": "gauu_smbu",
             "difficulty": "8way",
-            "prompt_excerpt": "Image 1 shows the Back-Left facade of an elongated ornamental lake beside a circular white building and paved plaza in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Front-Left\nC. Right\nD. Front",
-            "input_summary": "an elongated ornamental lake beside a circular white building and paved plaza",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of tall white antenna tower with lattice structure in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Back-Left\nC. Right\nD. Front",
+            "input_summary": "tall white antenna tower with lattice structure",
             "task_id": "self_where",
             "task_modality": "image",
-            "gold_answer": "C",
-            "gold_bbox": "[0.533, 0.540, 0.998, 0.989]",
-            "predictions": [],
+            "gold_answer": "D",
+            "gold_bbox": "[0.140, 0.615, 0.206, 0.757]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "D",
+                "bbox": "[0.377, 0.472, 0.392, 0.530]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.360, 0.440, 0.410, 0.560]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "D",
+                "bbox": "[0.370, 0.530, 0.380, 0.550]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              }
+            ],
             "media_panels": [
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where_answer.jpg",
                 "overlays": [
                   {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
+                    "label": "Ground truth",
+                    "color": "#16a34a",
                     "bbox": [
-                      0.5333284854888916,
-                      0.5403241675176765,
-                      0.9977849960327149,
-                      0.9887371890570047
+                      0.1396665096282959,
+                      0.6150406080561255,
+                      0.20550863742828368,
+                      0.7566726523574883
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.377,
+                      0.472,
+                      0.392,
+                      0.53
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.36,
+                      0.44,
+                      0.41,
+                      0.56
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.37,
+                      0.53,
+                      0.38,
+                      0.55
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of white striped pedestrian crosswalk on asphalt road in the landmark-centric coordinate frame. Based on that reference, what is your position relative to the landmark in image 2? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Front\nC. Left\nD. Back-Right",
+            "input_summary": "white striped pedestrian crosswalk on asphalt road",
+            "task_id": "self_where",
+            "task_modality": "image",
+            "gold_answer": "B",
+            "gold_bbox": "[0.580, 0.245, 0.679, 0.346]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.580, 0.250, 0.680, 0.380]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.701",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "B",
+                "bbox": "[0.560, 0.250, 0.670, 0.360]",
+                "status": "correct",
+                "option_status": "correct",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.646",
+                "note": "Both outputs are correct."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "A",
+                "bbox": "[0.605, 0.235, 0.665, 0.295]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.283",
+                "note": "Both the semantic answer and localization are incorrect."
+              }
+            ],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where_answer.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground truth",
+                    "color": "#16a34a",
+                    "bbox": [
+                      0.5795146942138671,
+                      0.2445554009306174,
+                      0.6788516998291015,
+                      0.34638815453483773
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.58,
+                      0.25,
+                      0.68,
+                      0.38
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.56,
+                      0.25,
+                      0.67,
+                      0.36
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.605,
+                      0.235,
+                      0.665,
+                      0.295
                     ]
                   }
                 ]
@@ -753,107 +464,323 @@
         "task_title": "Action-conditioned Future Observation Prediction",
         "examples": [
           {
-            "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_self_shared_4way_010001_what",
-            "scene_id": "gauu_upper_campus",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
-            "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-            "task_id": "self_what",
-            "task_modality": "image",
-            "gold_answer": "D",
-            "gold_bbox": "[0.572, 0.002, 0.668, 0.345]",
-            "predictions": [],
-            "media_panels": [
-              {
-                "kind": "image",
-                "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_reference.jpg"
-              },
-              {
-                "kind": "image",
-                "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_query.jpg",
-                "overlays": [
-                  {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
-                    "bbox": [
-                      0.5716004943847657,
-                      0.0015270561398807371,
-                      0.66834228515625,
-                      0.34460966902127754
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "example_id": "gauu_lfls_gauu_lfls_candidate_0078_self_shared_4way_030001_what",
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what",
             "scene_id": "gauu_lfls",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a group of bright blue sports courts on a large rectangular rooftop in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 0-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
-            "input_summary": "a group of bright blue sports courts on a large rectangular rooftop",
-            "task_id": "self_what",
-            "task_modality": "image",
-            "gold_answer": "C",
-            "gold_bbox": "[0.313, 0.633, 0.695, 0.997]",
-            "predictions": [],
-            "media_panels": [
-              {
-                "kind": "image",
-                "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_reference.jpg"
-              },
-              {
-                "kind": "image",
-                "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_query.jpg",
-                "overlays": [
-                  {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
-                    "bbox": [
-                      0.3134263038635254,
-                      0.6325260712421233,
-                      0.6954907894134521,
-                      0.9967642780764581
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "example_id": "gauu_smbu_gauu_smbu_candidate_0055_self_shared_8way_040003_what",
-            "scene_id": "gauu_smbu",
             "difficulty": "8way",
-            "prompt_excerpt": "Image 1 shows the Back-Left facade of an elongated ornamental lake beside a circular white building and paved plaza in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 135-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
-            "input_summary": "an elongated ornamental lake beside a circular white building and paved plaza",
+            "prompt_excerpt": "Image 1 shows the Back-Left facade of small green deciduous tree with rounded canopy located on a rooftop in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 135-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+            "input_summary": "small green deciduous tree with rounded canopy located on a rooftop",
             "task_id": "self_what",
             "task_modality": "image",
             "gold_answer": "B",
-            "gold_bbox": "[0.533, 0.540, 0.998, 0.989]",
-            "predictions": [],
+            "gold_bbox": "[0.795, 0.828, 0.856, 0.924]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "B",
+                "bbox": "[0.780, 0.830, 0.850, 0.910]",
+                "status": "correct",
+                "option_status": "correct",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.630",
+                "note": "Both outputs are correct."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.500, 0.720, 0.570, 0.830]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "C",
+                "bbox": "[0.420, 0.550, 0.480, 0.620]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              }
+            ],
             "media_panels": [
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what_answer.jpg",
                 "overlays": [
                   {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
+                    "label": "Ground truth",
+                    "color": "#16a34a",
                     "bbox": [
-                      0.5333284854888916,
-                      0.5403241675176765,
-                      0.9977849960327149,
-                      0.9887371890570047
+                      0.7945070743560791,
+                      0.8276674867654601,
+                      0.8558773040771485,
+                      0.9235436997408045
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.78,
+                      0.83,
+                      0.85,
+                      0.91
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.5,
+                      0.72,
+                      0.57,
+                      0.83
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.42,
+                      0.55,
+                      0.48,
+                      0.62
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what",
+            "scene_id": "gauu_smbu",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of tall white antenna tower with lattice structure in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 45-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+            "input_summary": "tall white antenna tower with lattice structure",
+            "task_id": "self_what",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.140, 0.615, 0.206, 0.757]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "B",
+                "bbox": "[0.203, 0.345, 0.219, 0.390]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "B",
+                "bbox": "[0.190, 0.330, 0.230, 0.430]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "C",
+                "bbox": "[0.000, 0.000, 1.000, 1.000]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.009",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              }
+            ],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what_answer.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground truth",
+                    "color": "#16a34a",
+                    "bbox": [
+                      0.1396665096282959,
+                      0.6150406080561255,
+                      0.20550863742828368,
+                      0.7566726523574883
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.203,
+                      0.345,
+                      0.219,
+                      0.39
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.19,
+                      0.33,
+                      0.23,
+                      0.43
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.0,
+                      0.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of white striped pedestrian crosswalk on asphalt road in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
+            "input_summary": "white striped pedestrian crosswalk on asphalt road",
+            "task_id": "self_what",
+            "task_modality": "image",
+            "gold_answer": "D",
+            "gold_bbox": "[0.906, 0.398, 0.974, 0.445]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.579, 0.252, 0.682, 0.375]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.699",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.560, 0.230, 0.660, 0.320]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.466",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "C",
+                "bbox": "[0.570, 0.530, 0.630, 0.580]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              }
+            ],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what_answer.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground truth",
+                    "color": "#16a34a",
+                    "bbox": [
+                      0.9056902313232422,
+                      0.3980154879426107,
+                      0.973848876953125,
+                      0.44527202917240216
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.579,
+                      0.252,
+                      0.682,
+                      0.375
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.56,
+                      0.23,
+                      0.66,
+                      0.32
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.57,
+                      0.53,
+                      0.63,
+                      0.58
                     ]
                   }
                 ]
@@ -867,71 +794,107 @@
         "task_title": "Landmark-relative Position Reasoning",
         "examples": [
           {
-            "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_env_shared_8way_010004_where",
-            "scene_id": "gauu_upper_campus",
-            "difficulty": "8way",
-            "prompt_excerpt": "Image 1 shows the Front-Right facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front-Right\nB. Back\nC. Front\nD. Back-Left",
-            "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-            "task_id": "env_where",
-            "task_modality": "image",
-            "gold_answer": "C",
-            "gold_bbox": "[0.518, 0.126, 0.655, 0.711]",
-            "predictions": [],
-            "media_panels": [
-              {
-                "kind": "image",
-                "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_reference.jpg"
-              },
-              {
-                "kind": "image",
-                "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_query.jpg",
-                "overlays": [
-                  {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
-                    "bbox": [
-                      0.5184074020385743,
-                      0.12601799147086604,
-                      0.6545885467529297,
-                      0.711233637773108
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "example_id": "gauu_lfls_gauu_lfls_candidate_0402_env_shared_4way_010002_where",
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where",
             "scene_id": "gauu_lfls",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a stepped white apartment block following the bend of a narrow river in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back\nB. Front\nC. Right\nD. Left",
-            "input_summary": "a stepped white apartment block following the bend of a narrow river",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of small green deciduous tree with rounded canopy located on a rooftop in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Left\nB. Front-Left\nC. Back-Right\nD. Right",
+            "input_summary": "small green deciduous tree with rounded canopy located on a rooftop",
             "task_id": "env_where",
             "task_modality": "image",
             "gold_answer": "D",
-            "gold_bbox": "[0.078, 0.088, 0.197, 0.236]",
-            "predictions": [],
+            "gold_bbox": "[0.795, 0.828, 0.856, 0.924]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "D",
+                "bbox": "[0.790, 0.830, 0.860, 0.920]",
+                "status": "correct",
+                "option_status": "correct",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.829",
+                "note": "Both outputs are correct."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "D",
+                "bbox": "[0.720, 0.530, 0.790, 0.620]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "D",
+                "bbox": "[0.610, 0.550, 0.660, 0.610]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              }
+            ],
             "media_panels": [
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where_answer.jpg",
                 "overlays": [
                   {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
+                    "label": "Ground truth",
+                    "color": "#16a34a",
                     "bbox": [
-                      0.07767819166183472,
-                      0.08757181827236592,
-                      0.19657702445983888,
-                      0.23557591857552387
+                      0.7945070743560791,
+                      0.8276674867654601,
+                      0.8558773040771485,
+                      0.9235436997408045
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.79,
+                      0.83,
+                      0.86,
+                      0.92
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.72,
+                      0.53,
+                      0.79,
+                      0.62
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.61,
+                      0.55,
+                      0.66,
+                      0.61
                     ]
                   }
                 ]
@@ -939,35 +902,215 @@
             ]
           },
           {
-            "example_id": "gauu_smbu_gauu_smbu_candidate_0329_env_shared_4way_020002_where",
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where",
             "scene_id": "gauu_smbu",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a tall white residential tower beside an open lawn and wooded area in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Left\nB. Back\nC. Front\nD. Right",
-            "input_summary": "a tall white residential tower beside an open lawn and wooded area",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front facade of tall white antenna tower with lattice structure in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Back-Left\nC. Front-Left\nD. Left",
+            "input_summary": "tall white antenna tower with lattice structure",
             "task_id": "env_where",
             "task_modality": "image",
-            "gold_answer": "A",
-            "gold_bbox": "[0.172, 0.003, 0.303, 0.231]",
-            "predictions": [],
+            "gold_answer": "D",
+            "gold_bbox": "[0.142, 0.618, 0.188, 0.725]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "C",
+                "bbox": "[0.138, 0.614, 0.205, 0.756]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.525",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "D",
+                "bbox": "[0.350, 0.450, 0.400, 0.570]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "C",
+                "bbox": "[0.140, 0.630, 0.170, 0.730]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.512",
+                "note": "Localization passes, but the semantic answer is wrong."
+              }
+            ],
             "media_panels": [
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where_answer.jpg",
                 "overlays": [
                   {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
+                    "label": "Ground truth",
+                    "color": "#16a34a",
                     "bbox": [
-                      0.1719407320022583,
-                      0.002760082448353382,
-                      0.30289411544799805,
-                      0.23062477245979265
+                      0.14162302017211914,
+                      0.6175044821127638,
+                      0.1879594087600708,
+                      0.7253987534803634
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.138,
+                      0.614,
+                      0.205,
+                      0.756
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.35,
+                      0.45,
+                      0.4,
+                      0.57
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.14,
+                      0.63,
+                      0.17,
+                      0.73
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where",
+            "scene_id": "gauu_upper_campus",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of white striped pedestrian crosswalk on asphalt road in the landmark-centric coordinate frame. In image 2, what is this landmark's position relative to your forward direction? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front\nB. Back\nC. Front-Left\nD. Front-Right",
+            "input_summary": "white striped pedestrian crosswalk on asphalt road",
+            "task_id": "env_where",
+            "task_modality": "image",
+            "gold_answer": "A",
+            "gold_bbox": "[0.580, 0.245, 0.679, 0.346]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "D",
+                "bbox": "[0.578, 0.250, 0.683, 0.372]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.717",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.570, 0.270, 0.660, 0.360]",
+                "status": "correct",
+                "option_status": "correct",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.509",
+                "note": "Both outputs are correct."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "A",
+                "bbox": "[0.620, 0.310, 0.720, 0.420]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.113",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              }
+            ],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where_answer.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground truth",
+                    "color": "#16a34a",
+                    "bbox": [
+                      0.5795146942138671,
+                      0.2445554009306174,
+                      0.6788516998291015,
+                      0.34638815453483773
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.578,
+                      0.25,
+                      0.683,
+                      0.372
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.57,
+                      0.27,
+                      0.66,
+                      0.36
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.62,
+                      0.31,
+                      0.72,
+                      0.42
                     ]
                   }
                 ]
@@ -981,107 +1124,323 @@
         "task_title": "Goal-conditioned Action Decision",
         "examples": [
           {
-            "example_id": "gauu_upper_campus_gauu_upper_candidate_0008_env_shared_8way_010004_how",
+            "example_id": "gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how",
+            "scene_id": "gauu_lfls",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of small green deciduous tree with rounded canopy located on a rooftop in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Left\nC. Right\nD. Front",
+            "input_summary": "small green deciduous tree with rounded canopy located on a rooftop",
+            "task_id": "env_how",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.795, 0.828, 0.856, 0.924]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.785, 0.835, 0.855, 0.925]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.784",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "D",
+                "bbox": "[0.620, 0.580, 0.670, 0.650]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "D",
+                "bbox": "[0.680, 0.580, 0.720, 0.620]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              }
+            ],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how_answer.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground truth",
+                    "color": "#16a34a",
+                    "bbox": [
+                      0.7945070743560791,
+                      0.8276674867654601,
+                      0.8558773040771485,
+                      0.9235436997408045
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.785,
+                      0.835,
+                      0.855,
+                      0.925
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.62,
+                      0.58,
+                      0.67,
+                      0.65
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.68,
+                      0.58,
+                      0.72,
+                      0.62
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how",
+            "scene_id": "gauu_smbu",
+            "difficulty": "8way",
+            "prompt_excerpt": "Image 1 shows the Front facade of tall white antenna tower with lattice structure in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Front-Left\nB. Front\nC. Left\nD. Back",
+            "input_summary": "tall white antenna tower with lattice structure",
+            "task_id": "env_how",
+            "task_modality": "image",
+            "gold_answer": "C",
+            "gold_bbox": "[0.142, 0.618, 0.188, 0.725]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
+              {
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.138, 0.615, 0.206, 0.756]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.521",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "B",
+                "bbox": "[0.360, 0.180, 0.400, 0.360]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "A",
+                "bbox": "[0.140, 0.620, 0.180, 0.740]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.703",
+                "note": "Localization passes, but the semantic answer is wrong."
+              }
+            ],
+            "media_panels": [
+              {
+                "kind": "image",
+                "label": "Reference landmark view",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how_reference.jpg"
+              },
+              {
+                "kind": "image",
+                "label": "Query observation",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how_answer.jpg",
+                "overlays": [
+                  {
+                    "label": "Ground truth",
+                    "color": "#16a34a",
+                    "bbox": [
+                      0.14162302017211914,
+                      0.6175044821127638,
+                      0.1879594087600708,
+                      0.7253987534803634
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.138,
+                      0.615,
+                      0.206,
+                      0.756
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.36,
+                      0.18,
+                      0.4,
+                      0.36
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.14,
+                      0.62,
+                      0.18,
+                      0.74
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how",
             "scene_id": "gauu_upper_campus",
             "difficulty": "8way",
-            "prompt_excerpt": "Image 1 shows the Front-Right facade of a tall slender white residential tower standing next to a wooded hillside in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Right\nB. Right\nC. Left\nD. Front",
-            "input_summary": "a tall slender white residential tower standing next to a wooded hillside",
-            "task_id": "env_how",
-            "task_modality": "image",
-            "gold_answer": "D",
-            "gold_bbox": "[0.518, 0.126, 0.655, 0.711]",
-            "predictions": [],
-            "media_panels": [
-              {
-                "kind": "image",
-                "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_reference.jpg"
-              },
-              {
-                "kind": "image",
-                "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_query.jpg",
-                "overlays": [
-                  {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
-                    "bbox": [
-                      0.5184074020385743,
-                      0.12601799147086604,
-                      0.6545885467529297,
-                      0.711233637773108
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "example_id": "gauu_lfls_gauu_lfls_candidate_0402_env_shared_4way_010002_how",
-            "scene_id": "gauu_lfls",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a stepped white apartment block following the bend of a narrow river in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Front\nC. Left\nD. Back",
-            "input_summary": "a stepped white apartment block following the bend of a narrow river",
+            "prompt_excerpt": "Image 1 shows the Front-Right facade of white striped pedestrian crosswalk on asphalt road in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Back-Left\nB. Left\nC. Front\nD. Back",
+            "input_summary": "white striped pedestrian crosswalk on asphalt road",
             "task_id": "env_how",
             "task_modality": "image",
             "gold_answer": "C",
-            "gold_bbox": "[0.078, 0.088, 0.197, 0.236]",
-            "predictions": [],
-            "media_panels": [
+            "gold_bbox": "[0.580, 0.245, 0.679, 0.346]",
+            "prediction_analysis": "The same output contract is used as in the AirSim benchmark; semantic correctness and target localization are evaluated independently.",
+            "predictions": [
               {
-                "kind": "image",
-                "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_reference.jpg"
+                "model": "Gemini 3.8 Flash",
+                "answer_option_id": "A",
+                "bbox": "[0.580, 0.250, 0.680, 0.380]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.701",
+                "note": "Localization passes, but the semantic answer is wrong."
               },
               {
-                "kind": "image",
-                "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_query.jpg",
-                "overlays": [
-                  {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
-                    "bbox": [
-                      0.07767819166183472,
-                      0.08757181827236592,
-                      0.19657702445983888,
-                      0.23557591857552387
-                    ]
-                  }
-                ]
+                "model": "GLM-5.3-Flash",
+                "answer_option_id": "C",
+                "bbox": "[0.570, 0.240, 0.680, 0.340]",
+                "status": "correct",
+                "option_status": "correct",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.815",
+                "note": "Both outputs are correct."
+              },
+              {
+                "model": "MiMo-V2.5",
+                "answer_option_id": "C",
+                "bbox": "[0.620, 0.270, 0.710, 0.330]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.295",
+                "note": "Semantic answer is correct, but localization misses the threshold."
               }
-            ]
-          },
-          {
-            "example_id": "gauu_smbu_gauu_smbu_candidate_0329_env_shared_4way_020002_how",
-            "scene_id": "gauu_smbu",
-            "difficulty": "4way",
-            "prompt_excerpt": "Image 1 shows the Front facade of a tall white residential tower beside an open lawn and wooded area in the landmark-centric coordinate frame. In image 2, which direction should you fly to get closer to this landmark? Select one option and return the normalized bounding box of the landmark in image 2.\n\nOptions:\n\nA. Right\nB. Front\nC. Left\nD. Back",
-            "input_summary": "a tall white residential tower beside an open lawn and wooded area",
-            "task_id": "env_how",
-            "task_modality": "image",
-            "gold_answer": "C",
-            "gold_bbox": "[0.172, 0.003, 0.303, 0.231]",
-            "predictions": [],
+            ],
             "media_panels": [
               {
                 "kind": "image",
                 "label": "Reference landmark view",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_reference.jpg"
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how_reference.jpg"
               },
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_query.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how_query.jpg"
+              }
+            ],
+            "answer_media_panels": [
+              {
+                "kind": "image",
+                "label": "Ground truth and model boxes",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how_answer.jpg",
                 "overlays": [
                   {
-                    "label": "Ground-truth landmark",
-                    "color": "#16a085",
+                    "label": "Ground truth",
+                    "color": "#16a34a",
                     "bbox": [
-                      0.1719407320022583,
-                      0.002760082448353382,
-                      0.30289411544799805,
-                      0.23062477245979265
+                      0.5795146942138671,
+                      0.2445554009306174,
+                      0.6788516998291015,
+                      0.34638815453483773
+                    ]
+                  },
+                  {
+                    "label": "Gemini 3.8 Flash",
+                    "color": "#2563eb",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.58,
+                      0.25,
+                      0.68,
+                      0.38
+                    ]
+                  },
+                  {
+                    "label": "GLM-5.3-Flash",
+                    "color": "#ef4444",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.57,
+                      0.24,
+                      0.68,
+                      0.34
+                    ]
+                  },
+                  {
+                    "label": "MiMo-V2.5",
+                    "color": "#8b5cf6",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.62,
+                      0.27,
+                      0.71,
+                      0.33
                     ]
                   }
                 ]
@@ -1090,6 +1449,1060 @@
           }
         ]
       }
+    ]
+  },
+  "results": {
+    "models": [
+      {
+        "model": "Claude Opus 4.7",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.39,
+            "evidence_acc": 0.05,
+            "mean_iou": 0.09288985013682595,
+            "valid_count": 73,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.3,
+            "evidence_acc": 0.01,
+            "mean_iou": 0.054554352573057976,
+            "valid_count": 81,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.4,
+            "evidence_acc": 0.04,
+            "mean_iou": 0.09720227873466149,
+            "valid_count": 94,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.41,
+            "evidence_acc": 0.01,
+            "mean_iou": 0.061587755329453826,
+            "valid_count": 72,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.18181818181818182,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.12121212121212122,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.14545454545454545,
+          "evidence": 0.0
+        },
+        "marginal": {
+          "semantic": 0.37499999999999994,
+          "evidence": 0.0275,
+          "mean_iou": 0.07655855919349981
+        }
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.43,
+            "evidence_acc": 0.76,
+            "mean_iou": 0.6865837822522396,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.49,
+            "evidence_acc": 0.79,
+            "mean_iou": 0.7051675500477352,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.32,
+            "evidence_acc": 0.81,
+            "mean_iou": 0.7025152903857692,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.34,
+            "evidence_acc": 0.87,
+            "mean_iou": 0.7252225990960405,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.15151515151515152,
+          "evidence": 0.6666666666666666,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.7272727272727273,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.14354066985645936,
+          "evidence": 0.6956521739130435
+        },
+        "marginal": {
+          "semantic": 0.395,
+          "evidence": 0.8075000000000001,
+          "mean_iou": 0.7048723054454461
+        }
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "group": "Open-weights",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.28,
+            "evidence_acc": 0.33,
+            "mean_iou": 0.33433730309282994,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.36,
+            "evidence_acc": 0.31,
+            "mean_iou": 0.3220777923298826,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.57,
+            "evidence_acc": 0.42,
+            "mean_iou": 0.38216572886081784,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.48,
+            "evidence_acc": 0.47,
+            "mean_iou": 0.39366028070083803,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.2878787878787879,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.24242424242424243,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.2632034632034632
+        },
+        "marginal": {
+          "semantic": 0.4225,
+          "evidence": 0.3825,
+          "mean_iou": 0.3580602762460921
+        }
+      },
+      {
+        "model": "MiMo-V2.5",
+        "group": "Open-weights",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.27,
+            "evidence_acc": 0.35,
+            "mean_iou": 0.3404184844114441,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.33,
+            "evidence_acc": 0.29,
+            "mean_iou": 0.3356547731541013,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.46,
+            "evidence_acc": 0.46,
+            "mean_iou": 0.3824185685631143,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.4,
+            "evidence_acc": 0.45,
+            "mean_iou": 0.3968684784424088,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.16666666666666666,
+          "evidence": 0.30303030303030304,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.10606060606060606,
+          "evidence": 0.21212121212121213,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.12962962962962962,
+          "evidence": 0.24955436720142607
+        },
+        "marginal": {
+          "semantic": 0.365,
+          "evidence": 0.38749999999999996,
+          "mean_iou": 0.36384007614276714
+        }
+      },
+      {
+        "model": "Claude Opus 4.8",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.36,
+            "evidence_acc": 0.04,
+            "mean_iou": 0.09725886346113878,
+            "valid_count": 69,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.29,
+            "evidence_acc": 0.04,
+            "mean_iou": 0.05976018673636333,
+            "valid_count": 71,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.38,
+            "evidence_acc": 0.01,
+            "mean_iou": 0.06519703448150214,
+            "valid_count": 63,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.37,
+            "evidence_acc": 0.01,
+            "mean_iou": 0.04115976610237893,
+            "valid_count": 51,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.12121212121212122,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.12834224598930483,
+          "evidence": 0.0
+        },
+        "marginal": {
+          "semantic": 0.35,
+          "evidence": 0.024999999999999998,
+          "mean_iou": 0.0658439626953458
+        }
+      },
+      {
+        "model": "Qwen3.6-27B",
+        "group": "Open-weights",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.26,
+            "evidence_acc": 0.36,
+            "mean_iou": 0.3450921474303463,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.31,
+            "evidence_acc": 0.11,
+            "mean_iou": 0.15179725374754172,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.53,
+            "evidence_acc": 0.46,
+            "mean_iou": 0.38380352230047976,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.5,
+            "evidence_acc": 0.44,
+            "mean_iou": 0.37590240521208407,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.15151515151515152,
+          "evidence": 0.2878787878787879,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.10606060606060606,
+          "evidence": 0.07575757575757576,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.12477718360071303,
+          "evidence": 0.11994949494949496
+        },
+        "marginal": {
+          "semantic": 0.4,
+          "evidence": 0.34249999999999997,
+          "mean_iou": 0.31414883217261297
+        }
+      },
+      {
+        "model": "Gemini 3 Flash",
+        "group": "Proprietary",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.33,
+            "evidence_acc": 0.61,
+            "mean_iou": 0.5702314354684102,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.32,
+            "evidence_acc": 0.55,
+            "mean_iou": 0.4950077841342836,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.5,
+            "evidence_acc": 0.68,
+            "mean_iou": 0.5886710663354728,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.28,
+            "evidence_acc": 0.76,
+            "mean_iou": 0.6186572598062829,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.5,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.10606060606060606,
+          "evidence": 0.5303030303030303,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.11931818181818181,
+          "evidence": 0.5147058823529411
+        },
+        "marginal": {
+          "semantic": 0.3575,
+          "evidence": 0.6500000000000001,
+          "mean_iou": 0.5681418864361124
+        }
+      },
+      {
+        "model": "Muse Spark 1.3 Contributor",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.31,
+            "evidence_acc": 0.21,
+            "mean_iou": 0.23516349329856923,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.37,
+            "evidence_acc": 0.17,
+            "mean_iou": 0.18758149694086274,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.51,
+            "evidence_acc": 0.23,
+            "mean_iou": 0.2762912708327857,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.49,
+            "evidence_acc": 0.22,
+            "mean_iou": 0.26343632634233094,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.10606060606060606,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.10606060606060606,
+          "evidence": 0.06060606060606061,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.11931818181818181,
+          "evidence": 0.07713498622589532
+        },
+        "marginal": {
+          "semantic": 0.42,
+          "evidence": 0.2075,
+          "mean_iou": 0.24061814685363714
+        }
+      },
+      {
+        "model": "Kimi K2.6",
+        "group": "Open-weights",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.24,
+            "evidence_acc": 0.29,
+            "mean_iou": 0.2726505205912688,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.31,
+            "evidence_acc": 0.21,
+            "mean_iou": 0.22187584316030648,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.39,
+            "evidence_acc": 0.43,
+            "mean_iou": 0.3882888058368446,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.34,
+            "evidence_acc": 0.37,
+            "mean_iou": 0.3531964594231898,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.10606060606060606,
+          "evidence": 0.21212121212121213,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.030303030303030304,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.11931818181818181,
+          "evidence": 0.05303030303030303
+        },
+        "marginal": {
+          "semantic": 0.32,
+          "evidence": 0.32499999999999996,
+          "mean_iou": 0.3090029072529024
+        }
+      },
+      {
+        "model": "Claude Opus 4.6",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.4,
+            "evidence_acc": 0.03,
+            "mean_iou": 0.0938364561897146,
+            "valid_count": 73,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.27,
+            "evidence_acc": 0.02,
+            "mean_iou": 0.058057541528767145,
+            "valid_count": 81,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.39,
+            "evidence_acc": 0.04,
+            "mean_iou": 0.09342202482297536,
+            "valid_count": 94,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.37,
+            "evidence_acc": 0.01,
+            "mean_iou": 0.06172547887607799,
+            "valid_count": 72,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.16666666666666666,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.09090909090909091,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.11764705882352942,
+          "evidence": 0.0
+        },
+        "marginal": {
+          "semantic": 0.35750000000000004,
+          "evidence": 0.024999999999999998,
+          "mean_iou": 0.07676037535438378
+        }
+      },
+      {
+        "model": "Kimi K2.5",
+        "group": "Open-weights",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.28,
+            "evidence_acc": 0.25,
+            "mean_iou": 0.2408569291221672,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.27,
+            "evidence_acc": 0.12,
+            "mean_iou": 0.15879439999626122,
+            "valid_count": 88,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.38,
+            "evidence_acc": 0.39,
+            "mean_iou": 0.3334443296412752,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.23,
+            "evidence_acc": 0.39,
+            "mean_iou": 0.3349412781039475,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.15151515151515152,
+          "evidence": 0.21212121212121213,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.09090909090909091,
+          "evidence": 0.045454545454545456,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.11363636363636363,
+          "evidence": 0.07486631016042782
+        },
+        "marginal": {
+          "semantic": 0.29000000000000004,
+          "evidence": 0.2875,
+          "mean_iou": 0.26700923421591277
+        }
+      },
+      {
+        "model": "GPT-5.6 Sol",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.32,
+            "evidence_acc": 0.19,
+            "mean_iou": 0.1978459483821547,
+            "valid_count": 98,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.33,
+            "evidence_acc": 0.08,
+            "mean_iou": 0.1388091082442175,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.46,
+            "evidence_acc": 0.14,
+            "mean_iou": 0.23833903043955146,
+            "valid_count": 99,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.31,
+            "evidence_acc": 0.25,
+            "mean_iou": 0.2955577189736704,
+            "valid_count": 98,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.15151515151515152,
+          "evidence": 0.06060606060606061,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.09090909090909091,
+          "evidence": 0.06060606060606061,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.11363636363636363,
+          "evidence": 0.06060606060606061
+        },
+        "marginal": {
+          "semantic": 0.35500000000000004,
+          "evidence": 0.165,
+          "mean_iou": 0.2176379515098985
+        }
+      },
+      {
+        "model": "Qwen3.8-27B",
+        "group": "Open-weights",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.28,
+            "evidence_acc": 0.36,
+            "mean_iou": 0.34847448572231715,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.3,
+            "evidence_acc": 0.22,
+            "mean_iou": 0.23520273987095972,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.44,
+            "evidence_acc": 0.51,
+            "mean_iou": 0.42402634832534924,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.41,
+            "evidence_acc": 0.5,
+            "mean_iou": 0.4017535792357311,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.15151515151515152,
+          "evidence": 0.2727272727272727,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.07575757575757576,
+          "evidence": 0.22727272727272727,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.10101010101010101,
+          "evidence": 0.24793388429752064
+        },
+        "marginal": {
+          "semantic": 0.3575,
+          "evidence": 0.39749999999999996,
+          "mean_iou": 0.35236428828858934
+        }
+      },
+      {
+        "model": "GPT-5.5",
+        "group": "Proprietary",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.29,
+            "evidence_acc": 0.19,
+            "mean_iou": 0.2052550071477442,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.37,
+            "evidence_acc": 0.1,
+            "mean_iou": 0.15327853548770112,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.37,
+            "evidence_acc": 0.21,
+            "mean_iou": 0.25639822176443605,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.36,
+            "evidence_acc": 0.16,
+            "mean_iou": 0.2154369650556386,
+            "valid_count": 99,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.045454545454545456,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.07575757575757576,
+          "evidence": 0.015151515151515152,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.09740259740259742,
+          "evidence": 0.022727272727272728
+        },
+        "marginal": {
+          "semantic": 0.3474999999999999,
+          "evidence": 0.165,
+          "mean_iou": 0.20759218236388
+        }
+      },
+      {
+        "model": "Qwen3.7-Plus",
+        "group": "Proprietary",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.23,
+            "evidence_acc": 0.26,
+            "mean_iou": 0.2765659044882036,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.25,
+            "evidence_acc": 0.15,
+            "mean_iou": 0.19698365642828505,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.45,
+            "evidence_acc": 0.28,
+            "mean_iou": 0.29909755890410156,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.37,
+            "evidence_acc": 0.35,
+            "mean_iou": 0.3035903437714269,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.12121212121212122,
+          "evidence": 0.16666666666666666,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.07575757575757576,
+          "evidence": 0.09090909090909091,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.09324009324009325,
+          "evidence": 0.11764705882352942
+        },
+        "marginal": {
+          "semantic": 0.32499999999999996,
+          "evidence": 0.26,
+          "mean_iou": 0.2690593658980043
+        }
+      },
+      {
+        "model": "GPT-6 Astra",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.28,
+            "evidence_acc": 0.2,
+            "mean_iou": 0.20679603138485625,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.39,
+            "evidence_acc": 0.11,
+            "mean_iou": 0.16802245304317204,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.44,
+            "evidence_acc": 0.28,
+            "mean_iou": 0.29942113606781967,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.34,
+            "evidence_acc": 0.27,
+            "mean_iou": 0.26505767910286737,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.12121212121212122,
+          "evidence": 0.07575757575757576,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.07575757575757576,
+          "evidence": 0.09090909090909091,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.09324009324009325,
+          "evidence": 0.08264462809917354
+        },
+        "marginal": {
+          "semantic": 0.36250000000000004,
+          "evidence": 0.21500000000000002,
+          "mean_iou": 0.23482432489967883
+        }
+      },
+      {
+        "model": "Qwen3.6-Plus",
+        "group": "Proprietary",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.23,
+            "evidence_acc": 0.27,
+            "mean_iou": 0.2672601920847111,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.27,
+            "evidence_acc": 0.1,
+            "mean_iou": 0.17943053884313556,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.46,
+            "evidence_acc": 0.3,
+            "mean_iou": 0.28310297183062383,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.48,
+            "evidence_acc": 0.28,
+            "mean_iou": 0.28897934300650946,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.10606060606060606,
+          "evidence": 0.15151515151515152,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.07575757575757576,
+          "evidence": 0.06060606060606061,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.08838383838383838,
+          "evidence": 0.08658008658008658
+        },
+        "marginal": {
+          "semantic": 0.36,
+          "evidence": 0.2375,
+          "mean_iou": 0.254693261441245
+        }
+      },
+      {
+        "model": "Qwen3.5-27B",
+        "group": "Open-weights",
+        "thinking": false,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.19,
+            "evidence_acc": 0.13,
+            "mean_iou": 0.23963066423848797,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.27,
+            "evidence_acc": 0.04,
+            "mean_iou": 0.133060258446067,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.45,
+            "evidence_acc": 0.24,
+            "mean_iou": 0.27273853522247543,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.4,
+            "evidence_acc": 0.28,
+            "mean_iou": 0.27760367740854053,
+            "valid_count": 100,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.06060606060606061,
+          "evidence": 0.06060606060606061,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.13636363636363635,
+          "evidence": 0.0,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.08391608391608392,
+          "evidence": 0.0
+        },
+        "marginal": {
+          "semantic": 0.3275,
+          "evidence": 0.17250000000000001,
+          "mean_iou": 0.2307582838288927
+        }
+      },
+      {
+        "model": "GPT-5.6 Terra",
+        "group": "Proprietary",
+        "thinking": true,
+        "tasks": {
+          "self_where": {
+            "semantic_acc": 0.32,
+            "evidence_acc": 0.19,
+            "mean_iou": 0.1898749040623411,
+            "valid_count": 100,
+            "count": 100
+          },
+          "self_what": {
+            "semantic_acc": 0.31,
+            "evidence_acc": 0.09,
+            "mean_iou": 0.16316237045333018,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_where": {
+            "semantic_acc": 0.41,
+            "evidence_acc": 0.23,
+            "mean_iou": 0.26500208176063283,
+            "valid_count": 100,
+            "count": 100
+          },
+          "env_how": {
+            "semantic_acc": 0.35,
+            "evidence_acc": 0.25,
+            "mean_iou": 0.2705512204360708,
+            "valid_count": 99,
+            "count": 100
+          }
+        },
+        "position": {
+          "semantic": 0.12121212121212122,
+          "evidence": 0.06060606060606061,
+          "pairs": 66
+        },
+        "action_observation": {
+          "semantic": 0.045454545454545456,
+          "evidence": 0.07575757575757576,
+          "pairs": 66
+        },
+        "overall": {
+          "semantic": 0.06611570247933883,
+          "evidence": 0.06734006734006734
+        },
+        "marginal": {
+          "semantic": 0.34750000000000003,
+          "evidence": 0.19,
+          "mean_iou": 0.2221476441780937
+        }
+      }
+    ]
+  },
+  "protocol": {
+    "scenes": [
+      "gauu_lfls",
+      "gauu_smbu",
+      "gauu_upper_campus"
+    ],
+    "scene_count": 3,
+    "landmark_count": 30,
+    "sample_count": 400,
+    "task_counts": {
+      "self_where": 100,
+      "self_what": 100,
+      "env_where": 100,
+      "env_how": 100
+    },
+    "model_count": 19,
+    "missing_predictions_policy": "failure",
+    "pairing": "Deterministic rank matching within the same scene, landmark, and difficulty stratum.",
+    "excluded_models": [
+      "Qwen/Qwen3.5-9B",
+      "Qwen/Qwen3.5-4B",
+      "Qwen/Qwen3.5-4B-UAV-DualCog-GRPO"
     ]
   }
 }

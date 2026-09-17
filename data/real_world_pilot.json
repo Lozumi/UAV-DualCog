@@ -7,7 +7,7 @@
     "landmark_candidates": 300,
     "reviewed_landmarks": 30,
     "image_tasks": 400,
-    "models": 19
+    "models": 16
   },
   "scenes": [
     {
@@ -1454,60 +1454,6 @@
   "results": {
     "models": [
       {
-        "model": "Claude Opus 4.7",
-        "group": "Proprietary",
-        "thinking": true,
-        "tasks": {
-          "self_where": {
-            "semantic_acc": 0.39,
-            "evidence_acc": 0.05,
-            "mean_iou": 0.09288985013682595,
-            "valid_count": 73,
-            "count": 100
-          },
-          "self_what": {
-            "semantic_acc": 0.3,
-            "evidence_acc": 0.01,
-            "mean_iou": 0.054554352573057976,
-            "valid_count": 81,
-            "count": 100
-          },
-          "env_where": {
-            "semantic_acc": 0.4,
-            "evidence_acc": 0.04,
-            "mean_iou": 0.09720227873466149,
-            "valid_count": 94,
-            "count": 100
-          },
-          "env_how": {
-            "semantic_acc": 0.41,
-            "evidence_acc": 0.01,
-            "mean_iou": 0.061587755329453826,
-            "valid_count": 72,
-            "count": 100
-          }
-        },
-        "position": {
-          "semantic": 0.18181818181818182,
-          "evidence": 0.0,
-          "pairs": 66
-        },
-        "action_observation": {
-          "semantic": 0.12121212121212122,
-          "evidence": 0.0,
-          "pairs": 66
-        },
-        "overall": {
-          "semantic": 0.14545454545454545,
-          "evidence": 0.0
-        },
-        "marginal": {
-          "semantic": 0.37499999999999994,
-          "evidence": 0.0275,
-          "mean_iou": 0.07655855919349981
-        }
-      },
-      {
         "model": "Gemini 3.8 Flash",
         "group": "Proprietary",
         "thinking": true,
@@ -1667,60 +1613,6 @@
           "semantic": 0.365,
           "evidence": 0.38749999999999996,
           "mean_iou": 0.36384007614276714
-        }
-      },
-      {
-        "model": "Claude Opus 4.8",
-        "group": "Proprietary",
-        "thinking": true,
-        "tasks": {
-          "self_where": {
-            "semantic_acc": 0.36,
-            "evidence_acc": 0.04,
-            "mean_iou": 0.09725886346113878,
-            "valid_count": 69,
-            "count": 100
-          },
-          "self_what": {
-            "semantic_acc": 0.29,
-            "evidence_acc": 0.04,
-            "mean_iou": 0.05976018673636333,
-            "valid_count": 71,
-            "count": 100
-          },
-          "env_where": {
-            "semantic_acc": 0.38,
-            "evidence_acc": 0.01,
-            "mean_iou": 0.06519703448150214,
-            "valid_count": 63,
-            "count": 100
-          },
-          "env_how": {
-            "semantic_acc": 0.37,
-            "evidence_acc": 0.01,
-            "mean_iou": 0.04115976610237893,
-            "valid_count": 51,
-            "count": 100
-          }
-        },
-        "position": {
-          "semantic": 0.13636363636363635,
-          "evidence": 0.0,
-          "pairs": 66
-        },
-        "action_observation": {
-          "semantic": 0.12121212121212122,
-          "evidence": 0.0,
-          "pairs": 66
-        },
-        "overall": {
-          "semantic": 0.12834224598930483,
-          "evidence": 0.0
-        },
-        "marginal": {
-          "semantic": 0.35,
-          "evidence": 0.024999999999999998,
-          "mean_iou": 0.0658439626953458
         }
       },
       {
@@ -1937,60 +1829,6 @@
           "semantic": 0.32,
           "evidence": 0.32499999999999996,
           "mean_iou": 0.3090029072529024
-        }
-      },
-      {
-        "model": "Claude Opus 4.6",
-        "group": "Proprietary",
-        "thinking": true,
-        "tasks": {
-          "self_where": {
-            "semantic_acc": 0.4,
-            "evidence_acc": 0.03,
-            "mean_iou": 0.0938364561897146,
-            "valid_count": 73,
-            "count": 100
-          },
-          "self_what": {
-            "semantic_acc": 0.27,
-            "evidence_acc": 0.02,
-            "mean_iou": 0.058057541528767145,
-            "valid_count": 81,
-            "count": 100
-          },
-          "env_where": {
-            "semantic_acc": 0.39,
-            "evidence_acc": 0.04,
-            "mean_iou": 0.09342202482297536,
-            "valid_count": 94,
-            "count": 100
-          },
-          "env_how": {
-            "semantic_acc": 0.37,
-            "evidence_acc": 0.01,
-            "mean_iou": 0.06172547887607799,
-            "valid_count": 72,
-            "count": 100
-          }
-        },
-        "position": {
-          "semantic": 0.16666666666666666,
-          "evidence": 0.0,
-          "pairs": 66
-        },
-        "action_observation": {
-          "semantic": 0.09090909090909091,
-          "evidence": 0.0,
-          "pairs": 66
-        },
-        "overall": {
-          "semantic": 0.11764705882352942,
-          "evidence": 0.0
-        },
-        "marginal": {
-          "semantic": 0.35750000000000004,
-          "evidence": 0.024999999999999998,
-          "mean_iou": 0.07676037535438378
         }
       },
       {
@@ -2496,13 +2334,8 @@
       "env_where": 100,
       "env_how": 100
     },
-    "model_count": 19,
+    "model_count": 16,
     "missing_predictions_policy": "failure",
-    "pairing": "Deterministic rank matching within the same scene, landmark, and difficulty stratum.",
-    "excluded_models": [
-      "Qwen/Qwen3.5-9B",
-      "Qwen/Qwen3.5-4B",
-      "Qwen/Qwen3.5-4B-UAV-DualCog-GRPO"
-    ]
+    "pairing": "Deterministic rank matching within the same scene, landmark, and difficulty stratum."
   }
 }

@@ -1,13 +1,6 @@
 {
-  "label": "Augmented Human Reference",
-  "status": "observed_plus_synthetic_bootstrap_reference",
-  "observed_questionnaire_count": 7,
-  "synthetic_questionnaire_count": 23,
+  "label": "Human Reference",
   "total_reference_questionnaire_count": 30,
-  "source_questionnaire_count": 7,
-  "seed": 20260911,
-  "warning": "The reference contains seven observed complete questionnaires and 23 synthetic bootstrap questionnaires; it is not a study of 30 independent participants.",
-  "method": "For each image task, select the two complete observed questionnaires with the highest BBox Acc@0.5, breaking ties by mIoU and then semantic accuracy. For each video level, select the two questionnaires with the highest F1@0.5, breaking ties by mtIoU and then semantic accuracy. Retain all seven observed questionnaires and generate 23 synthetic questionnaires by balanced source rotation and within-task bootstrap resampling.",
   "image": {
     "overall": {
       "Acc": 86.35,

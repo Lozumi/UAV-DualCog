@@ -239,7 +239,7 @@ The important shift is that Stage 2 turns a fused but still machine-oriented sce
           short, discriminative, and machine-parseable. The result is a semantic layer that later
           prompt templates can reuse directly without re-describing each landmark from scratch.
 </p> <p>
-In practice, <strong>Stage 2 Step 2-4 are completed in the internal review web</strong>.
+In practice, <strong>Stage 2 Step 2-4 are completed in the local review workspace</strong>.
           That interface is where reviewers perform candidate screening, main-view confirmation,
           single-direction anchoring, invalid-view cleanup, auto-label launch, and final semantic
           audit. The command line remains useful for collection and standalone auto-label reruns,
@@ -608,14 +608,14 @@ In other words, Stage 3 is where motion programs become auditable temporal tasks
           is why mission repair, behavior templating, and supervision export are treated as one
           connected pipeline rather than three independent utilities.
 </p> <p>
-The media contract used at this stage is therefore worth exposing directly. Internally,
+The media contract used at this stage is therefore exposed directly. The pipeline
           missions still retain higher-resolution archived frame captures for supervision and
           refresh, while the released benchmark distributes a lighter 1080P H.264 video stream at a
           fixed frame rate. This separation keeps temporal evaluation efficient for public use while
           preserving enough upstream visual detail to support rerendering, inspection, and
           higher-resolution downstream analysis when needed.
 </p> <p>
-The <strong>Stage 3 internal web</strong> is used here as an interactive mission and task
+The <strong>Stage 3 review workspace</strong> is used here as an interactive mission and task
           workbench. It exposes pages for the behavior library, mission generation, candidate
           review, manifest browsing, experiments, result inspection, and metrics. This makes it
           well suited for qualitative verification and targeted reruns, whereas
@@ -1163,7 +1163,7 @@ The release-side media specification stays explicit here as well. Stage 4 keeps 
           assets remain compact without discarding the visual detail needed for fine landmark
           grounding.
 </p> <p>
-The <strong>Stage 4 internal web</strong> plays a similar role on the image side: it is
+The <strong>Stage 4 review workspace</strong> plays a similar role on the image side: it is
           the place to inspect generated manifests, preview task rows, launch comparison runs,
           browse per-sample outputs, and read metric summaries. For small interactive checks, this
           web surface is the fastest way to verify that reference images, query observations,
@@ -1195,6 +1195,6 @@ The pipeline exposes concrete handoff files between stages: scene point clouds, 
 The release is also practical to reuse: both the dataset assets and the public codebase are
         already published, so external users do not need to reconstruct the benchmark from scratch
         before they can inspect files, load manifests, or run evaluation. The Usage page collects
-        the currently released download channels together with the official code repository and
+        the currently available download channels together with the anonymous code repository and
         access notes.
 </p> <div class="button-row" style="margin-top: 14px;"> <a class="button" href="/w/UAV-DualCog/usage">Open Usage & Release Access</a> </div> <div class="overview-list" style="margin-top: 16px;"> <div class="overview-item"> <p><strong>Reviewer workflow.</strong> Read Benchmark for released scope and sample balance. Read Construction for stage-by-stage provenance and handoff files. Read Evaluation for exact prompt templates, JSON contracts, and scoring rules. Download leaderboard JSON / CSV files to verify tables or regenerate figures.</p> </div><div class="overview-item"> <p><strong>Dataset user workflow.</strong> Start from scene_data reviewed landmarks and task_pipeline manifests. Use Stage 4 manifests plus render_requests to reproduce image tasks without changing semantics. Use Stage 3 mission folders plus task_data.json to inspect video supervision and media specs. Use exported metric matrices when comparing model runs outside the website.</p> </div><div class="overview-item"> <p><strong>Maintainer workflow.</strong> Regenerate Stage 4 and Stage 3 media through task_pipeline render phases. Rerun experiment phases for the desired stage. Export latest metrics CSV files. Refresh site data and rebuild the static website.</p> </div> </div> </article> </section> <nav class="chapter-pager" aria-label="Chapter navigation"> <div class="chapter-pager-slot"> <a class="chapter-pager-link is-prev" href="/w/UAV-DualCog/benchmark"> <span class="chapter-pager-direction">Previous</span> <span class="chapter-pager-label">Benchmark</span> </a> </div> <div class="chapter-pager-slot is-next"> <a class="chapter-pager-link is-next" href="/w/UAV-DualCog/sim-to-real"> <span class="chapter-pager-direction">Next</span> <span class="chapter-pager-label">Sim-to-Real</span> </a> </div> </nav>  </main> <div class="image-lightbox is-hidden" id="image-lightbox" aria-hidden="true"> <button type="button" class="image-lightbox-close" id="image-lightbox-close" aria-label="Close enlarged image">×</button> <img class="image-lightbox-media" id="image-lightbox-media" src="" alt=""> </div> <a class="back-to-top" href="#top" aria-label="Back to top">↑</a> <footer class="site-footer"> <div class="shell footer-inner"> <p>UAV-DualCog evaluates coordinated Agent-State and World-State Reasoning across image and video tasks.</p> <p>UAV-DualCog supplementary material. Under peer review.</p> </div> </footer> <script type="module">const d=document.querySelector(".page-sidebar");if(d){const n=Array.from(d.querySelectorAll(".page-sidebar-link")),o=n.map(e=>document.getElementById(e.dataset.section)).filter(Boolean),r=e=>{n.forEach(t=>{const i=t.dataset.section===e;t.classList.toggle("is-active",i),i?t.setAttribute("aria-current","location"):t.removeAttribute("aria-current")})},c=()=>{if(!o.length)return;const e=window.innerHeight*.28;let t=o[0];for(const i of o)if(i.getBoundingClientRect().top<=e)t=i;else break;r(t.id)};n.forEach(e=>{e.addEventListener("click",()=>{const t=e.dataset.section;t&&r(t)})});let s=!1;const a=()=>{s||(s=!0,window.requestAnimationFrame(()=>{c(),s=!1}))};c(),window.addEventListener("scroll",a,{passive:!0}),window.addEventListener("resize",a),window.addEventListener("hashchange",()=>{const e=window.location.hash.replace("#","");e&&r(e)})}</script> <script type="module">const e=document.getElementById("image-lightbox"),i=document.getElementById("image-lightbox-media"),d=document.getElementById("image-lightbox-close"),n=(t,s)=>{!e||!i||!t||(i.setAttribute("src",t),i.setAttribute("alt",s||"Enlarged image"),e.classList.remove("is-hidden"),e.setAttribute("aria-hidden","false"),document.body.classList.add("lightbox-open"))},o=()=>{!e||!i||(e.classList.add("is-hidden"),e.setAttribute("aria-hidden","true"),i.setAttribute("src",""),i.setAttribute("alt",""),document.body.classList.remove("lightbox-open"))};document.addEventListener("click",t=>{const s=t.target.closest("[data-lightbox-src]");if(s){n(s.getAttribute("data-lightbox-src"),s.getAttribute("data-lightbox-alt"));return}t.target===e&&o()});d?.addEventListener("click",o);document.addEventListener("keydown",t=>{t.key==="Escape"&&o()});</script> </body> </html>

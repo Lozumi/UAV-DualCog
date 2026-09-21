@@ -3126,7 +3126,7 @@
       },
       {
         "group": "Human",
-        "model": "Augmented human reference",
+        "model": "Human",
         "image_acc": 86.35416666666667,
         "image_miou": 55.520337042439614,
         "video_acc": 85.06373917297344,

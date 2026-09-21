@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T12:44:41.112016+00:00",
+  "generated_at": "2026-09-21T14:52:26.970070+00:00",
   "status": "evaluation_complete",
   "statistics": {
     "registered_views": 1326,
@@ -152,7 +152,7 @@
             "task_modality": "image",
             "gold_answer": "C",
             "gold_bbox": "[0.478, 0.427, 0.549, 0.511]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 3/10, landmark localization at IoU >= 0.5 succeeds for 0/10, and both succeed for 0/10. Semantic decisions are more reliable than spatial grounding on this reconstruction example.",
+            "prediction_analysis": "For the dense green deciduous tree cluster with irregular shape located in urban gap in this Self-relative Position Reasoning question, the target is GT option C and BBox [0.478, 0.427, 0.549, 0.511]. Across 10 available outputs, option prediction succeeds for 3/10 and landmark localization at IoU >= 0.5 for 0/10; both succeed for 0/10 (none). Semantic-only cases are Gemini 3.8 Flash, GPT-5.6 Sol, and Kimi K2.6, evidence-only cases are none, and 7/10 fail both. The split outcomes show that reference-frame reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -401,7 +401,7 @@
             "task_modality": "image",
             "gold_answer": "A",
             "gold_bbox": "[0.074, 0.311, 0.336, 0.681]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 4/10, landmark localization at IoU >= 0.5 succeeds for 7/10, and both succeed for 3/10. Spatial grounding is more reliable than the final semantic decision on this reconstruction example.",
+            "prediction_analysis": "For the gray mid-rise building with flat roof and rectangular windows in this Self-relative Position Reasoning question, the target is GT option A and BBox [0.074, 0.311, 0.336, 0.681]. Across 10 available outputs, option prediction succeeds for 4/10 and landmark localization at IoU >= 0.5 for 7/10; both succeed for 3/10 (Gemini 3.8 Flash, Qwen3.7-Plus, and MiMo-V2.5). Semantic-only cases are GPT-6 Astra, evidence-only cases are Muse Spark 1.3 Contributor, GLM-5.3-Flash, and Qwen3.8-27B (+1 more), and 2/10 fail both. The split outcomes show that reference-frame reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -650,7 +650,7 @@
             "task_modality": "image",
             "gold_answer": "A",
             "gold_bbox": "[0.691, 0.421, 0.878, 0.660]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 0/10, landmark localization at IoU >= 0.5 succeeds for 4/10, and both succeed for 0/10. Spatial grounding is more reliable than the final semantic decision on this reconstruction example.",
+            "prediction_analysis": "For the gray low-rise building with flat roof and adjacent green courts in this Self-relative Position Reasoning question, the target is GT option A and BBox [0.691, 0.421, 0.878, 0.660]. Across 10 available outputs, option prediction succeeds for 0/10 and landmark localization at IoU >= 0.5 for 4/10; both succeed for 0/10 (none). Semantic-only cases are none, evidence-only cases are Gemini 3.8 Flash, GLM-5.3-Flash, and Kimi K2.6 (+1 more), and 6/10 fail both. The split outcomes show that reference-frame reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -905,7 +905,7 @@
             "task_modality": "image",
             "gold_answer": "C",
             "gold_bbox": "[0.216, 0.270, 0.300, 0.426]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 5/10, landmark localization at IoU >= 0.5 succeeds for 1/10, and both succeed for 1/10. Semantic decisions are more reliable than spatial grounding on this reconstruction example.",
+            "prediction_analysis": "For the dense green deciduous tree cluster with irregular shape located in urban gap in this Action-conditioned Future Observation Prediction question, the target is GT option C and BBox [0.216, 0.270, 0.300, 0.426]. Across 10 available outputs, option prediction succeeds for 5/10 and landmark localization at IoU >= 0.5 for 1/10; both succeed for 1/10 (Gemini 3.8 Flash). Semantic-only cases are GPT-6 Astra, GLM-5.3-Flash, and Kimi K2.6 (+1 more), evidence-only cases are none, and 5/10 fail both. The split outcomes show that action-observation reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -1154,7 +1154,7 @@
             "task_modality": "image",
             "gold_answer": "C",
             "gold_bbox": "[0.074, 0.311, 0.336, 0.681]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 4/10, landmark localization at IoU >= 0.5 succeeds for 4/10, and both succeed for 3/10. Semantic and grounding success are equally frequent on this reconstruction example.",
+            "prediction_analysis": "For the gray mid-rise building with flat roof and rectangular windows in this Action-conditioned Future Observation Prediction question, the target is GT option C and BBox [0.074, 0.311, 0.336, 0.681]. Across 10 available outputs, option prediction succeeds for 4/10 and landmark localization at IoU >= 0.5 for 4/10; both succeed for 3/10 (Gemini 3.8 Flash, GLM-5.3-Flash, and Qwen3.8-27B). Semantic-only cases are Kimi K2.6, evidence-only cases are MiMo-V2.5, and 5/10 fail both. The split outcomes show that action-observation reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -1403,7 +1403,7 @@
             "task_modality": "image",
             "gold_answer": "D",
             "gold_bbox": "[0.691, 0.421, 0.878, 0.660]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 5/10, landmark localization at IoU >= 0.5 succeeds for 5/10, and both succeed for 2/10. Semantic and grounding success are equally frequent on this reconstruction example.",
+            "prediction_analysis": "For the gray low-rise building with flat roof and adjacent green courts in this Action-conditioned Future Observation Prediction question, the target is GT option D and BBox [0.691, 0.421, 0.878, 0.660]. Across 10 available outputs, option prediction succeeds for 5/10 and landmark localization at IoU >= 0.5 for 5/10; both succeed for 2/10 (Gemini 3.8 Flash and GPT-6 Astra). Semantic-only cases are Kimi K2.6, Qwen3.8-27B, and Qwen3.6-27B, evidence-only cases are Muse Spark 1.3 Contributor, GLM-5.3-Flash, and MiMo-V2.5, and 2/10 fail both. The split outcomes show that action-observation reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -1658,7 +1658,7 @@
             "task_modality": "image",
             "gold_answer": "D",
             "gold_bbox": "[0.478, 0.427, 0.549, 0.511]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 5/10, landmark localization at IoU >= 0.5 succeeds for 0/10, and both succeed for 0/10. Semantic decisions are more reliable than spatial grounding on this reconstruction example.",
+            "prediction_analysis": "For the dense green deciduous tree cluster with irregular shape located in urban gap in this Landmark-relative Position Reasoning question, the target is GT option D and BBox [0.478, 0.427, 0.549, 0.511]. Across 10 available outputs, option prediction succeeds for 5/10 and landmark localization at IoU >= 0.5 for 0/10; both succeed for 0/10 (none). Semantic-only cases are GPT-6 Astra, Muse Spark 1.3 Contributor, and GLM-5.3-Flash (+2 more), evidence-only cases are none, and 5/10 fail both. The split outcomes show that reference-frame reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -1907,7 +1907,7 @@
             "task_modality": "image",
             "gold_answer": "A",
             "gold_bbox": "[0.127, 0.295, 0.347, 0.593]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 7/10, landmark localization at IoU >= 0.5 succeeds for 8/10, and both succeed for 6/10. Spatial grounding is more reliable than the final semantic decision on this reconstruction example.",
+            "prediction_analysis": "For the gray mid-rise building with flat roof and rectangular windows in this Landmark-relative Position Reasoning question, the target is GT option A and BBox [0.127, 0.295, 0.347, 0.593]. Across 10 available outputs, option prediction succeeds for 7/10 and landmark localization at IoU >= 0.5 for 8/10; both succeed for 6/10 (GPT-6 Astra, GPT-5.6 Sol, and Qwen3.7-Plus (+3 more)). Semantic-only cases are Muse Spark 1.3 Contributor, evidence-only cases are Gemini 3.8 Flash and MiMo-V2.5, and 1/10 fail both. The split outcomes show that reference-frame reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -2156,7 +2156,7 @@
             "task_modality": "image",
             "gold_answer": "A",
             "gold_bbox": "[0.691, 0.421, 0.878, 0.660]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 9/10, landmark localization at IoU >= 0.5 succeeds for 7/10, and both succeed for 6/10. Semantic decisions are more reliable than spatial grounding on this reconstruction example.",
+            "prediction_analysis": "For the gray low-rise building with flat roof and adjacent green courts in this Landmark-relative Position Reasoning question, the target is GT option A and BBox [0.691, 0.421, 0.878, 0.660]. Across 10 available outputs, option prediction succeeds for 9/10 and landmark localization at IoU >= 0.5 for 7/10; both succeed for 6/10 (Gemini 3.8 Flash, Qwen3.7-Plus, and GLM-5.3-Flash (+3 more)). Semantic-only cases are GPT-6 Astra, GPT-5.6 Sol, and Muse Spark 1.3 Contributor, evidence-only cases are Qwen3.8-27B, and 0/10 fail both. The split outcomes show that reference-frame reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -2411,7 +2411,7 @@
             "task_modality": "image",
             "gold_answer": "D",
             "gold_bbox": "[0.478, 0.427, 0.549, 0.511]",
-            "prediction_analysis": "Across 9 available model outputs, option prediction succeeds for 2/9, landmark localization at IoU >= 0.5 succeeds for 1/9, and both succeed for 0/9. Semantic decisions are more reliable than spatial grounding on this reconstruction example.",
+            "prediction_analysis": "For the dense green deciduous tree cluster with irregular shape located in urban gap in this Goal-conditioned Action Decision question, the target is GT option D and BBox [0.478, 0.427, 0.549, 0.511]. Across 9 available outputs, option prediction succeeds for 2/9 and landmark localization at IoU >= 0.5 for 1/9; both succeed for 0/9 (none). Semantic-only cases are Kimi K2.6 and MiMo-V2.5, evidence-only cases are Qwen3.6-27B, and 6/9 fail both. The split outcomes show that action-observation reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -2639,7 +2639,7 @@
             "task_modality": "image",
             "gold_answer": "B",
             "gold_bbox": "[0.127, 0.295, 0.347, 0.593]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 7/10, landmark localization at IoU >= 0.5 succeeds for 7/10, and both succeed for 6/10. Semantic and grounding success are equally frequent on this reconstruction example.",
+            "prediction_analysis": "For the gray mid-rise building with flat roof and rectangular windows in this Goal-conditioned Action Decision question, the target is GT option B and BBox [0.127, 0.295, 0.347, 0.593]. Across 10 available outputs, option prediction succeeds for 7/10 and landmark localization at IoU >= 0.5 for 7/10; both succeed for 6/10 (Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and GLM-5.3-Flash (+3 more)). Semantic-only cases are GPT-6 Astra, evidence-only cases are Qwen3.7-Plus, and 2/10 fail both. The split outcomes show that action-observation reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",
@@ -2888,7 +2888,7 @@
             "task_modality": "image",
             "gold_answer": "D",
             "gold_bbox": "[0.691, 0.421, 0.878, 0.660]",
-            "prediction_analysis": "Across 10 available model outputs, option prediction succeeds for 4/10, landmark localization at IoU >= 0.5 succeeds for 6/10, and both succeed for 1/10. Spatial grounding is more reliable than the final semantic decision on this reconstruction example.",
+            "prediction_analysis": "For the gray low-rise building with flat roof and adjacent green courts in this Goal-conditioned Action Decision question, the target is GT option D and BBox [0.691, 0.421, 0.878, 0.660]. Across 10 available outputs, option prediction succeeds for 4/10 and landmark localization at IoU >= 0.5 for 6/10; both succeed for 1/10 (Qwen3.7-Plus). Semantic-only cases are Muse Spark 1.3 Contributor, Kimi K2.6, and Qwen3.8-27B, evidence-only cases are Gemini 3.8 Flash, GPT-5.6 Sol, and GLM-5.3-Flash (+2 more), and 1/10 fail both. The split outcomes show that action-observation reasoning and localization of the same reconstructed landmark do not yet reliably coincide.",
             "predictions": [
               {
                 "model": "Gemini 3.8 Flash",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T12:33:49.939891+00:00",
+  "generated_at": "2026-09-21T14:51:55.004587+00:00",
   "groups": [
     {
       "group_id": "self_where",
@@ -477,7 +477,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 2/16, spatial grounding succeeds for 1/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option A (Right) and BBox [0.398, 0.384, 0.562, 0.674]. Across 16 available outputs, option prediction succeeds for 2/16 and spatial grounding for 1/16; both succeed for 0/16 (none). Semantic-only cases are Claude Opus 4.8 and MiMo-V2.5, evidence-only cases are Gemini 3.8 Flash, and 13/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_11_12_231_self_shared_4way_000021_where",
@@ -965,7 +965,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 2/16, spatial grounding succeeds for 1/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option A (Left) and BBox [0.489, 0.370, 0.513, 0.654]. Across 16 available outputs, option prediction succeeds for 2/16 and spatial grounding for 1/16; both succeed for 0/16 (none). Semantic-only cases are GLM-5.3-Flash and MiMo-V2.5, evidence-only cases are Gemini 3.8 Flash, and 13/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_21_1_12_self_shared_4way_000029_where",
@@ -1389,7 +1389,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 8/16, spatial grounding succeeds for 7/16, and both succeed for 5/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option B (Left) and BBox [0.367, 0.417, 0.634, 0.663]. Across 16 available outputs, option prediction succeeds for 8/16 and spatial grounding for 7/16; both succeed for 5/16 (GPT-6 Astra, Gemini 3.8 Flash, and Gemini 3.1 Pro Preview (+2 more)). Semantic-only cases are InternVL 3.5-30B-A3B, SpaceR, and SpaceThinker, evidence-only cases are GPT-5.6 Sol and Kimi K2.6, and 6/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_23_10_34_self_shared_4way_000133_where",
@@ -1813,7 +1813,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 3/16, spatial grounding succeeds for 6/16, and both succeed for 3/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option D (Left) and BBox [0.373, 0.440, 0.625, 0.578]. Across 16 available outputs, option prediction succeeds for 3/16 and spatial grounding for 6/16; both succeed for 3/16 (GPT-6 Astra, GPT-5.6 Sol, and Gemini 3.1 Pro Preview). Semantic-only cases are none, evidence-only cases are MiMo-V2.5, Qwen3.8-27B, and SpaceOm, and 10/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_21_102_self_shared_4way_000029_where",
@@ -2285,7 +2285,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 2/16, spatial grounding succeeds for 3/16, and both succeed for 0/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option A (Right) and BBox [0.434, 0.333, 0.524, 0.694]. Across 16 available outputs, option prediction succeeds for 2/16 and spatial grounding for 3/16; both succeed for 0/16 (none). Semantic-only cases are Claude Opus 4.8 and Qwen3.7-Plus, evidence-only cases are Gemini 3.1 Pro Preview, GLM-5.3-Flash, and MiMo-V2.5, and 11/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_16_33_403_self_shared_8way_000127_where",
@@ -2741,7 +2741,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 0/16, spatial grounding succeeds for 7/16, and both succeed for 0/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option B (Front) and BBox [0.438, 0.315, 0.542, 0.740]. Across 16 available outputs, option prediction succeeds for 0/16 and spatial grounding for 7/16; both succeed for 0/16 (none). Semantic-only cases are none, evidence-only cases are GPT-6 Astra, Gemini 3.8 Flash, and Gemini 3.1 Pro Preview (+4 more), and 9/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_26_107_self_shared_8way_000067_where",
@@ -3213,7 +3213,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 6/16, spatial grounding succeeds for 10/16, and both succeed for 4/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option D (Front-Right) and BBox [0.368, 0.432, 0.626, 0.582]. Across 16 available outputs, option prediction succeeds for 6/16 and spatial grounding for 10/16; both succeed for 4/16 (GPT-6 Astra, GPT-5.6 Sol, and Qwen3.7-Plus (+1 more)). Semantic-only cases are Claude Opus 4.8 and Kimi K2.6, evidence-only cases are Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and GLM-5.3-Flash (+3 more), and 4/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_20_134_self_shared_4way_000129_where",
@@ -3669,7 +3669,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 7/16, spatial grounding succeeds for 2/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option B (Back) and BBox [0.435, 0.345, 0.595, 0.712]. Across 16 available outputs, option prediction succeeds for 7/16 and spatial grounding for 2/16; both succeed for 1/16 (GLM-5.3-Flash). Semantic-only cases are Claude Opus 4.8, GPT-6 Astra, and Qwen3.7-Plus (+3 more), evidence-only cases are SpaceThinker, and 8/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_11_45_627_self_shared_4way_000005_where",
@@ -4141,7 +4141,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 0/16, spatial grounding succeeds for 6/16, and both succeed for 0/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option D (Left) and BBox [0.439, 0.353, 0.554, 0.726]. Across 16 available outputs, option prediction succeeds for 0/16 and spatial grounding for 6/16; both succeed for 0/16 (none). Semantic-only cases are none, evidence-only cases are Claude Opus 4.8, Gemini 3.8 Flash, and Gemini 3.1 Pro Preview (+3 more), and 10/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_15_42_self_shared_8way_000095_where",
@@ -4613,7 +4613,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 4/16, spatial grounding succeeds for 6/16, and both succeed for 3/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Self-relative Position Reasoning question uses GT Option C (Back-Right) and BBox [0.399, 0.436, 0.627, 0.582]. Across 16 available outputs, option prediction succeeds for 4/16 and spatial grounding for 6/16; both succeed for 3/16 (Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and Qwen3.8-27B). Semantic-only cases are SpaceThinker, evidence-only cases are GPT-6 Astra, GLM-5.3-Flash, and MiMo-V2.5, and 9/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         }
       ]
     },
@@ -4631,7 +4631,7 @@
           "prompt_excerpt": "Image 1 shows the Left facade of gray high-rise building with grid-like windows and flat roof in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 90-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option D (Image 5 · Front)",
+          "gold_answer": "Option D (Image 5 -> Front)",
           "gold_bbox": "[0.427, 0.322, 0.566, 0.732]",
           "predictions": [
             {
@@ -4949,7 +4949,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 1/16, spatial grounding succeeds for 9/16, and both succeed for 1/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option D (Image 5 -> Front) and BBox [0.427, 0.322, 0.566, 0.732]. Across 16 available outputs, option prediction succeeds for 1/16 and spatial grounding for 9/16; both succeed for 1/16 (Gemini 3.8 Flash). Semantic-only cases are none, evidence-only cases are GPT-6 Astra, GPT-5.6 Sol, and Gemini 3.1 Pro Preview (+5 more), and 7/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_11_56_self_shared_4way_000145_what",
@@ -4959,7 +4959,7 @@
           "prompt_excerpt": "Image 1 shows the Front facade of green deciduous tree with full foliage located on a waterfront promenade in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 90-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option A (Image 2 · Right)",
+          "gold_answer": "Option A (Image 2 -> Right)",
           "gold_bbox": "[0.435, 0.373, 0.592, 0.640]",
           "predictions": [
             {
@@ -5331,7 +5331,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 5/16, spatial grounding succeeds for 4/16, and both succeed for 2/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option A (Image 2 -> Right) and BBox [0.435, 0.373, 0.592, 0.640]. Across 16 available outputs, option prediction succeeds for 5/16 and spatial grounding for 4/16; both succeed for 2/16 (Claude Opus 4.8 and Gemini 3.8 Flash). Semantic-only cases are GPT-5.6 Sol, Gemini 3.1 Pro Preview, and ViLaSR, evidence-only cases are GLM-5.3-Flash and Qwen3.8-27B, and 9/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_23_30_331_self_shared_8way_000071_what",
@@ -5341,7 +5341,7 @@
           "prompt_excerpt": "Image 1 shows the Front facade of red rectangular signboard with white text and graphics on a building rooftop in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 135-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option D (Image 5 · Back-Right)",
+          "gold_answer": "Option D (Image 5 -> Back-Right)",
           "gold_bbox": "[0.365, 0.374, 0.625, 0.708]",
           "predictions": [
             {
@@ -5687,7 +5687,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 4/16, spatial grounding succeeds for 6/16, and both succeed for 4/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option D (Image 5 -> Back-Right) and BBox [0.365, 0.374, 0.625, 0.708]. Across 16 available outputs, option prediction succeeds for 4/16 and spatial grounding for 6/16; both succeed for 4/16 (GPT-6 Astra, GPT-5.6 Sol, and Gemini 3.8 Flash (+1 more)). Semantic-only cases are none, evidence-only cases are Qwen3.7-Plus and Qwen3.8-27B, and 10/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_20_99_684_self_shared_8way_000143_what",
@@ -5697,7 +5697,7 @@
           "prompt_excerpt": "Image 1 shows the Right facade of metal shipyard crane with a long boom and pulley system located on a dock in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 135-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option D (Image 5 · Back-Right)",
+          "gold_answer": "Option D (Image 5 -> Back-Right)",
           "gold_bbox": "[0.430, 0.366, 0.593, 0.667]",
           "predictions": [
             {
@@ -6049,7 +6049,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 5/16, spatial grounding succeeds for 2/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option D (Image 5 -> Back-Right) and BBox [0.430, 0.366, 0.593, 0.667]. Across 16 available outputs, option prediction succeeds for 5/16 and spatial grounding for 2/16; both succeed for 1/16 (Gemini 3.8 Flash). Semantic-only cases are GPT-6 Astra, Qwen3.7-Plus, and MiMo-V2.5 (+1 more), evidence-only cases are GPT-5.6 Sol, and 10/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_10_27_122_self_shared_4way_000009_what",
@@ -6059,7 +6059,7 @@
           "prompt_excerpt": "Image 1 shows the Front facade of black bicycle parked against a black metal railing on a bridge in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 90-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option C (Image 4 · Left)",
+          "gold_answer": "Option C (Image 4 -> Left)",
           "gold_bbox": "[0.459, 0.425, 0.523, 0.593]",
           "predictions": [
             {
@@ -6399,7 +6399,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 3/16, spatial grounding succeeds for 2/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option C (Image 4 -> Left) and BBox [0.459, 0.425, 0.523, 0.593]. Across 16 available outputs, option prediction succeeds for 3/16 and spatial grounding for 2/16; both succeed for 1/16 (Gemini 3.8 Flash). Semantic-only cases are GPT-5.6 Sol and InternVL 3.5-30B-A3B, evidence-only cases are Gemini 3.1 Pro Preview, and 12/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_27_243_self_shared_4way_000317_what",
@@ -6409,7 +6409,7 @@
           "prompt_excerpt": "Image 1 shows the Front facade of light gray mid-rise building with red roof and dormer windows in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 90-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option B (Image 3 · Right)",
+          "gold_answer": "Option B (Image 3 -> Right)",
           "gold_bbox": "[0.393, 0.350, 0.552, 0.692]",
           "predictions": [
             {
@@ -6754,7 +6754,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 3/16, spatial grounding succeeds for 5/16, and both succeed for 0/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option B (Image 3 -> Right) and BBox [0.393, 0.350, 0.552, 0.692]. Across 16 available outputs, option prediction succeeds for 3/16 and spatial grounding for 5/16; both succeed for 0/16 (none). Semantic-only cases are InternVL 3.5-30B-A3B, SpaceOm, and SpaceR, evidence-only cases are Gemini 3.8 Flash, Qwen3.7-Plus, and GLM-5.3-Flash (+2 more), and 8/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_20_31_273_self_shared_4way_000033_what",
@@ -6764,7 +6764,7 @@
           "prompt_excerpt": "Image 1 shows the Left facade of tall wooden scaffolding structure with cross-bracing and ladder access attached to the side of a brick building in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 90-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option C (Image 4 · Front)",
+          "gold_answer": "Option C (Image 4 -> Front)",
           "gold_bbox": "[0.421, 0.334, 0.534, 0.652]",
           "predictions": [
             {
@@ -7132,7 +7132,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 6/16, spatial grounding succeeds for 3/16, and both succeed for 2/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option C (Image 4 -> Front) and BBox [0.421, 0.334, 0.534, 0.652]. Across 16 available outputs, option prediction succeeds for 6/16 and spatial grounding for 3/16; both succeed for 2/16 (Gemini 3.1 Pro Preview and Qwen3.7-Plus). Semantic-only cases are Qwen3.8-27B, InternVL 3.5-30B-A3B, and SpaceR (+1 more), evidence-only cases are MiMo-V2.5, and 9/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_49_230_self_shared_8way_000075_what",
@@ -7142,7 +7142,7 @@
           "prompt_excerpt": "Image 1 shows the Front facade of small gray corrugated metal shed with a single door and two small windows in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 45-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option B (Image 3 · Front-Right)",
+          "gold_answer": "Option B (Image 3 -> Front-Right)",
           "gold_bbox": "[0.388, 0.398, 0.661, 0.641]",
           "predictions": [
             {
@@ -7586,7 +7586,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 12/16, spatial grounding succeeds for 6/16, and both succeed for 5/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option B (Image 3 -> Front-Right) and BBox [0.388, 0.398, 0.661, 0.641]. Across 16 available outputs, option prediction succeeds for 12/16 and spatial grounding for 6/16; both succeed for 5/16 (Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and Qwen3.7-Plus (+2 more)). Semantic-only cases are Claude Opus 4.8, GPT-6 Astra, and GPT-5.6 Sol (+4 more), evidence-only cases are MiMo-V2.5, and 3/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_2_36_self_shared_8way_000119_what",
@@ -7596,7 +7596,7 @@
           "prompt_excerpt": "Image 1 shows the Front-Left facade of light gray brick building with red roof tiles and dormer windows in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 90-degree counterclockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option A (Image 2 · Back-Right)",
+          "gold_answer": "Option A (Image 2 -> Back-Right)",
           "gold_bbox": "[0.439, 0.327, 0.580, 0.732]",
           "predictions": [
             {
@@ -7958,7 +7958,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 5/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option A (Image 2 -> Back-Right) and BBox [0.439, 0.327, 0.580, 0.732]. Across 16 available outputs, option prediction succeeds for 5/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and InternVL 3.5-30B-A3B (+2 more), evidence-only cases are none, and 11/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_8_15_self_shared_8way_000143_what",
@@ -7968,7 +7968,7 @@
           "prompt_excerpt": "Image 1 shows the Front facade of green corrugated metal roof industrial shed with visible rust patches in the landmark-centric coordinate frame. Which candidate image is the resulting future view after taking a 180-degree clockwise turn around the landmark? Select one option and return the normalized bounding box of the landmark in the selected image.\n\nOptions:\nA. Image 2\nB. Image 3\nC. Image 4\nD. Image 5",
           "input_summary": "5 images: 1 reference view and 4 candidate future observations.",
           "task_modality": "image",
-          "gold_answer": "Option D (Image 5 · Back)",
+          "gold_answer": "Option D (Image 5 -> Back)",
           "gold_bbox": "[0.410, 0.424, 0.628, 0.617]",
           "predictions": [
             {
@@ -8368,7 +8368,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 8/16, spatial grounding succeeds for 5/16, and both succeed for 3/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Action-conditioned Future Observation Prediction question uses GT Option D (Image 5 -> Back) and BBox [0.410, 0.424, 0.628, 0.617]. Across 16 available outputs, option prediction succeeds for 8/16 and spatial grounding for 5/16; both succeed for 3/16 (Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and GLM-5.3-Flash). Semantic-only cases are Claude Opus 4.8, GPT-6 Astra, and Muse Spark 1.3 Contributor (+2 more), evidence-only cases are MiMo-V2.5 and Qwen3.8-27B, and 6/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         }
       ]
     },
@@ -8832,7 +8832,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 7/16, spatial grounding succeeds for 6/16, and both succeed for 4/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option C (Right) and BBox [0.693, 0.289, 0.870, 0.787]. Across 16 available outputs, option prediction succeeds for 7/16 and spatial grounding for 6/16; both succeed for 4/16 (GPT-6 Astra, Gemini 3.1 Pro Preview, and GLM-5.3-Flash (+1 more)). Semantic-only cases are GPT-5.6 Sol, Qwen3.7-Plus, and Qwen3.8-27B, evidence-only cases are Gemini 3.8 Flash and MiMo-V2.5, and 7/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_11_56_env_shared_4way_000146_where",
@@ -9304,7 +9304,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 2/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option A (Left) and BBox [0.100, 0.338, 0.363, 0.784]. Across 16 available outputs, option prediction succeeds for 2/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are SpaceOm and SpaceThinker, evidence-only cases are none, and 14/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_23_30_314_env_shared_4way_000106_where",
@@ -9760,7 +9760,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 3/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option D (Front) and BBox [0.482, 0.354, 0.518, 0.727]. Across 16 available outputs, option prediction succeeds for 3/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are SpaceOm, SpaceR, and ViLaSR, evidence-only cases are none, and 13/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_20_99_684_env_shared_8way_000144_where",
@@ -10184,7 +10184,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 9/16, spatial grounding succeeds for 6/16, and both succeed for 6/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option C (Front) and BBox [0.364, 0.340, 0.616, 0.728]. Across 16 available outputs, option prediction succeeds for 9/16 and spatial grounding for 6/16; both succeed for 6/16 (GPT-6 Astra, Gemini 3.8 Flash, and Gemini 3.1 Pro Preview (+3 more)). Semantic-only cases are Qwen3.7-Plus, SpaceR, and SpaceThinker, evidence-only cases are none, and 7/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_21_87_env_shared_4way_000110_where",
@@ -10656,7 +10656,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 10/16, spatial grounding succeeds for 3/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option A (Front) and BBox [0.447, 0.286, 0.553, 0.747]. Across 16 available outputs, option prediction succeeds for 10/16 and spatial grounding for 3/16; both succeed for 1/16 (GPT-6 Astra). Semantic-only cases are Qwen3.7-Plus, GLM-5.3-Flash, and Kimi K2.6 (+6 more), evidence-only cases are Gemini 3.8 Flash and Gemini 3.1 Pro Preview, and 4/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_20_118_env_shared_8way_000084_where",
@@ -11128,7 +11128,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 8/16, spatial grounding succeeds for 1/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option D (Front-Right) and BBox [0.733, 0.342, 0.999, 0.818]. Across 16 available outputs, option prediction succeeds for 8/16 and spatial grounding for 1/16; both succeed for 1/16 (SpaceOm). Semantic-only cases are GPT-6 Astra, GPT-5.6 Sol, and Gemini 3.1 Pro Preview (+4 more), evidence-only cases are none, and 8/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_49_224_env_shared_4way_000026_where",
@@ -11600,7 +11600,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 12/16, spatial grounding succeeds for 9/16, and both succeed for 8/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option A (Left) and BBox [0.026, 0.378, 0.428, 0.803]. Across 16 available outputs, option prediction succeeds for 12/16 and spatial grounding for 9/16; both succeed for 8/16 (GPT-6 Astra, GPT-5.6 Sol, and Gemini 3.8 Flash (+5 more)). Semantic-only cases are Kimi K2.6, InternVL 3.5-30B-A3B, and SpaceOm (+1 more), evidence-only cases are MiMo-V2.5, and 3/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_20_31_273_env_shared_4way_000034_where",
@@ -12024,7 +12024,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 5/16, spatial grounding succeeds for 2/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option A (Right) and BBox [0.647, 0.308, 0.890, 0.799]. Across 16 available outputs, option prediction succeeds for 5/16 and spatial grounding for 2/16; both succeed for 1/16 (Gemini 3.1 Pro Preview). Semantic-only cases are GPT-6 Astra, GPT-5.6 Sol, and Qwen3.7-Plus (+1 more), evidence-only cases are Gemini 3.8 Flash, and 10/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_2_36_env_shared_8way_000120_where",
@@ -12512,7 +12512,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 1/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option A (Front) and BBox [0.427, 0.293, 0.572, 0.748]. Across 16 available outputs, option prediction succeeds for 1/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are Muse Spark 1.3 Contributor, evidence-only cases are none, and 15/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_15_42_env_shared_4way_000094_where",
@@ -12968,7 +12968,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 6/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark-relative Position Reasoning question uses GT Option A (Front) and BBox [0.484, 0.411, 0.515, 0.657]. Across 16 available outputs, option prediction succeeds for 6/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and SpaceOm (+3 more), evidence-only cases are none, and 10/16 fail both. This exposes whether reference-frame reasoning and localization of the shared landmark succeed together."
         }
       ]
     },
@@ -13448,7 +13448,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 2/16, spatial grounding succeeds for 3/16, and both succeed for 2/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option C (Right) and BBox [0.606, 0.334, 0.901, 0.776]. Across 16 available outputs, option prediction succeeds for 2/16 and spatial grounding for 3/16; both succeed for 2/16 (Muse Spark 1.3 Contributor and Qwen3.7-Plus). Semantic-only cases are none, evidence-only cases are GLM-5.3-Flash, and 13/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_11_56_env_shared_4way_000146_how",
@@ -13920,7 +13920,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 1/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option D (Left) and BBox [0.100, 0.338, 0.363, 0.784]. Across 16 available outputs, option prediction succeeds for 1/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are Gemini 3.1 Pro Preview, evidence-only cases are none, and 15/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_23_10_34_env_shared_4way_000134_how",
@@ -14376,7 +14376,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 5/16, spatial grounding succeeds for 2/16, and both succeed for 1/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option D (Front) and BBox [0.342, 0.419, 0.657, 0.607]. Across 16 available outputs, option prediction succeeds for 5/16 and spatial grounding for 2/16; both succeed for 1/16 (SpaceR). Semantic-only cases are Gemini 3.8 Flash, Kimi K2.6, and MiMo-V2.5 (+1 more), evidence-only cases are Qwen3.8-27B, and 10/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_20_85_652_env_shared_8way_000240_how",
@@ -14816,7 +14816,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 8/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option C (Front-Left) and BBox [0.048, 0.396, 0.422, 0.720]. Across 16 available outputs, option prediction succeeds for 8/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are Gemini 3.8 Flash, Qwen3.7-Plus, and MiMo-V2.5 (+5 more), evidence-only cases are none, and 8/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_21_1_12_env_shared_4way_000030_how",
@@ -15240,7 +15240,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 5/16, spatial grounding succeeds for 3/16, and both succeed for 3/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option A (Front) and BBox [0.356, 0.392, 0.644, 0.648]. Across 16 available outputs, option prediction succeeds for 5/16 and spatial grounding for 3/16; both succeed for 3/16 (Gemini 3.8 Flash, Gemini 3.1 Pro Preview, and MiMo-V2.5). Semantic-only cases are Qwen3.7-Plus and SpaceR, evidence-only cases are none, and 11/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_16_33_403_env_shared_8way_000128_how",
@@ -15696,7 +15696,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 7/16, spatial grounding succeeds for 6/16, and both succeed for 4/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option A (Front-Right) and BBox [0.684, 0.282, 0.875, 0.814]. Across 16 available outputs, option prediction succeeds for 7/16 and spatial grounding for 6/16; both succeed for 4/16 (GPT-6 Astra, Gemini 3.8 Flash, and Gemini 3.1 Pro Preview (+1 more)). Semantic-only cases are GPT-5.6 Sol, InternVL 3.5-30B-A3B, and SpaceOm, evidence-only cases are MiMo-V2.5 and Qwen3.8-27B, and 7/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_49_230_env_shared_8way_000076_how",
@@ -16152,7 +16152,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 7/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option B (Front-Right) and BBox [0.577, 0.402, 0.976, 0.707]. Across 16 available outputs, option prediction succeeds for 7/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and GLM-5.3-Flash (+4 more), evidence-only cases are none, and 9/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_7_20_134_env_shared_4way_000130_how",
@@ -16640,7 +16640,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 4/16, spatial grounding succeeds for 1/16, and both succeed for 0/16. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option A (Right) and BBox [0.652, 0.330, 0.909, 0.782]. Across 16 available outputs, option prediction succeeds for 4/16 and spatial grounding for 1/16; both succeed for 0/16 (none). Semantic-only cases are Claude Opus 4.8, Qwen3.7-Plus, and Kimi K2.6 (+1 more), evidence-only cases are Gemini 3.8 Flash, and 11/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_11_45_627_env_shared_4way_000006_how",
@@ -17128,7 +17128,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 0/16, spatial grounding succeeds for 0/16, and both succeed for 0/16. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option D (Left) and BBox [0.080, 0.323, 0.412, 0.784]. Across 16 available outputs, option prediction succeeds for 0/16 and spatial grounding for 0/16; both succeed for 0/16 (none). Semantic-only cases are none, evidence-only cases are none, and 16/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         },
         {
           "example_id": "env_9_8_15_env_shared_8way_000144_how",
@@ -17584,7 +17584,7 @@
             }
           ],
           "answer_media_panels": [],
-          "prediction_analysis": "Across 16 available model outputs, option prediction succeeds for 6/16, spatial grounding succeeds for 7/16, and both succeed for 2/16. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Goal-conditioned Action Decision question uses GT Option A (Front) and BBox [0.315, 0.440, 0.671, 0.609]. Across 16 available outputs, option prediction succeeds for 6/16 and spatial grounding for 7/16; both succeed for 2/16 (Gemini 3.8 Flash and Muse Spark 1.3 Contributor). Semantic-only cases are Claude Opus 4.8, GPT-5.6 Sol, and Kimi K2.6 (+1 more), evidence-only cases are GPT-6 Astra, Qwen3.7-Plus, and GLM-5.3-Flash (+2 more), and 5/16 fail both. This exposes whether action-observation reasoning and localization of the shared landmark succeed together."
         }
       ]
     },
@@ -18120,7 +18120,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 7/12, temporal localization succeeds for 4/12, and both succeed for 2/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option C (fly toward the landmark for about 60 meters while keeping the landmark in view) with intervals [0.0, 13.7]. Across 12 available outputs, behavior recognition succeeds for 7/12 and temporal localization for 4/12; both succeed for 2/12 (Kimi K2.6 and MiMo-V2.5). Semantic-only cases are Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and Qwen3.8-27B (+2 more), evidence-only cases are Qwen3.7-Plus and GLM-5.3-Flash, and 3/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_20_batch_env_20_99_687_composite_0051_self_instance_recognition_joint_000235",
@@ -18843,7 +18843,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 3/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option A (fly toward the landmark for about 30 meters while keeping the landmark in view); Option B (an inspection mission that circles around one landmark that first looks forward and then tracks the landmark including 225°, 225° orbit segments); Option C (circle around the landmark for about 225° in a counterclockwise direction while looking forward); Option D (circle around the landmark for about 225° in a clockwise direction while keeping the landmark in view); Option H (move away from the landmark for about 30 meters while looking forward and rising 5 meters) with intervals [0.0, 2.2], [2.3, 6.3], [6.3, 9.8], [9.9, 12.1]. Across 12 available outputs, behavior recognition succeeds for 3/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are Muse Spark 1.3 Contributor, GLM-5.3-Flash, and Qwen3.8-27B, evidence-only cases are none, and 9/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_9_batch_env_9_15_42_composite_0035_self_instance_recognition_joint_000047",
@@ -19569,7 +19569,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 1/12, temporal localization succeeds for 1/12, and both succeed for 0/12. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option B (scan back and forth over a 42 meters by 21 meters area around the landmark in an S-shaped pattern while looking forward using 3 back-and-forth passes); Option D (an inspection mission that first looks forward and then tracks the landmark); Option G (move away from the landmark for about 40 meters while looking forward and rising 20 meters); Option H (fly toward the landmark for about 40 meters while keeping the landmark in view) with intervals [4.1, 13.2], [13.2, 15.5], [0.0, 4.0]. Across 12 available outputs, behavior recognition succeeds for 1/12 and temporal localization for 1/12; both succeed for 0/12 (none). Semantic-only cases are SpaceR, evidence-only cases are Muse Spark 1.3 Contributor, and 10/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_20_batch_env_20_23_220_composite_0032_self_instance_recognition_joint_000043",
@@ -20335,7 +20335,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 2/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option C (spiral around the landmark for about 360° in a counterclockwise direction while keeping the landmark in view); Option D (move away from the landmark for about 60 meters while looking forward and rising 25 meters); Option E (spiral around the landmark for about 180° in a clockwise direction while looking forward); Option G (an inspection mission that spirals around one landmark that first looks forward and then tracks the landmark including 180°, 360° orbit segments); Option H (fly toward the landmark for about 50 meters while keeping the landmark in view) with intervals [9.5, 22.3], [22.3, 27.2], [2.3, 9.5], [0.0, 2.2]. Across 12 available outputs, behavior recognition succeeds for 2/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are Muse Spark 1.3 Contributor and GLM-5.3-Flash, evidence-only cases are none, and 10/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_23_batch_env_23_42_473_atomic_0035_self_instance_recognition_joint_000129",
@@ -20886,7 +20886,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 7/12, temporal localization succeeds for 8/12, and both succeed for 4/12. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option A (move away from the landmark for about 30 meters while keeping the landmark in view and rising 15 meters) with intervals [0.0, 2.3]. Across 12 available outputs, behavior recognition succeeds for 7/12 and temporal localization for 8/12; both succeed for 4/12 (Qwen3.7-Plus, Kimi K2.6, and MiMo-V2.5 (+1 more)). Semantic-only cases are Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and GLM-5.3-Flash, evidence-only cases are Qwen3.8-27B, SpaceOm, and SpaceR (+1 more), and 1/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_7_batch_env_7_27_243_atomic_0012_self_instance_recognition_joint_000145",
@@ -21460,7 +21460,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 3/12, temporal localization succeeds for 6/12, and both succeed for 1/12. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option C (sweep around the landmark in a long curved pass for about 585° while keeping the landmark in view) with intervals [0.0, 52.4]. Across 12 available outputs, behavior recognition succeeds for 3/12 and temporal localization for 6/12; both succeed for 1/12 (MiMo-V2.5). Semantic-only cases are InternVL 3.5-30B-A3B and SpaceR, evidence-only cases are Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and Qwen3.7-Plus (+2 more), and 4/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_10_batch_env_10_23_94_composite_0003_self_instance_recognition_joint_000035",
@@ -22253,7 +22253,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 1/12, temporal localization succeeds for 1/12, and both succeed for 0/12. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option A (fly toward the landmark for about 80 meters while keeping the landmark in view); Option C (an inspection mission that checks one landmark along a square-shaped route that first looks forward and then tracks the landmark); Option D (move around the landmark along a square-shaped loop in a clockwise direction while looking forward with 4 corners); Option E (move around the landmark along a square-shaped loop in a clockwise direction while keeping the landmark in view with 4 corners); Option F (move away from the landmark for about 70 meters while looking forward and rising 25 meters) with intervals [0.0, 2.3], [2.4, 22.0], [22.1, 39.1], [39.1, 41.4]. Across 12 available outputs, behavior recognition succeeds for 1/12 and temporal localization for 1/12; both succeed for 0/12 (none). Semantic-only cases are SpaceR, evidence-only cases are Muse Spark 1.3 Contributor, and 10/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_16_batch_env_16_33_403_atomic_0008_self_instance_recognition_joint_000225",
@@ -22781,7 +22781,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 3/12, temporal localization succeeds for 4/12, and both succeed for 0/12. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option G (move around the landmark along a square-shaped loop in a clockwise direction while keeping the landmark in view with 6 corners) with intervals [0.0, 35.5]. Across 12 available outputs, behavior recognition succeeds for 3/12 and temporal localization for 4/12; both succeed for 0/12 (none). Semantic-only cases are Muse Spark 1.3 Contributor, Qwen3.8-27B, and SpaceR, evidence-only cases are Qwen3.7-Plus, GLM-5.3-Flash, and Kimi K2.6 (+1 more), and 5/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_9_batch_env_9_26_107_atomic_0025_self_instance_recognition_joint_000117",
@@ -23355,7 +23355,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 5/12, temporal localization succeeds for 7/12, and both succeed for 3/12. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option A (move away from the landmark for about 50 meters while keeping the landmark in view and rising 25 meters) with intervals [0.0, 2.3]. Across 12 available outputs, behavior recognition succeeds for 5/12 and temporal localization for 7/12; both succeed for 3/12 (Qwen3.7-Plus, SpaceOm, and SpaceThinker). Semantic-only cases are Gemini 3.8 Flash and SpaceR, evidence-only cases are GLM-5.3-Flash, Kimi K2.6, and MiMo-V2.5 (+1 more), and 3/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         },
         {
           "example_id": "env_16_batch_env_16_32_286_composite_0083_self_instance_recognition_joint_000115",
@@ -24038,7 +24038,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, behavior recognition succeeds for 4/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Flight Behavior Recognition and Temporal Localization question uses GT behavior set Option A (move around the landmark along a square-shaped loop in a counterclockwise direction while looking forward with 4 corners); Option B (move around the landmark along a square-shaped loop in a counterclockwise direction while keeping the landmark in view with 4 corners); Option C (move away from the landmark for about 30 meters while looking forward and rising 10 meters); Option D (fly toward the landmark for about 30 meters while keeping the landmark in view); Option E (an inspection mission that checks one landmark along a square-shaped route that first looks forward and then tracks the landmark) with intervals [2.4, 6.6], [6.6, 12.9], [12.9, 15.2], [0.0, 2.3]. Across 12 available outputs, behavior recognition succeeds for 4/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and Qwen3.8-27B (+1 more), evidence-only cases are none, and 8/12 fail both. This exposes whether behavior identification and temporal localization remain aligned along the same flight."
         }
       ]
     },
@@ -24448,7 +24448,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 8/12, temporal localization succeeds for 2/12, and both succeed for 2/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 1 with intervals [0.0, 3.5]. Across 12 available outputs, visibility count succeeds for 8/12 and temporal localization for 2/12; both succeed for 2/12 (GLM-5.3-Flash and Kimi K2.6). Semantic-only cases are Muse Spark 1.3 Contributor, MiMo-V2.5, and Qwen3.8-27B (+3 more), evidence-only cases are none, and 4/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_9_batch_env_9_21_86_composite_0024_env_visibility_reasoning_000108",
@@ -24920,7 +24920,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 6/12, temporal localization succeeds for 5/12, and both succeed for 4/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 2 with intervals [0.0, 3.9], [13.9, 22.7]. Across 12 available outputs, visibility count succeeds for 6/12 and temporal localization for 5/12; both succeed for 4/12 (Gemini 3.8 Flash, Qwen3.7-Plus, and Kimi K2.6 (+1 more)). Semantic-only cases are SpaceOm and ViLaSR, evidence-only cases are Muse Spark 1.3 Contributor, and 5/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_20_batch_env_20_85_652_atomic_0005_env_visibility_reasoning_000218",
@@ -25346,7 +25346,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 4/12, temporal localization succeeds for 3/12, and both succeed for 2/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 1 with intervals [0.0, 2.3]. Across 12 available outputs, visibility count succeeds for 4/12 and temporal localization for 3/12; both succeed for 2/12 (Qwen3.7-Plus and MiMo-V2.5). Semantic-only cases are InternVL 3.5-30B-A3B and ViLaSR, evidence-only cases are Kimi K2.6, and 7/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_23_batch_env_23_42_469_atomic_0013_env_visibility_reasoning_000126",
@@ -25796,7 +25796,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 4/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 2 with intervals [0.4, 1.3], [3.4, 4.0]. Across 12 available outputs, visibility count succeeds for 4/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are SpaceOm, SpaceR, and SpaceThinker (+1 more), evidence-only cases are none, and 8/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_16_batch_env_16_23_197_atomic_0039_env_visibility_reasoning_000042",
@@ -26330,7 +26330,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 0/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 6 with intervals [3.8, 4.9], [6.8, 7.8], [9.8, 10.8], [12.8, 13.8], [15.7, 16.8], [18.7, 19.8]. Across 12 available outputs, visibility count succeeds for 0/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are none, evidence-only cases are none, and 12/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_16_batch_env_16_33_378_composite_0027_env_visibility_reasoning_000192",
@@ -26734,7 +26734,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 2/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic decisions are more reliable than their explicit grounding on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 2 with intervals [0.0, 2.6], [13.0, 25.4]. Across 12 available outputs, visibility count succeeds for 2/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are GLM-5.3-Flash and SpaceOm, evidence-only cases are none, and 10/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_16_batch_env_16_33_384_atomic_0017_env_visibility_reasoning_000202",
@@ -27162,7 +27162,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 6/12, temporal localization succeeds for 6/12, and both succeed for 3/12. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 1 with intervals [0.0, 14.3]. Across 12 available outputs, visibility count succeeds for 6/12 and temporal localization for 6/12; both succeed for 3/12 (Qwen3.7-Plus, Kimi K2.6, and Qwen3.8-27B). Semantic-only cases are GLM-5.3-Flash, MiMo-V2.5, and InternVL 3.5-30B-A3B, evidence-only cases are SpaceOm, SpaceThinker, and ViLaSR, and 3/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_9_batch_env_9_18_61_atomic_0012_env_visibility_reasoning_000078",
@@ -27666,7 +27666,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 2/12, temporal localization succeeds for 5/12, and both succeed for 0/12. Grounding is more reliable than the final semantic decision on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 1 with intervals [0.0, 41.7]. Across 12 available outputs, visibility count succeeds for 2/12 and temporal localization for 5/12; both succeed for 0/12 (none). Semantic-only cases are Qwen3.8-27B and SpaceThinker, evidence-only cases are Gemini 3.8 Flash, Muse Spark 1.3 Contributor, and Qwen3.7-Plus (+2 more), and 5/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_10_batch_env_10_23_96_composite_0004_env_visibility_reasoning_000040",
@@ -28182,7 +28182,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 0/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 4 with intervals [0.0, 2.7], [5.4, 6.5], [9.6, 10.1], [13.1, 23.3]. Across 12 available outputs, visibility count succeeds for 0/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are none, evidence-only cases are none, and 12/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         },
         {
           "example_id": "env_16_batch_env_16_32_283_composite_0121_env_visibility_reasoning_000104",
@@ -28632,7 +28632,7 @@
               ]
             }
           ],
-          "prediction_analysis": "Across 12 available model outputs, visibility count succeeds for 0/12, temporal localization succeeds for 0/12, and both succeed for 0/12. Semantic and grounding success are equally frequent on this example."
+          "prediction_analysis": "This Landmark Visibility Counting and Interval Reasoning question uses GT count 3 with intervals [0.0, 2.9], [21.0, 21.3], [21.9, 28.5]. Across 12 available outputs, visibility count succeeds for 0/12 and temporal localization for 0/12; both succeed for 0/12 (none). Semantic-only cases are none, evidence-only cases are none, and 12/12 fail both. This separates counting landmark reappearances from recovering their complete visible intervals."
         }
       ]
     }

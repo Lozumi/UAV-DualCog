@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T04:36:35.909119+00:00",
+  "generated_at": "2026-09-20T09:44:29.951164+00:00",
   "status": "evaluation_complete",
   "statistics": {
     "registered_views": 1326,
@@ -13,7 +13,6 @@
     {
       "scene_id": "gauu_lfls",
       "scene": "LFLS",
-      "checkpoint": "LFLS.zip",
       "statistics": {
         "registered_views": 553,
         "landmarks": 11,
@@ -29,7 +28,6 @@
     {
       "scene_id": "gauu_smbu",
       "scene": "SMBU",
-      "checkpoint": "SMBU.zip",
       "statistics": {
         "registered_views": 415,
         "landmarks": 10,
@@ -45,7 +43,6 @@
     {
       "scene_id": "gauu_upper_campus",
       "scene": "Upper Campus",
-      "checkpoint": "UPPER_CAMPUS.zip",
       "statistics": {
         "registered_views": 358,
         "landmarks": 9,
@@ -65,8 +62,12 @@
       "label": "LFLS",
       "images": [
         {
-          "label": "Full-scene aerial panorama",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_panorama.jpg"
+          "label": "3DGS Oblique Overview",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_oblique.png"
+        },
+        {
+          "label": "3DGS Top-Down Overview",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_topdown.png"
         },
         {
           "label": "Registered aerial view 1",
@@ -87,8 +88,12 @@
       "label": "SMBU",
       "images": [
         {
-          "label": "Full-scene aerial panorama",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_panorama.jpg"
+          "label": "3DGS Oblique Overview",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_oblique.png"
+        },
+        {
+          "label": "3DGS Top-Down Overview",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_topdown.png"
         },
         {
           "label": "Registered aerial view 1",
@@ -109,8 +114,12 @@
       "label": "Upper Campus",
       "images": [
         {
-          "label": "Full-scene aerial panorama",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_panorama.jpg"
+          "label": "3DGS Oblique Overview",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_oblique.png"
+        },
+        {
+          "label": "3DGS Top-Down Overview",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_topdown.png"
         },
         {
           "label": "Registered aerial view 1",
@@ -156,6 +165,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "C",
+                "bbox": "[0.535, 0.775, 0.635, 0.860]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "C",
+                "bbox": "[0.800, 0.770, 0.860, 0.860]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.191",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "C",
                 "bbox": "[0.020, 0.550, 0.100, 0.680]",
@@ -174,6 +203,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.000",
                 "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "B",
+                "bbox": "[0.210, 0.480, 0.270, 0.560]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -185,14 +224,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_where_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -216,8 +248,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.535,
+                      0.775,
+                      0.635,
+                      0.86
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.8,
+                      0.77,
+                      0.86,
+                      0.86
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.02,
@@ -228,7 +282,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.63,
@@ -236,10 +290,22 @@
                       0.68,
                       0.73
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.21,
+                      0.48,
+                      0.27,
+                      0.56
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where",
@@ -264,6 +330,26 @@
                 "note": "Semantic answer is correct, but localization misses the threshold."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "B",
+                "bbox": "[0.310, 0.300, 0.360, 0.480]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "B",
+                "bbox": "[0.509, 0.606, 0.539, 0.774]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "A",
                 "bbox": "[0.360, 0.440, 0.410, 0.560]",
@@ -282,6 +368,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.000",
                 "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "B",
+                "bbox": "[0.440, 0.450, 0.460, 0.510]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -293,14 +389,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_where_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060023_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -324,8 +413,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.31,
+                      0.3,
+                      0.36,
+                      0.48
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.509,
+                      0.606,
+                      0.539,
+                      0.774
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.36,
@@ -336,7 +447,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.37,
@@ -344,10 +455,22 @@
                       0.38,
                       0.55
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.44,
+                      0.45,
+                      0.46,
+                      0.51
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where",
@@ -372,6 +495,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "A",
+                "bbox": "[0.530, 0.355, 0.585, 0.445]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "A",
+                "bbox": "[0.616, 0.198, 0.725, 0.289]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.162",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "B",
                 "bbox": "[0.560, 0.250, 0.670, 0.360]",
@@ -390,6 +533,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.283",
                 "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "A",
+                "bbox": "[0.580, 0.280, 0.680, 0.380]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.484",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -401,14 +554,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_where_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -432,8 +578,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.53,
+                      0.355,
+                      0.585,
+                      0.445
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.616,
+                      0.198,
+                      0.725,
+                      0.289
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.56,
@@ -444,7 +612,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.605,
@@ -452,10 +620,22 @@
                       0.665,
                       0.295
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.58,
+                      0.28,
+                      0.68,
+                      0.38
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           }
         ]
       },
@@ -486,6 +666,26 @@
                 "note": "Both outputs are correct."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "C",
+                "bbox": "[0.480, 0.570, 0.535, 0.620]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "C",
+                "bbox": "[0.375, 0.538, 0.434, 0.614]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.068",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "A",
                 "bbox": "[0.500, 0.720, 0.570, 0.830]",
@@ -504,6 +704,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.000",
                 "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "C",
+                "bbox": "[0.480, 0.580, 0.550, 0.660]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -515,14 +725,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_self_what_gauu_lfls_gauu_lfls_candidate_0376_self_shared_8way_050003_what_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -546,8 +749,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.48,
+                      0.57,
+                      0.535,
+                      0.62
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.375,
+                      0.538,
+                      0.434,
+                      0.614
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.5,
@@ -558,7 +783,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.42,
@@ -566,10 +791,22 @@
                       0.48,
                       0.62
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.48,
+                      0.58,
+                      0.55,
+                      0.66
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what",
@@ -594,6 +831,26 @@
                 "note": "Both the semantic answer and localization are incorrect."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "A",
+                "bbox": "[0.065, 0.705, 0.135, 0.755]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "B",
+                "bbox": "[0.280, 0.540, 0.300, 0.600]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.076",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "B",
                 "bbox": "[0.190, 0.330, 0.230, 0.430]",
@@ -612,6 +869,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.009",
                 "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "B",
+                "bbox": "[0.460, 0.550, 0.470, 0.590]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -623,14 +890,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_self_what_gauu_smbu_gauu_smbu_candidate_0040_self_shared_8way_060021_what_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -654,8 +914,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.065,
+                      0.705,
+                      0.135,
+                      0.755
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.28,
+                      0.54,
+                      0.3,
+                      0.6
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.19,
@@ -666,7 +948,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.0,
@@ -674,10 +956,22 @@
                       1.0,
                       1.0
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.46,
+                      0.55,
+                      0.47,
+                      0.59
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what",
@@ -702,6 +996,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "A",
+                "bbox": "[0.530, 0.165, 0.650, 0.250]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.019",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "A",
+                "bbox": "[0.580, 0.252, 0.673, 0.349]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.856",
+                "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "A",
                 "bbox": "[0.560, 0.230, 0.660, 0.320]",
@@ -720,6 +1034,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.000",
                 "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "A",
+                "bbox": "[0.550, 0.330, 0.630, 0.410]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.053",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -731,14 +1055,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_self_what_gauu_upper_campus_gauu_upper_candidate_0158_self_shared_8way_070033_what_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -762,8 +1079,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.53,
+                      0.165,
+                      0.65,
+                      0.25
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.5797,
+                      0.2518,
+                      0.6734,
+                      0.3489
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.56,
@@ -774,7 +1113,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.57,
@@ -782,10 +1121,22 @@
                       0.63,
                       0.58
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.55,
+                      0.33,
+                      0.63,
+                      0.41
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           }
         ]
       },
@@ -816,6 +1167,26 @@
                 "note": "Both outputs are correct."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "D",
+                "bbox": "[0.535, 0.590, 0.590, 0.660]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "D",
+                "bbox": "[0.738, 0.700, 0.786, 0.761]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "D",
                 "bbox": "[0.720, 0.530, 0.790, 0.620]",
@@ -834,6 +1205,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.000",
                 "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "D",
+                "bbox": "[0.720, 0.570, 0.750, 0.610]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
               }
             ],
             "media_panels": [
@@ -845,14 +1226,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_where_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -876,8 +1250,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.535,
+                      0.59,
+                      0.59,
+                      0.66
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.7375,
+                      0.6995,
+                      0.7859,
+                      0.7606
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.72,
@@ -888,7 +1284,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.61,
@@ -896,10 +1292,22 @@
                       0.66,
                       0.61
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.72,
+                      0.57,
+                      0.75,
+                      0.61
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where",
@@ -924,6 +1332,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "C",
+                "bbox": "[0.094, 0.613, 0.208, 0.758]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.302",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "D",
+                "bbox": "[0.139, 0.613, 0.206, 0.758]",
+                "status": "correct",
+                "option_status": "correct",
+                "bbox_status": "correct",
+                "bbox_metric": "IoU = 0.515",
+                "note": "Both outputs are correct."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "D",
                 "bbox": "[0.350, 0.450, 0.400, 0.570]",
@@ -942,6 +1370,16 @@
                 "bbox_status": "correct",
                 "bbox_metric": "IoU = 0.512",
                 "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "C",
+                "bbox": "[0.130, 0.580, 0.180, 0.710]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.447",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -953,14 +1391,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_where_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -984,8 +1415,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.094,
+                      0.613,
+                      0.208,
+                      0.758
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.139,
+                      0.613,
+                      0.206,
+                      0.758
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.35,
@@ -996,7 +1449,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.14,
@@ -1004,10 +1457,22 @@
                       0.17,
                       0.73
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.13,
+                      0.58,
+                      0.18,
+                      0.71
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where",
@@ -1032,6 +1497,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "A",
+                "bbox": "[0.534, 0.311, 0.630, 0.448]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.083",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "D",
+                "bbox": "[0.623, 0.269, 0.683, 0.361]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.382",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "A",
                 "bbox": "[0.570, 0.270, 0.660, 0.360]",
@@ -1050,6 +1535,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.113",
                 "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "C",
+                "bbox": "[0.580, 0.330, 0.660, 0.410]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.086",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -1061,14 +1556,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_where_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_where_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -1092,8 +1580,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.534,
+                      0.311,
+                      0.63,
+                      0.448
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.623,
+                      0.269,
+                      0.683,
+                      0.361
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.57,
@@ -1104,7 +1614,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.62,
@@ -1112,10 +1622,22 @@
                       0.72,
                       0.42
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.58,
+                      0.33,
+                      0.66,
+                      0.41
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           }
         ]
       },
@@ -1146,6 +1668,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "D",
+                "bbox": "[0.585, 0.650, 0.630, 0.725]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "A",
+                "bbox": "[0.720, 0.690, 0.770, 0.770]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "D",
                 "bbox": "[0.620, 0.580, 0.670, 0.650]",
@@ -1164,6 +1706,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.000",
                 "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "C",
+                "bbox": "[0.750, 0.530, 0.780, 0.570]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Semantic answer is correct, but localization misses the threshold."
               }
             ],
             "media_panels": [
@@ -1175,14 +1727,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_env_how_gauu_lfls_gauu_lfls_candidate_0376_env_shared_8way_050012_how_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -1206,8 +1751,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.585,
+                      0.65,
+                      0.63,
+                      0.725
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.72,
+                      0.69,
+                      0.77,
+                      0.77
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.62,
@@ -1218,7 +1785,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.68,
@@ -1226,10 +1793,22 @@
                       0.72,
                       0.62
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.75,
+                      0.53,
+                      0.78,
+                      0.57
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how",
@@ -1254,6 +1833,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "A",
+                "bbox": "[0.095, 0.615, 0.165, 0.755]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.205",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "A",
+                "bbox": "[0.369, 0.650, 0.394, 0.878]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "B",
                 "bbox": "[0.360, 0.180, 0.400, 0.360]",
@@ -1272,6 +1871,16 @@
                 "bbox_status": "correct",
                 "bbox_metric": "IoU = 0.703",
                 "note": "Localization passes, but the semantic answer is wrong."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "A",
+                "bbox": "[0.125, 0.556, 0.183, 0.694]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.322",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -1283,14 +1892,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_env_how_gauu_smbu_gauu_smbu_candidate_0040_env_shared_8way_060010_how_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -1314,8 +1916,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.095,
+                      0.615,
+                      0.165,
+                      0.755
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.369,
+                      0.65,
+                      0.394,
+                      0.878
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.36,
@@ -1326,7 +1950,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.14,
@@ -1334,10 +1958,22 @@
                       0.18,
                       0.74
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.125,
+                      0.556,
+                      0.183,
+                      0.694
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           },
           {
             "example_id": "gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how",
@@ -1362,6 +1998,26 @@
                 "note": "Localization passes, but the semantic answer is wrong."
               },
               {
+                "model": "Muse Spark 1.3 Contributor",
+                "answer_option_id": "C",
+                "bbox": "[0.532, 0.312, 0.632, 0.378]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.121",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "GPT-5.5",
+                "answer_option_id": "C",
+                "bbox": "[0.634, 0.340, 0.691, 0.385]",
+                "status": "incorrect",
+                "option_status": "correct",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.023",
+                "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
                 "model": "GLM-5.3-Flash",
                 "answer_option_id": "C",
                 "bbox": "[0.570, 0.240, 0.680, 0.340]",
@@ -1380,6 +2036,16 @@
                 "bbox_status": "incorrect",
                 "bbox_metric": "IoU = 0.295",
                 "note": "Semantic answer is correct, but localization misses the threshold."
+              },
+              {
+                "model": "Qwen3.6-27B",
+                "answer_option_id": "D",
+                "bbox": "[0.580, 0.350, 0.640, 0.420]",
+                "status": "incorrect",
+                "option_status": "incorrect",
+                "bbox_status": "incorrect",
+                "bbox_metric": "IoU = 0.000",
+                "note": "Both the semantic answer and localization are incorrect."
               }
             ],
             "media_panels": [
@@ -1391,14 +2057,7 @@
               {
                 "kind": "image",
                 "label": "Query observation",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how_query.jpg"
-              }
-            ],
-            "answer_media_panels": [
-              {
-                "kind": "image",
-                "label": "Ground truth and model boxes",
-                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how_answer.jpg",
+                "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_env_how_gauu_upper_campus_gauu_upper_candidate_0158_env_shared_8way_070016_how_query.jpg",
                 "overlays": [
                   {
                     "label": "Ground truth",
@@ -1422,8 +2081,30 @@
                     ]
                   },
                   {
+                    "label": "Muse Spark 1.3 Contributor",
+                    "color": "#d97706",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.532,
+                      0.312,
+                      0.632,
+                      0.378
+                    ]
+                  },
+                  {
+                    "label": "GPT-5.5",
+                    "color": "#0f766e",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.634,
+                      0.34,
+                      0.691,
+                      0.385
+                    ]
+                  },
+                  {
                     "label": "GLM-5.3-Flash",
-                    "color": "#ef4444",
+                    "color": "#dc2626",
                     "line_style": "dashed",
                     "bbox": [
                       0.57,
@@ -1434,7 +2115,7 @@
                   },
                   {
                     "label": "MiMo-V2.5",
-                    "color": "#8b5cf6",
+                    "color": "#7c3aed",
                     "line_style": "dashed",
                     "bbox": [
                       0.62,
@@ -1442,10 +2123,22 @@
                       0.71,
                       0.33
                     ]
+                  },
+                  {
+                    "label": "Qwen3.6-27B",
+                    "color": "#64748b",
+                    "line_style": "dashed",
+                    "bbox": [
+                      0.58,
+                      0.35,
+                      0.64,
+                      0.42
+                    ]
                   }
                 ]
               }
-            ]
+            ],
+            "answer_media_panels": []
           }
         ]
       }
@@ -2334,8 +3027,13 @@
       "env_where": 100,
       "env_how": 100
     },
-    "model_count": 16,
+    "model_count": 19,
     "missing_predictions_policy": "failure",
-    "pairing": "Deterministic rank matching within the same scene, landmark, and difficulty stratum."
+    "pairing": "Deterministic rank matching within the same scene, landmark, and difficulty stratum.",
+    "excluded_models": [
+      "Qwen/Qwen3.5-9B",
+      "Qwen/Qwen3.5-4B",
+      "Qwen/Qwen3.5-4B-UAV-DualCog-GRPO"
+    ]
   }
 }

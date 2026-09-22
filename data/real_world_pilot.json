@@ -62,16 +62,16 @@
       "label": "LFLS",
       "images": [
         {
-          "label": "Registered RGB Panorama",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_panorama.jpg"
+          "label": "Rendered 3DGS RGB Overview - Oblique",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_oblique.png"
         },
         {
-          "label": "Landmark-Semantic Point Cloud - Top-Down",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_semantic_top.png"
+          "label": "LiDAR Point Cloud - Top-Down",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_pointcloud_top.png"
         },
         {
-          "label": "Landmark-Semantic Point Cloud - Oblique",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_semantic_oblique.png"
+          "label": "LiDAR Point Cloud - Oblique",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_lfls_pointcloud_oblique.png"
         },
         {
           "label": "Selected landmark gauu_lfls_candidate_0204",
@@ -88,16 +88,16 @@
       "label": "SMBU",
       "images": [
         {
-          "label": "Registered RGB Panorama",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_panorama.jpg"
+          "label": "Rendered 3DGS RGB Overview - Oblique",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_oblique.png"
         },
         {
-          "label": "Landmark-Semantic Point Cloud - Top-Down",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_semantic_top.png"
+          "label": "LiDAR Point Cloud - Top-Down",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_pointcloud_top.png"
         },
         {
-          "label": "Landmark-Semantic Point Cloud - Oblique",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_semantic_oblique.png"
+          "label": "LiDAR Point Cloud - Oblique",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_smbu_pointcloud_oblique.png"
         },
         {
           "label": "Selected landmark gauu_smbu_candidate_0178",
@@ -114,16 +114,16 @@
       "label": "Upper Campus",
       "images": [
         {
-          "label": "Registered RGB Panorama",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_panorama.jpg"
+          "label": "Rendered 3DGS RGB Overview - Oblique",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_oblique.png"
         },
         {
-          "label": "Landmark-Semantic Point Cloud - Top-Down",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_semantic_top.png"
+          "label": "LiDAR Point Cloud - Top-Down",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_pointcloud_top.png"
         },
         {
-          "label": "Landmark-Semantic Point Cloud - Oblique",
-          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_semantic_oblique.png"
+          "label": "LiDAR Point Cloud - Oblique",
+          "url": "/w/UAV-DualCog/media/real-world/gauu_upper_campus_pointcloud_oblique.png"
         },
         {
           "label": "Selected landmark gauu_upper_candidate_0390",

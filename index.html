@@ -60,11 +60,32 @@ UAV-DualCog is designed around that dual-cognition view. At the capability level
       playButton.title = playing ? 'Pause' : 'Play';
       playButton.setAttribute('aria-label', playButton.title);
     };
-    const bufferedThrough = seconds => {
-      for (let i = 0; i < video.buffered.length; i += 1) {
-        if (video.buffered.start(i) <= seconds && video.buffered.end(i) >= seconds - 0.15) return true;
+    const seekableThrough = seconds => {
+      for (let i = 0; i < video.seekable.length; i += 1) {
+        if (video.seekable.start(i) <= seconds && video.seekable.end(i) >= seconds) return true;
       }
       return false;
+    };
+
+    const advanceTo = async (target, request) => {
+      const wasMuted = video.muted;
+      video.muted = true;
+      video.playbackRate = 8;
+      try {
+        await video.play();
+        const start = performance.now();
+        while (video.currentTime < target - 0.15 && !video.ended) {
+          if (request !== loadId) return;
+          if (performance.now() - start > 20000) throw new Error('Segment seek timed out');
+          await new Promise(resolve => setTimeout(resolve, 25));
+        }
+      } finally {
+        if (request === loadId) {
+          video.pause();
+          video.playbackRate = 1;
+          video.muted = wasMuted;
+        }
+      }
     };
 
     const loadSegment = async (index, offset, shouldPlay) => {
@@ -86,16 +107,14 @@ UAV-DualCog is designed around that dual-cognition view. At the capability level
         await metadata;
         if (request !== loadId) return;
         const target = Math.min(offset, Math.max(0, video.duration - 0.1));
-        if (target > 0) {
-          const start = performance.now();
-          while (!bufferedThrough(target) && performance.now() - start < 10000) {
-            await new Promise(resolve => setTimeout(resolve, 100));
-            if (request !== loadId) return;
-          }
+        if (target > 0 && seekableThrough(target)) {
+          const seeked = new Promise(resolve => video.addEventListener('seeked', resolve, { once: true }));
           video.currentTime = target;
-          await new Promise(resolve => video.addEventListener('seeked', resolve, { once: true }));
-          if (request !== loadId) return;
+          await seeked;
+        } else if (target > 0) {
+          await advanceTo(target, request);
         }
+        if (request !== loadId) return;
         loading = false;
         root.dataset.loading = 'false';
         renderTime(segments[index].start + video.currentTime);
@@ -116,7 +135,7 @@ UAV-DualCog is designed around that dual-cognition view. At the capability level
       const next = Math.max(0, index);
       const offset = position - segments[next].start;
       const shouldPlay = !video.paused || (loading && resumeAfterLoad);
-      if (next === active && !loading && bufferedThrough(offset)) {
+      if (next === active && !loading && seekableThrough(offset)) {
         video.currentTime = offset;
         renderTime(position);
       } else {

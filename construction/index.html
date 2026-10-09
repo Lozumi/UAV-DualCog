@@ -424,11 +424,9 @@ Stage 3 begins from reviewed Stage 2 landmarks and an explicit two-layer behavio
           trajectories, camera-control programs, temporal supervision tracks, and final benchmark
           manifest rows.
 </p> <p>
-The <strong>flight-mode library</strong> is designed as a benchmark primitive rather than
-          a loose collection of cinematic motions. The intent is to keep released trajectories close
-          to common UAV operating scenarios, so that the resulting video tasks reflect recognizable
-          drone behavior patterns instead of synthetic camera sweeps with little operational
-          meaning. At the low level, the atomic motions borrow from the design logic behind DJI's
+The <strong>flight-mode library</strong> defines reusable UAV maneuvers for inspection,
+          patrol, and mapping, grounding the video tasks in common UAV operating scenarios.
+          At the low level, the atomic motions borrow from the design logic behind DJI's
           automated “MasterShots”-style capture patterns, where approach, orbit, rise, and mapping
           maneuvers are defined as reusable camera-flight units. At the high level, the
 <strong>hierarchical flight-mode design</strong> organizes composite classes around common
@@ -577,9 +575,9 @@ The <strong>flight-mode library</strong> is designed as a benchmark primitive ra
           template reuses in the released Stage 3 library.
 </p> <p>
 The implemented chain is mission generation, trajectory search, trajectory repair, video
-          recording, and temporal task organization. Collision checks and safety buffers can
-          trigger radius, height, or scan-width adjustments before a trajectory is accepted, so the
-          final videos are filtered task assets rather than naïve recordings of an idealized path.
+          recording, and temporal task organization. Trajectories are screened and repaired before
+          recording: collision checks and safety buffers can trigger radius, height, or scan-width
+          adjustments before a trajectory is accepted.
           Parallel rendering is also scheduled to keep missions spatially separated and reduce
           multi-UAV contamination in the frame.
 </p> <p>
@@ -1122,12 +1120,9 @@ The <strong>image-task library</strong> is designed to make
           only at the level of evaluation metrics. The agent-state branch asks where the UAV is and
           what it will see after a described motion, while the world-state branch asks where
           the target lies and what action is appropriate under the current landmark-relative
-          situation. This split ensures that image tasks are not just generic multiple-choice
-          perception items: paired Agent-State and World-State questions probe complementary
+          situation. Paired Agent-State and World-State questions probe complementary
           decisions within a shared Agent–Landmark world context.
-</p> <p>
-The image branch is not assembled by randomly pairing screenshots.
-<em>Self-relative Position Reasoning</em> and <em>Action-conditioned Future Observation Prediction</em>
+</p> <p> <em>Self-relative Position Reasoning</em> and <em>Action-conditioned Future Observation Prediction</em>
 share landmark-centric reference families but ask different questions about current
           position and motion-induced future observation. <em>Landmark-relative Position Reasoning</em>
 and <em>Goal-conditioned Action Decision</em> share the same egocentric observation so
@@ -1176,10 +1171,9 @@ The benchmark-facing image interface is the per-scene QA manifest, while
               to be refreshed later without changing ids, options, or answers.
 </p> <div class="button-row" style="margin-top: 18px;"> <a class="button" href="/w/UAV-DualCog/benchmark#examples">Open Benchmark Image Examples</a> </div> </article> <article class="article-block"> <p class="section-kicker">Reproduce</p> <div class="schema-block">python scripts/flightmvstg/task_pipeline.py --spec configs/flightmvstg/task_pipeline/task_pipeline_uav_dualcog_v1.yaml --stage stage4 --phase render</div> </article> </div> <div class="button-row" style="margin-top: 18px;"> <a class="button" href="/w/UAV-DualCog/usage#internal-web">Open Stage 4 Web Guide</a> </div> </section> </div> </section> <section class="section-divider" id="reproduce"> <article class="article-block"> <p class="section-kicker">Reproducibility</p> <h2>The released benchmark remains reconstructable because handoff artifacts are explicit</h2> <p>
 The pipeline exposes concrete handoff files between stages: scene point clouds, reviewed
-        landmarks, mission folders, manifests, rerender requests, and metric exports. This keeps
-        the released benchmark traceable as an inspectable file hierarchy rather than hidden runtime
-        state, so benchmark media can be refreshed and evaluation can be rerun without guessing
-        intermediate decisions.
+        landmarks, mission folders, manifests, rerender requests, and metric exports. These explicit
+        handoff artifacts support inspection, media refresh, and reproducible evaluation through
+        a traceable file hierarchy.
 </p> <p>
 The release is also practical to reuse: both the dataset assets and the public codebase are
         already published, so external users do not need to reconstruct the benchmark from scratch

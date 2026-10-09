@@ -24,7 +24,7 @@ Open foundation architectures evaluated on local GPU clusters or dedicated insta
 </li> <li> <strong>3. Spatially Specialized Models (4 models):</strong>
 Models explicitly fine-tuned or post-trained for 2D/3D spatial reasoning and vision-language grounding:
             SpaceOm, SpaceR, SpaceThinker-Qwen2.5VL, and ViLaSR-3B.
-</li> </ul> </article> <article class="article-block"> <p class="section-kicker">Inference Mode Protocol</p> <h3>Mode and Coverage Are Reported Rather Than Conflated</h3> <p>
+</li> </ul> </article> <article class="article-block"> <p class="section-kicker">Inference Mode Protocol</p> <h3>Inference Modes and Evaluation Coverage</h3> <p>
 Instant mode remains the deployment-oriented default. When a model has no non-reasoning endpoint,
           we use its lowest supported reasoning effort and mark that row rather than excluding the model.
 </p> <div class="table-wrap"> <table> <thead> <tr> <th>Case</th> <th>Setting</th> <th>Reporting Rule</th> </tr> </thead> <tbody> <tr> <td>Non-reasoning endpoint available</td> <td><strong>Instant</strong></td> <td>Used as the default deployment-oriented protocol.</td> </tr> <tr> <td>Reasoning-only endpoint</td> <td><strong>Low</strong></td> <td>Marked with T in the paper tables; Muse Spark uses its minimum available setting.</td> </tr> <tr> <td>Maximum output</td> <td><strong>2,048 tokens</strong></td> <td>Allows complete structured JSON output.</td> </tr> </tbody> </table> </div> <p class="table-note" style="margin-top: 8px;">
